@@ -17,15 +17,24 @@ export const ProjectCard = ({ project, onOpen }: ProjectCardProps) => {
                 className="relative cursor-pointer bg-black overflow-hidden h-64"
                 onClick={() => onOpen(project)}
             >
-                <img
-                    src={project.image}
-                    alt={`Screenshot del proyecto ${project.title}`}
-                    className="w-full h-full object-contain p-2 transition-transform duration-500"
-                    loading="lazy"
-                    decoding="async"
-                    width="450"
-                    height="256"
-                />
+                <picture>
+                    <source
+                        srcSet={`${project.image.replace('.jpg', '-400w.webp')} 400w`}
+                        sizes="450px"
+                        type="image/webp"
+                    />
+                    <img
+                        src={project.image}
+                        srcSet={`${project.image.replace('.jpg', '-400w.jpg')} 400w`}
+                        sizes="450px"
+                        alt={`Screenshot del proyecto ${project.title}`}
+                        className="w-full h-full object-contain p-2 transition-transform duration-500"
+                        loading="lazy"
+                        decoding="async"
+                        width="450"
+                        height="256"
+                    />
+                </picture>
 
                 {/* Overlay al Hover */}
                 <div className="absolute inset-0 bg-background/60 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">

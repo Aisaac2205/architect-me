@@ -1,5 +1,4 @@
 import { lazy, Suspense } from 'react';
-import heroImage from '@/assets/hero-bg.jpg';
 
 // Lazy load particles to not block initial render
 const Particles = lazy(() => import('@tsparticles/react').then(mod => ({ default: mod.Particles })));
@@ -49,7 +48,7 @@ export const HeroBackground = ({ enableParticles, init }: HeroBackgroundProps) =
             {/* Background Image - Always rendered as fallback and base layer */}
             <div
                 className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
-                style={{ backgroundImage: `url(${heroImage})` }}
+                style={{ backgroundImage: 'url(/hero-bg.jpg)' }}
                 role="img"
                 aria-label="Imagen de fondo decorativa"
             />

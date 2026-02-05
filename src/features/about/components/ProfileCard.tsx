@@ -6,7 +6,7 @@ export const ProfileCard = () => {
                     <div className="w-32 h-32 rounded-full bg-gradient-primary p-1">
                         <div className="w-full h-full rounded-full bg-background flex items-center justify-center overflow-hidden">
                             <img
-                                src="/profile.jpg"
+                                src="/profile-400w.webp"
                                 alt="Isaac Sarceño"
                                 className="w-28 h-28 rounded-full object-cover"
                                 width="112"

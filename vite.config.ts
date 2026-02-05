@@ -29,7 +29,9 @@ export default defineConfig(({ mode }) => ({
         manualChunks: {
           'vendor-react': ['react', 'react-dom', 'react-router-dom'],
           'vendor-animations': ['framer-motion'],
-          'vendor-particles': ['@tsparticles/react', '@tsparticles/slim', '@tsparticles/engine'],
+          // Split particles into smaller chunks for better loading
+          'vendor-particles-core': ['@tsparticles/react', '@tsparticles/engine'],
+          'vendor-particles-slim': ['@tsparticles/slim'],
           'vendor-ui': ['@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-toast'],
         },
         assetFileNames: 'assets/[name].[hash].[ext]',
@@ -38,6 +40,8 @@ export default defineConfig(({ mode }) => ({
       },
     },
     chunkSizeWarningLimit: 1000,
+    // Optimize for faster initial paint
+    target: 'es2020',
   },
   optimizeDeps: {
     include: ['react', 'react-dom', 'react-router-dom'],

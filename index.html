@@ -1,53 +1,62 @@
 <!DOCTYPE html>
 <html lang="es" class="dark">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portfolio de Isaac Sarceño - Desarrollador Full Stack especializado en React, TypeScript, Node.js y tecnologías modernas. Creando experiencias web excepcionales." />
-    <meta name="author" content="Isaac Sarceño" />
-    <meta name="keywords" content="desarrollador full stack, react, typescript, node.js, desarrollo web, portfolio, guatemala" />
-    <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#7c3aed" />
-    <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="canonical" href="https://portafolioisaac-production.up.railway.app/" />
-    <!-- DNS prefetch for external resources -->
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=optional" rel="stylesheet">
-    
-    <!-- Preload critical hero image -->
-    <link rel="preload" as="image" href="/hero-bg.jpg" type="image/jpeg" fetchpriority="high">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://portafolioisaac-production.up.railway.app/" />
-    <meta property="og:title" content="Isaac Sarceño - Full Stack Developer | Portfolio" />
-    <meta property="og:description" content="Portfolio de Isaac Sarceño - Desarrollador Full Stack especializado en tecnologías modernas y desarrollo web completo" />
-    <meta property="og:image" content="https://portafolioisaac-production.up.railway.app/is.jpg" />
-    <meta property="og:locale" content="es_ES" />
-    <meta property="og:site_name" content="Isaac Sarceño Portfolio" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Portfolio de Isaac Sarceño - Desarrollador Full Stack especializado en React, TypeScript, Node.js y tecnologías modernas. Creando experiencias web excepcionales." />
+  <meta name="author" content="Isaac Sarceño" />
+  <meta name="keywords"
+    content="desarrollador full stack, react, typescript, node.js, desarrollo web, portfolio, guatemala" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#7c3aed" />
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="canonical" href="https://portafolioisaac-production.up.railway.app/" />
+  <!-- DNS prefetch for external resources -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://portafolioisaac-production.up.railway.app/" />
-    <meta name="twitter:title" content="Isaac Sarceño - Full Stack Developer | Portfolio" />
-    <meta name="twitter:description" content="Portfolio de Isaac Sarceño - Desarrollador Full Stack especializado en tecnologías modernas y desarrollo web completo" />
-    <meta name="twitter:image" content="https://portafolioisaac-production.up.railway.app/is.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+  </noscript>
 
-    <!-- Preload critical resources -->
-    <!-- Note: Actual path will be determined by Vite build, consider using a plugin for dynamic preload -->
-    
-    <title>Isaac Sarceño - Full Stack Developer | Portfolio</title>
-  </head>
+  <!-- Preload critical hero image -->
+  <link rel="preload" as="image" href="/hero-bg.jpg" type="image/jpeg" fetchpriority="high">
 
-  <body>
-    <div id="root">
-      <!-- Critical loading skeleton - visible immediately before React loads -->
-      <div id="initial-loader" style="
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://isaacsf-dev.vercel.app/" />
+  <meta property="og:title" content="Isaac Sarceño - Full Stack Developer | Portfolio" />
+  <meta property="og:description"
+    content="Portfolio de Isaac Sarceño - Desarrollador Full Stack especializado en tecnologías modernas y desarrollo web completo" />
+  <meta property="og:image" content="https://isaacsf-dev.vercel.app/is.jpg" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:site_name" content="Isaac Sarceño Portfolio" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://isaacsf-dev.vercel.app/" />
+  <meta name="twitter:title" content="Isaac Sarceño - Full Stack Developer | Portfolio" />
+  <meta name="twitter:description"
+    content="Portfolio de Isaac Sarceño - Desarrollador Full Stack especializado en tecnologías modernas y desarrollo web completo" />
+  <meta name="twitter:image" content="https://isaacsf-dev.vercel.app/is.jpg" />
+
+  <!-- Preload critical resources -->
+  <!-- Note: Actual path will be determined by Vite build, consider using a plugin for dynamic preload -->
+
+  <title>Isaac Sarceño - Full Stack Developer | Portfolio</title>
+</head>
+
+<body>
+  <div id="root">
+    <!-- Critical loading skeleton - visible immediately before React loads -->
+    <div id="initial-loader" style="
         position: fixed;
         inset: 0;
         background: #09090b;
@@ -58,7 +67,7 @@
         z-index: 9999;
         transition: opacity 0.3s ease;
       ">
-        <div style="
+      <div style="
           width: 48px;
           height: 48px;
           border: 3px solid #27272a;
@@ -66,31 +75,92 @@
           border-radius: 50%;
           animation: initial-spin 1s linear infinite;
         "></div>
-        <p style="
+      <p style="
           color: #a1a1aa;
           margin-top: 16px;
           font-family: system-ui, -apple-system, sans-serif;
           font-size: 14px;
         ">Cargando...</p>
-      </div>
     </div>
-    
-    <style>
-      @keyframes initial-spin {
-        to { transform: rotate(360deg); }
+  </div>
+
+  <style>
+    @keyframes initial-spin {
+      to {
+        transform: rotate(360deg);
       }
-      /* Critical CSS for instant rendering - prevents FOUC */
-      html { background-color: #09090b; }
-      body { 
-        margin: 0; 
-        background-color: #09090b; 
-        color: #fafafa;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    /* Critical CSS for instant rendering - prevents FOUC */
+    html {
+      background-color: #09090b;
+    }
+
+    body {
+      margin: 0;
+      background-color: #09090b;
+      color: #fafafa;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    /* Prevent layout shift for hero */
+    #root {
+      min-height: 100vh;
+    }
+
+    /* Critical Hero styles to prevent LCP delay */
+    .hero-critical {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-content-critical {
+      text-align: center;
+      max-width: 56rem;
+      margin: 0 auto;
+      padding: 5rem 1.5rem;
+      position: relative;
+      z-index: 10;
+    }
+
+    .hero-title-critical {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+      background: linear-gradient(135deg, #7c3aed, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    @media (min-width: 768px) {
+      .hero-title-critical {
+        font-size: 4.5rem;
       }
-      /* Prevent layout shift for hero */
-      #root { min-height: 100vh; }
-    </style>
-    
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    }
+
+    .hero-subtitle-critical {
+      font-size: 1.25rem;
+      color: #a1a1aa;
+      margin-bottom: 2rem;
+      max-width: 48rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (min-width: 768px) {
+      .hero-subtitle-critical {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
 </html>

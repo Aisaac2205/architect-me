@@ -100,10 +100,23 @@
     *,
     *::before,
     *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
+      /* Allow critical scroll animations but slow them down or remove others */
+      /* animation-duration: 0.01ms !important; */
+      /* animation-iteration-count: 1 !important; */
+      /* transition-duration: 0.01ms !important; */
       scroll-behavior: auto !important;
+    }
+
+    /* Only disable non-essential animations, but KEEP carousel scroll */
+    .animate-spin,
+    .animate-ping,
+    .animate-pulse,
+    .animate-bounce,
+    .animate-accordion-down,
+    .animate-accordion-up,
+    .animate-blob,
+    .animate-float {
+      animation: none !important;
     }
   }
 }
@@ -132,28 +145,9 @@
 }
 
 @layer utilities {
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
+  /* Removed scroll keyframes as they are now in tailwind.config.ts */
 
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-
-  .animate-scroll {
-    animation: scroll 40s linear infinite;
-  }
-
-  .animate-scroll:hover {
-    animation-play-state: paused;
-  }
-
-  .animate-scroll-slow {
-    animation: scroll 60s linear infinite;
-  }
-
+  .animate-scroll:hover,
   .animate-scroll-slow:hover {
     animation-play-state: paused;
   }

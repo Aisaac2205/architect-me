@@ -29,7 +29,7 @@ export default defineConfig(({ mode }) => ({
         manualChunks: {
           'vendor-react': ['react', 'react-dom', 'react-router-dom'],
           'vendor-animations': ['framer-motion'],
-          'vendor-particles': ['react-tsparticles', 'tsparticles-slim', 'tsparticles-engine'],
+          'vendor-particles': ['@tsparticles/react', '@tsparticles/slim', '@tsparticles/engine'],
           'vendor-ui': ['@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-toast'],
         },
         assetFileNames: 'assets/[name].[hash].[ext]',

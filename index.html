@@ -55,32 +55,29 @@
 
 <body>
   <div id="root">
-    <!-- Critical loading skeleton - visible immediately before React loads -->
-    <div id="initial-loader" style="
-        position: fixed;
-        inset: 0;
-        background: #09090b;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        z-index: 9999;
-        transition: opacity 0.3s ease;
-      ">
-      <div style="
-          width: 48px;
-          height: 48px;
-          border: 3px solid #27272a;
-          border-top-color: #7c3aed;
-          border-radius: 50%;
-          animation: initial-spin 1s linear infinite;
-        "></div>
-      <p style="
-          color: #a1a1aa;
-          margin-top: 16px;
-          font-family: system-ui, -apple-system, sans-serif;
-          font-size: 14px;
-        ">Cargando...</p>
+    <!-- Critical Hero HTML for Instant LCP -->
+    <div class="hero-critical">
+      <div class="hero-content-critical">
+        <div style="margin-bottom: 1.5rem;">
+          <span
+            style="display: inline-block; padding: 0.5rem 1rem; border-radius: 9999px; background-color: rgba(124, 58, 237, 0.1); border: 1px solid rgba(124, 58, 237, 0.2); color: #7c3aed; font-size: 0.875rem; font-weight: 500;">
+            ¡Hola! Soy Full Stack Developer
+          </span>
+        </div>
+
+        <h1 class="hero-title-critical">
+          Isaac Sarceño
+        </h1>
+
+        <p class="hero-subtitle-critical">
+          Especializado en <span style="color: #7c3aed; font-weight: 600;">tecnologías modernas</span> y desarrollo web
+          completo.
+          Creo experiencias web excepcionales que combinan diseño elegante con funcionalidad robusta.
+        </p>
+
+        <!-- Placeholder for buttons to prevent layout shift, but not interactive yet -->
+        <div style="height: 3rem;"></div>
+      </div>
     </div>
   </div>
 

@@ -21,16 +21,16 @@ export const HeroContent = () => {
                     </span>
                 </div>
 
-                <h1 className="hero-title-critical opacity-0 animate-[fadeIn_0.5s_ease-out_0.1s_forwards]">
+                <h1 className="hero-title-critical">
                     <span className="text-gradient">Isaac Sarceño</span>
                 </h1>
 
-                <p className="hero-subtitle-critical opacity-0 animate-[fadeIn_0.5s_ease-out_0.2s_forwards]">
+                <p className="hero-subtitle-critical">
                     Especializado en <span className="text-primary font-semibold">tecnologías modernas</span> y desarrollo web completo.
                     Creo experiencias web excepcionales que combinan diseño elegante con funcionalidad robusta.
                 </p>
 
-                <div 
+                <div
                     className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 opacity-0 animate-[fadeIn_0.5s_ease-out_0.3s_forwards]"
                 >
                     <Button

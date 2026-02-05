@@ -6,8 +6,8 @@ import {
 
 export const techStack = [
     { name: 'React', Icon: SiReact, color: '#61DAFB', bgColor: 'transparent' },
-    { name: 'Next.js', Icon: SiNextdotjs, color: '#000000', bgColor: '#ffffff' },
-    { name: 'Angular', Icon: SiAngular, color: '#DD0031', bgColor: 'transparent' },
+    { name: 'Next.js', Icon: SiNextdotjs, color: '#000000', bgColor: '#ffffff', sizeClass: 'text-5xl' },
+    { name: 'Angular', Icon: SiAngular, color: '#DD0031', bgColor: '#0e0e0eff' },
     { name: 'Tailwind CSS', Icon: SiTailwindcss, color: '#06B6D4', bgColor: 'transparent' },
     { name: 'JavaScript', Icon: SiJavascript, color: '#F7DF1E', bgColor: 'transparent' },
     { name: 'Node.js', Icon: SiNodedotjs, color: '#339933', bgColor: 'transparent' },

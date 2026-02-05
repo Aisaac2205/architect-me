@@ -38,10 +38,13 @@ export const TechStackCarousel = () => {
                                 className="flex flex-col items-center justify-center group shrink-0 w-24"
                             >
                                 <div
-                                    className="relative w-16 h-16 rounded-2xl border border-border/50 backdrop-blur-sm shadow-lg flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:-translate-y-1 bg-white/5"
+                                    className="relative w-16 h-16 rounded-2xl border border-border/50 backdrop-blur-sm shadow-lg flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:-translate-y-1"
+                                    style={{
+                                        backgroundColor: tech.bgColor !== 'transparent' ? tech.bgColor : 'rgba(255, 255, 255, 0.05)'
+                                    }}
                                 >
                                     <tech.Icon
-                                        className="text-3xl transition-transform duration-300 group-hover:rotate-6 sm:grayscale sm:group-hover:grayscale-0"
+                                        className={`${tech.sizeClass || 'text-5xl'} transition-transform duration-300 group-hover:rotate-6`}
                                         style={{ color: tech.color }}
                                     />
                                 </div>
@@ -60,10 +63,13 @@ export const TechStackCarousel = () => {
                                 className="flex flex-col items-center justify-center group shrink-0 w-24"
                             >
                                 <div
-                                    className="relative w-16 h-16 rounded-2xl border border-border/50 backdrop-blur-sm shadow-lg flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:-translate-y-1 bg-white/5"
+                                    className="relative w-16 h-16 rounded-2xl border border-border/50 backdrop-blur-sm shadow-lg flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:-translate-y-1"
+                                    style={{
+                                        backgroundColor: tech.bgColor !== 'transparent' ? tech.bgColor : 'rgba(255, 255, 255, 0.05)'
+                                    }}
                                 >
                                     <tech.Icon
-                                        className="text-3xl transition-transform duration-300 group-hover:rotate-6 sm:grayscale sm:group-hover:grayscale-0"
+                                        className={`${tech.sizeClass || 'text-5xl'} transition-transform duration-300 group-hover:rotate-6`}
                                         style={{ color: tech.color }}
                                     />
                                 </div>

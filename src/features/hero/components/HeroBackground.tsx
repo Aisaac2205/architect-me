@@ -1,27 +1,25 @@
-import Particles from 'react-tsparticles';
+import Particles from '@tsparticles/react';
 import heroImage from '@/assets/hero-bg.jpg';
 import { particlesOptions } from '../config/particles.config';
-import type { Engine } from 'tsparticles-engine';
 
 interface HeroBackgroundProps {
     enableParticles: boolean;
-    particlesInit: (engine: Engine) => Promise<void>;
+    init: boolean;
 }
 
-export const HeroBackground = ({ enableParticles, particlesInit }: HeroBackgroundProps) => {
+export const HeroBackground = ({ enableParticles, init }: HeroBackgroundProps) => {
     return (
         <>
-            {/* Animated Particles Background */}
-            {enableParticles && (
+            {/* Animated Particles Background - Only render if enabled and initialized */}
+            {enableParticles && init && (
                 <Particles
                     id="tsparticles"
-                    init={particlesInit}
                     className="absolute inset-0"
                     options={particlesOptions}
                 />
             )}
 
-            {/* Background Image */}
+            {/* Background Image - Always rendered as fallback and base layer */}
             <div
                 className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
                 style={{ backgroundImage: `url(${heroImage})` }}

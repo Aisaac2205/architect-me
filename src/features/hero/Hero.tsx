@@ -3,13 +3,13 @@ import { HeroBackground } from './components/HeroBackground';
 import { HeroContent } from './components/HeroContent';
 
 const Hero = () => {
-  const { enableParticles, particlesInit } = useParticles();
+  const { enableParticles, init } = useParticles();
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       <HeroBackground
         enableParticles={enableParticles}
-        particlesInit={particlesInit}
+        init={init}
       />
       <HeroContent />
     </section>

@@ -13,7 +13,7 @@
     <link rel="canonical" href="https://portafolioisaac-production.up.railway.app/" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=optional" rel="stylesheet">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -72,6 +72,16 @@
       @keyframes initial-spin {
         to { transform: rotate(360deg); }
       }
+      /* Critical CSS for instant rendering - prevents FOUC */
+      html { background-color: #09090b; }
+      body { 
+        margin: 0; 
+        background-color: #09090b; 
+        color: #fafafa;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+      /* Prevent layout shift for hero */
+      #root { min-height: 100vh; }
     </style>
     
     <script type="module" src="/src/main.tsx"></script>

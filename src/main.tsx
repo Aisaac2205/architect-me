@@ -5,10 +5,18 @@ import './index.css'
 const root = document.getElementById("root")!
 const loader = document.getElementById("initial-loader")
 
+// Remove loader immediately when React starts mounting
 createRoot(root).render(<App />);
 
-// Remove initial loader after React mounts
+// Faster removal on mobile - don't wait for animations
 if (loader) {
-  loader.style.opacity = '0'
-  setTimeout(() => loader.remove(), 300)
+  // Use requestAnimationFrame for smoother removal
+  requestAnimationFrame(() => {
+    loader.style.opacity = '0'
+    loader.style.transition = 'opacity 0.15s ease'
+    setTimeout(() => {
+      loader.style.display = 'none'
+      loader.remove()
+    }, 150)
+  })
 }

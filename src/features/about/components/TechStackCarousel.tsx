@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 import { techStack } from '../data/techStack.data';
+import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
+import AutoScroll from 'embla-carousel-auto-scroll';
 
 export const TechStackCarousel = () => {
     return (
@@ -18,68 +20,50 @@ export const TechStackCarousel = () => {
                     Las herramientas que domino para construir soluciones robustas y modernas.
                 </p>
             </motion.div>
-            {/* Contenedor del Carrusel - Full Width */}
-            <div className="relative w-screen left-1/2 -translate-x-1/2 overflow-hidden py-4">
-                {/* Máscaras de degradado */}
+
+            <div className="relative w-full overflow-hidden py-4">
+                {/* Gradient Masks */}
                 <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
                 <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
 
-                <div
-                    className="flex w-max animate-scroll"
-                    style={{
-                        width: 'max-content'
+                <Carousel
+                    opts={{
+                        align: "start",
+                        loop: true,
+                        dragFree: true,
                     }}
+                    plugins={[
+                        AutoScroll({
+                            speed: 1,
+                            stopOnInteraction: false,
+                            stopOnMouseEnter: true,
+                        })
+                    ]}
+                    className="w-full"
                 >
-                    {/* Primer Set de Iconos */}
-                    <div className="flex gap-16 shrink-0 pr-16 items-center">
+                    <CarouselContent className="-ml-16">
                         {techStack.map((tech, index) => (
-                            <div
-                                key={`original-${tech.name}-${index}`}
-                                className="flex flex-col items-center justify-center group shrink-0 w-24"
-                            >
-                                <div
-                                    className="relative w-16 h-16 rounded-2xl border border-border/50 backdrop-blur-sm shadow-lg flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:-translate-y-1"
-                                    style={{
-                                        backgroundColor: tech.bgColor !== 'transparent' ? tech.bgColor : 'rgba(255, 255, 255, 0.05)'
-                                    }}
-                                >
-                                    <tech.Icon
-                                        className={`${tech.sizeClass || 'text-5xl'} transition-transform duration-300 group-hover:rotate-6`}
-                                        style={{ color: tech.color }}
-                                    />
+                            <CarouselItem key={index} className="pl-16 basis-auto">
+                                <div className="flex flex-col items-center justify-center group w-24 cursor-grab active:cursor-grabbing">
+                                    <div
+                                        className="relative w-16 h-16 rounded-2xl border border-border/50 backdrop-blur-sm shadow-lg flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:-translate-y-1"
+                                        style={{
+                                            backgroundColor: tech.bgColor !== 'transparent' ? tech.bgColor : 'rgba(255, 255, 255, 0.05)'
+                                        }}
+                                    >
+                                        <tech.Icon
+                                            className={`${tech.sizeClass || 'text-5xl'} transition-transform duration-300 group-hover:rotate-6`}
+                                            style={{ color: tech.color }}
+                                        />
+                                    </div>
+                                    <span className="mt-3 text-sm font-medium text-center text-muted-foreground group-hover:text-primary transition-colors duration-200">
+                                        {tech.name}
+                                    </span>
                                 </div>
-                                <span className="mt-3 text-sm font-medium text-center text-muted-foreground group-hover:text-primary transition-colors duration-200">
-                                    {tech.name}
-                                </span>
-                            </div>
+                            </CarouselItem>
                         ))}
-                    </div>
-
-                    {/* Segundo Set de Iconos (Duplicado exacto) */}
-                    <div className="flex gap-16 shrink-0 pr-16 items-center">
-                        {techStack.map((tech, index) => (
-                            <div
-                                key={`duplicated-${tech.name}-${index}`}
-                                className="flex flex-col items-center justify-center group shrink-0 w-24"
-                            >
-                                <div
-                                    className="relative w-16 h-16 rounded-2xl border border-border/50 backdrop-blur-sm shadow-lg flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:-translate-y-1"
-                                    style={{
-                                        backgroundColor: tech.bgColor !== 'transparent' ? tech.bgColor : 'rgba(255, 255, 255, 0.05)'
-                                    }}
-                                >
-                                    <tech.Icon
-                                        className={`${tech.sizeClass || 'text-5xl'} transition-transform duration-300 group-hover:rotate-6`}
-                                        style={{ color: tech.color }}
-                                    />
-                                </div>
-                                <span className="mt-3 text-sm font-medium text-center text-muted-foreground group-hover:text-primary transition-colors duration-200">
-                                    {tech.name}
-                                </span>
-                            </div>
-                        ))}
-                    </div>
-                </div>
+                    </CarouselContent>
+                </Carousel>
             </div>
         </div>
     );

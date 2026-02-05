@@ -1,4 +1,6 @@
-export const particlesOptions = {
+import { type ISourceOptions } from "@tsparticles/engine";
+
+export const particlesOptions: ISourceOptions = {
     fpsLimit: 120,
     interactivity: {
         events: {
@@ -10,7 +12,10 @@ export const particlesOptions = {
                 enable: true,
                 mode: "repulse",
             },
-            resize: true,
+            resize: {
+                enable: true,
+                delay: 0.5
+            },
         },
         modes: {
             push: {
@@ -46,7 +51,8 @@ export const particlesOptions = {
         number: {
             density: {
                 enable: true,
-                area: 800,
+                width: 800,
+                height: 800
             },
             value: 80,
         },
@@ -61,4 +67,4 @@ export const particlesOptions = {
         },
     },
     detectRetina: true,
-} as const;
+};

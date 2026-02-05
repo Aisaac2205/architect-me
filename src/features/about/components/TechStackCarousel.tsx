@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { techStack } from '../data/techStack.data';
 import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
 import AutoScroll from 'embla-carousel-auto-scroll';
@@ -6,20 +5,14 @@ import AutoScroll from 'embla-carousel-auto-scroll';
 export const TechStackCarousel = () => {
     return (
         <div className="mt-20">
-            <motion.div
-                className="text-center mb-12 px-6"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
-                viewport={{ once: true, margin: "-100px" }}
-            >
+            <div className="text-center mb-12 px-6 opacity-0 animate-[fadeIn_0.4s_ease-out_forwards]">
                 <h3 className="text-3xl font-bold mb-4">
                     Mi Stack <span className="text-gradient">Tecnológico</span>
                 </h3>
                 <p className="text-muted-foreground text-lg">
                     Las herramientas que domino para construir soluciones robustas y modernas.
                 </p>
-            </motion.div>
+            </div>
 
             <div className="relative w-full overflow-hidden py-4">
                 {/* Gradient Masks */}

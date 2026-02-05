@@ -1,14 +1,6 @@
-import { motion } from 'framer-motion';
-
 export const ProfileCard = () => {
     return (
-        <motion.div
-            className="space-y-6"
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
-            viewport={{ once: true, margin: "-100px" }}
-        >
+        <div className="space-y-6 opacity-0 animate-[fadeIn_0.4s_ease-out_0.1s_forwards]">
             <div className="flex items-center gap-6 mb-8">
                 <div className="relative">
                     <div className="w-32 h-32 rounded-full bg-gradient-primary p-1">
@@ -20,6 +12,7 @@ export const ProfileCard = () => {
                                 width="112"
                                 height="112"
                                 loading="lazy"
+                                decoding="async"
                             />
                         </div>
                     </div>
@@ -29,6 +22,6 @@ export const ProfileCard = () => {
                     <p className="text-primary font-medium">React · NestJS · TypeScript</p>
                 </div>
             </div>
-        </motion.div>
+        </div>
     );
 };

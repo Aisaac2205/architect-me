@@ -1,4 +1,5 @@
 import { Bot, Glasses, Guitar, Code, Rocket, Zap, Music } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 const icons = [
     { Icon: Bot, top: '15%', left: '10%', delay: '0s', size: 'h-12 w-12', rotate: '12deg' },
@@ -11,6 +12,22 @@ const icons = [
 ];
 
 const FloatingIcons = () => {
+    // Optimization: Don't render floating icons on mobile
+    const [shouldRender, setShouldRender] = useState(false);
+
+    useEffect(() => {
+        const checkRender = () => {
+            const isDesktop = window.matchMedia('(min-width: 768px)').matches;
+            setShouldRender(isDesktop);
+        };
+
+        checkRender();
+        window.addEventListener('resize', checkRender);
+        return () => window.removeEventListener('resize', checkRender);
+    }, []);
+
+    if (!shouldRender) return null;
+
     return (
         <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
             {icons.map((item, index) => (

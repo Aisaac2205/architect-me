@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, useState } from 'react';
+import { lazy, Suspense } from 'react';
 import { MainLayout } from '@/layouts';
 import { Hero } from '@/features/hero';
 import { useLenis } from '@/hooks/use-lenis';
@@ -21,30 +21,21 @@ const SectionSkeleton = () => (
 );
 
 const Index = () => {
-  const [mounted, setMounted] = useState(false);
   useLenis(); // Inicializar Lenis para scroll suave
-
-  useEffect(() => {
-    // Remove loader once component mounts
-    setMounted(true);
-  }, []);
 
   return (
     <MainLayout>
       <Hero />
-      {mounted && (
-        <>
-          <Suspense fallback={<SectionSkeleton />}>
-            <About />
-          </Suspense>
-          <Suspense fallback={<SectionSkeleton />}>
-            <Projects />
-          </Suspense>
-          <Suspense fallback={<SectionSkeleton />}>
-            <Contact />
-          </Suspense>
-        </>
-      )}
+      <Hero />
+      <Suspense fallback={<SectionSkeleton />}>
+        <About />
+      </Suspense>
+      <Suspense fallback={<SectionSkeleton />}>
+        <Projects />
+      </Suspense>
+      <Suspense fallback={<SectionSkeleton />}>
+        <Contact />
+      </Suspense>
     </MainLayout>
   );
 };

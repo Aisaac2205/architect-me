@@ -26,7 +26,7 @@ const Index = () => {
   return (
     <MainLayout>
       <Hero />
-      <Hero />
+
       <Suspense fallback={<SectionSkeleton />}>
         <About />
       </Suspense>

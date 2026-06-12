@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
 import { OrbitAnimation } from "./components/OrbitAnimation";
 import { ContactForm } from "./components/ContactForm";
 import gsap from "gsap";
@@ -7,6 +8,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Contact: React.FC = () => {
+  const { t } = useTranslation();
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -77,12 +79,12 @@ const Contact: React.FC = () => {
           {/* Left Column: Heading and Tech Orbit Animation */}
           <div className="lg:col-span-5 flex flex-col justify-between space-y-8">
             <div className="space-y-4">
-              <p className="contact-header-eyebrow opacity-0 section-eyebrow">Contacto</p>
+              <p className="contact-header-eyebrow opacity-0 section-eyebrow">{t('contact.eyebrow')}</p>
               <h2 className="contact-header-title opacity-0 section-title text-gradient">
-                Construyamos tu visión
+                {t('contact.title')}
               </h2>
               <p className="contact-header-subtitle opacity-0 section-subtitle leading-relaxed">
-                Transformo ideas complejas en soluciones web eficientes, rápidas y diseñadas para alcanzar los objetivos de tu negocio. Completa la información y definamos la ruta ideal para tu proyecto.
+                {t('contact.subtitle')}
               </p>
             </div>
             

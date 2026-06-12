@@ -7,13 +7,13 @@ export const ContactForm = () => {
     const { formData, handleChange, handleSubmit, isSubmitting } = useContactForm();
 
     return (
-        <div className="glass-card rounded-2xl p-8">
-            <h3 className="text-xl font-semibold mb-6">Envíame un mensaje</h3>
+        <div className="flat-panel rounded-md p-8">
+            <h3 className="text-xl font-bold uppercase tracking-tight mb-6">Envíame un mensaje</h3>
 
             <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                        <label htmlFor="name" className="block text-sm font-medium mb-2">
+                        <label htmlFor="name" className="section-eyebrow block mb-2">
                             Nombre *
                         </label>
                         <Input
@@ -28,7 +28,7 @@ export const ContactForm = () => {
                         />
                     </div>
                     <div>
-                        <label htmlFor="email" className="block text-sm font-medium mb-2">
+                        <label htmlFor="email" className="section-eyebrow block mb-2">
                             Email *
                         </label>
                         <Input
@@ -45,7 +45,7 @@ export const ContactForm = () => {
                 </div>
 
                 <div>
-                    <label htmlFor="subject" className="block text-sm font-medium mb-2">
+                    <label htmlFor="subject" className="section-eyebrow block mb-2">
                         Asunto
                     </label>
                     <Input
@@ -60,7 +60,7 @@ export const ContactForm = () => {
                 </div>
 
                 <div>
-                    <label htmlFor="message" className="block text-sm font-medium mb-2">
+                    <label htmlFor="message" className="section-eyebrow block mb-2">
                         Mensaje *
                     </label>
                     <Textarea
@@ -77,14 +77,14 @@ export const ContactForm = () => {
 
                 <Button
                     type="submit"
-                    variant="hero"
+                    variant="default"
                     size="lg"
                     className="w-full"
                     disabled={isSubmitting}
                 >
                     {isSubmitting ? (
                         <div className="flex items-center gap-2">
-                            <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                            <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin"></div>
                             Enviando mensaje...
                         </div>
                     ) : (

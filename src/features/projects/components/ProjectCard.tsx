@@ -23,20 +23,13 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
                 <div className="flex aspect-[3/2] overflow-clip rounded-xl border border-border bg-[#d9d9d9]">
                     <div className="flex-1">
                         <div className="relative h-full w-full origin-bottom transition duration-300 group-hover:scale-[1.02]">
-                            <picture>
-                                <source
-                                    srcSet={`${project.image.replace('.webp', '-400w.webp')} 400w`}
-                                    sizes="452px"
-                                    type="image/webp"
-                                />
-                                <img
-                                    src={project.image}
-                                    alt={title}
-                                    className="h-full w-full object-contain object-top"
-                                    loading="lazy"
-                                    decoding="async"
-                                />
-                            </picture>
+                            <img
+                                src={project.image}
+                                alt={title}
+                                className="h-full w-full object-contain object-top"
+                                loading="lazy"
+                                decoding="async"
+                            />
                         </div>
                     </div>
                 </div>

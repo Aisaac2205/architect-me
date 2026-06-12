@@ -156,7 +156,7 @@
   }
 
   .section-title {
-    @apply font-bold uppercase tracking-tighter text-primary text-5xl md:text-7xl;
+    @apply font-bold uppercase tracking-tighter text-primary text-5xl md:text-7xl leading-[1.15] md:leading-[1.1] pb-1;
   }
 
   .section-subtitle {

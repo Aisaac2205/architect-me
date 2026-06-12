@@ -1,96 +1,135 @@
-import { Github, Linkedin, Mail, Heart } from 'lucide-react';
+import { useEffect, useRef } from 'react';
+import { cn } from '@/lib/utils';
+import { scrollToElement } from '@/hooks/use-lenis';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
+interface FlipLinkProps {
+  children: string;
+  href: string;
+  className?: string;
+}
+
+const FlipLink = ({ children, href, className = '' }: FlipLinkProps) => {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={cn(
+        "group text-primary relative block overflow-hidden whitespace-nowrap text-5xl font-black uppercase sm:text-7xl md:text-8xl lg:text-[7.5rem]",
+        className
+      )}
+      style={{
+        lineHeight: 0.75,
+      }}
+      aria-label={`Visitar mi ${children}`}
+    >
+      <div className="flex">
+        {children.split("").map((letter, i) => (
+          <span
+            key={i}
+            className="inline-block transition-transform duration-300 ease-in-out group-hover:-translate-y-[110%]"
+            style={{
+              transitionDelay: `${i * 25}ms`,
+            }}
+          >
+            {letter}
+          </span>
+        ))}
+      </div>
+      <div className="absolute inset-0 flex">
+        {children.split("").map((letter, i) => (
+          <span
+            key={i}
+            className="inline-block translate-y-[110%] transition-transform duration-300 ease-in-out group-hover:translate-y-0"
+            style={{
+              transitionDelay: `${i * 25}ms`,
+            }}
+          >
+            {letter}
+          </span>
+        ))}
+      </div>
+    </a>
+  );
+};
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const footerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!footerRef.current) return;
+
+    const ctx = gsap.context(() => {
+      // Staggered entry animation for the giant social links
+      gsap.fromTo(
+        '.footer-social-link',
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          stagger: 0.08,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: footerRef.current,
+            start: 'top 92%',
+            toggleActions: 'play none none none',
+          },
+        }
+      );
+    }, footerRef);
+
+    return () => ctx.revert();
+  }, []);
+
+  const scrollToSection = (sectionId: string) => {
+    scrollToElement(`#${sectionId}`, { offset: -80, duration: 1.5 });
+  };
 
   return (
-    <footer className="py-12 border-t border-border/50">
-      <div className="container mx-auto px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
-            {/* Información personal */}
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold uppercase tracking-tight text-primary">Isaac Sarceño</h3>
-              <p className="text-muted-foreground">
-                Desarrollador Full Stack especializado en crear experiencias web excepcionales 
-                con tecnologías modernas y desarrollo web completo.
-              </p>
-            </div>
-
-            {/* Enlaces rápidos */}
-            <div className="space-y-4">
-              <h4 className="section-eyebrow">Enlaces rápidos</h4>
-              <nav className="space-y-2">
-                <a 
-                  href="#sobre-mi" 
-                  className="block text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Sobre mí
-                </a>
-                <a 
-                  href="#proyectos" 
-                  className="block text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Proyectos
-                </a>
-                <a 
-                  href="#contacto" 
-                  className="block text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Contacto
-                </a>
-              </nav>
-            </div>
-
-            {/* Redes sociales */}
-            <div className="space-y-4">
-              <h4 className="section-eyebrow">Conecta conmigo</h4>
-              <div className="flex gap-4">
-                <a
-                  href="https://github.com/Aisaac2205"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-3 rounded-lg bg-card/50 border border-border/50 hover:bg-card transition-all duration-300 glow-on-hover"
-                  aria-label="GitHub de Isaac Sarceño"
-                >
-                  <Github className="h-5 w-5" />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/isaac-sarce%C3%B1o-aa2850374?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-3 rounded-lg bg-card/50 border border-border/50 hover:bg-card transition-all duration-300 glow-on-hover"
-                  aria-label="LinkedIn de Isaac Sarceño"
-                >
-                  <Linkedin className="h-5 w-5" />
-                </a>
-                <a
-                  href="mailto:isaac.flores.dev@gmail.com"
-                  className="p-3 rounded-lg bg-card/50 border border-border/50 hover:bg-card transition-all duration-300 glow-on-hover"
-                  aria-label="Email de Isaac Sarceño"
-                >
-                  <Mail className="h-5 w-5" />
-                </a>
-              </div>
-              <p className="text-sm text-muted-foreground">
-                ¿Tienes un proyecto en mente? <br />
-                <a 
-                  href="mailto:isaac.flores.dev@gmail.com" 
-                  className="text-primary hover:underline"
-                >
-                  ¡Hablemos!
-                </a>
-              </p>
-            </div>
+    <footer ref={footerRef} className="py-16 border-t border-border/30 bg-background overflow-hidden">
+      <div className="w-full px-6 md:px-12">
+        <div className="flex flex-col gap-12 md:gap-16">
+          
+          {/* Main Content Layout - Giant Social Links */}
+          <div className="flex flex-col gap-4 py-8 select-none">
+            <FlipLink href="https://github.com/Aisaac2205" className="footer-social-link">Github</FlipLink>
+            <FlipLink href="https://www.linkedin.com/in/isaac-sarce%C3%B1o-aa2850374?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" className="footer-social-link">Linkedin</FlipLink>
+            <FlipLink href="https://www.instagram.com/_isaac.webp?igsh=d2N4NWV4YTlyNDll&utm_source=qr" className="footer-social-link">Instagram</FlipLink>
+            <FlipLink href="mailto:isaac.flores.dev@gmail.com" className="footer-social-link">Email</FlipLink>
           </div>
 
-          {/* Copyright */}
-          <div className="pt-8 border-t border-border/50">
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-              <p className="text-sm text-muted-foreground">
-                © {currentYear} Isaac Sarceño. Todos los derechos reservados.
-              </p>
+          {/* Footer bottom metadata */}
+          <div className="pt-8 border-t border-border/30 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex items-center space-x-6">
+              <button 
+                onClick={() => scrollToSection('sobre-mi')} 
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              >
+                Sobre mí
+              </button>
+              <button 
+                onClick={() => scrollToSection('proyectos')} 
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              >
+                Proyectos
+              </button>
+              <button 
+                onClick={() => scrollToSection('contacto')} 
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              >
+                Contacto
+              </button>
             </div>
+            
+            <p className="text-sm text-muted-foreground text-center md:text-right">
+              © {currentYear} Isaac Sarceño. Todos los derechos reservados.
+            </p>
           </div>
         </div>
       </div>

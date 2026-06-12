@@ -85,6 +85,13 @@
     @apply border-border;
   }
 
+  html,
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+  }
+
   body {
     @apply bg-background text-foreground font-inter;
     font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';

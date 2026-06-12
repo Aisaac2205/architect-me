@@ -77,8 +77,8 @@ architect-me/
 | Project | Description | Stack |
 |---------|-------------|-------|
 | [E-commerce Moderno](https://www.lacasadelbalompie.com/) | Football jersey e-commerce with WhatsApp order processing | React, NestJS, PostgreSQL |
-| [Quick-Service Orders](https://demo1.restaurantegt.com/) | High-volume restaurant ordering platform (Lighthouse 100) | React, Astro, PostgreSQL |
-| [Digital Gastronomy](https://demo2.restaurantegt.com/) | Premium restaurant interface with video headers | React, Astro, Motion |
+| [SaaS Restaurant Ordering (Design 1)](https://demo1.restaurantegt.com/) | Gastronomic SaaS integrating web and internal ordering system, custom landing page, interactive/PDF menu | React, Astro, PostgreSQL |
+| [SaaS Restaurant Ordering (Design 2)](https://demo2.restaurantegt.com/) | Gastronomic SaaS integrating web and internal ordering system, premium visuals, smooth animations, PDF/interactive menu | React, Astro, Motion |
 | [Turbo Auto](https://turboautogt.com/) | Workshop & carwash service page | React, Node.js, Vite |
 
 ---

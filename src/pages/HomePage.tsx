@@ -1,14 +1,11 @@
-import { lazy, Suspense } from 'react';
 import { MainLayout } from '@/layouts';
 import { Hero } from '@/features/hero';
+import { About } from '@/features/about';
+import { Projects } from '@/features/projects';
+import { Contact } from '@/features/contact';
 import { useLenis } from '@/hooks/use-lenis';
 
-// Lazy load components below the fold for better initial load performance
-const About = lazy(() => import('@/features/about').then(module => ({ default: module.About })));
-const Projects = lazy(() => import('@/features/projects').then(module => ({ default: module.Projects })));
-const Contact = lazy(() => import('@/features/contact').then(module => ({ default: module.Contact })));
-
-// Simple loading skeleton
+// Simple loading skeleton (kept for reference or other uses if needed)
 const SectionSkeleton = () => (
   <div className="py-20">
     <div className="container mx-auto px-6">
@@ -20,6 +17,13 @@ const SectionSkeleton = () => (
   </div>
 );
 
+const SectionDivider = () => (
+  <div className="w-full h-px bg-border/30 relative">
+    <span className="absolute left-6 -top-[9px] text-foreground/20 font-light text-sm font-mono">+</span>
+    <span className="absolute right-6 -top-[9px] text-foreground/20 font-light text-sm font-mono">+</span>
+  </div>
+);
+
 const Index = () => {
   useLenis(); // Inicializar Lenis para scroll suave
 
@@ -27,15 +31,14 @@ const Index = () => {
     <MainLayout>
       <Hero />
 
-      <Suspense fallback={<SectionSkeleton />}>
-        <About />
-      </Suspense>
-      <Suspense fallback={<SectionSkeleton />}>
-        <Projects />
-      </Suspense>
-      <Suspense fallback={<SectionSkeleton />}>
-        <Contact />
-      </Suspense>
+      <SectionDivider />
+      <About />
+
+      <SectionDivider />
+      <Projects />
+
+      <SectionDivider />
+      <Contact />
     </MainLayout>
   );
 };

@@ -1,109 +1,113 @@
-import { Rocket, TrendingUp, Users, Clock, Shield, Smartphone } from 'lucide-react';
-import { ProfileCard } from './components/ProfileCard';
-import { TechStackCarousel } from './components/TechStackCarousel';
+import React from 'react';
+import { cn } from '@/lib/utils';
+import { TechMarquee } from './components/TechMarquee';
+
+const PlusIcon = ({ className = '' }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    width={20}
+    height={20}
+    strokeWidth={1}
+    stroke="currentColor"
+    className={cn('text-foreground/30 size-5', className)}
+    aria-hidden="true"
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
+  </svg>
+);
+
+const CornerPlusIcons = () => (
+  <>
+    <PlusIcon className="absolute -top-2.5 -left-2.5" />
+    <PlusIcon className="absolute -top-2.5 -right-2.5" />
+    <PlusIcon className="absolute -bottom-2.5 -left-2.5" />
+    <PlusIcon className="absolute -bottom-2.5 -right-2.5" />
+  </>
+);
+
+interface BentoCardProps {
+  title: string;
+  description: string;
+  className?: string;
+}
+
+const BentoCard = ({ title, description, className }: BentoCardProps) => (
+  <div
+    className={cn(
+      'relative flex min-h-[180px] flex-col justify-between rounded-lg border border-dashed border-border bg-card p-6',
+      className
+    )}
+  >
+    <CornerPlusIcons />
+    <div className="relative z-10 space-y-3">
+      <h3 className="text-xl font-semibold text-foreground">{title}</h3>
+      <p className="text-muted-foreground leading-relaxed">{description}</p>
+    </div>
+  </div>
+);
+
+const cards: BentoCardProps[] = [
+  {
+    title: 'Soluciones a tu medida',
+    description:
+      'Convierto ideas en productos digitales sólidos, pensados para los objetivos reales de tu negocio y preparados para acompañar su crecimiento.',
+  },
+  {
+    title: 'Acompañamiento de principio a fin',
+    description:
+      'Me involucro en cada etapa del proyecto, con comunicación clara y entregas a tiempo, para que tengas total claridad en cada paso del proceso.',
+  },
+  {
+    title: 'Enfoque en resultados',
+    description:
+      'No entrego solo un sitio web: entrego una herramienta que aporta valor, mejora la experiencia de tus clientes y potencia tu marca.',
+  },
+  {
+    title: 'Calidad que perdura',
+    description:
+      'Construyo sobre bases sólidas para que tu producto siga funcionando de forma confiable mucho después del lanzamiento.',
+  },
+  {
+    title: 'Presencia en cada dispositivo',
+    description:
+      'Experiencias que se ven y funcionan de manera impecable en cualquier pantalla, para llegar a tus clientes donde estén.',
+  },
+];
 
 const About = () => {
   return (
-    <section
-      id="sobre-mi"
-      className="py-20 relative"
-    >
+    <section id="sobre-mi" className="py-20">
       <div className="container mx-auto px-6">
-        <div className="max-w-6xl mx-auto">
-          {/* Header */}
-          <div
-            className="text-center mb-16 opacity-0 animate-[fadeIn_0.6s_ease-out_forwards]"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              De la Idea a <span className="text-gradient">Resultados</span>
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              No solo escribo código. Diseño soluciones digitales que hacen crecer tu negocio, automatizan procesos y convierten visitantes en clientes.
+        {/* Intro */}
+        <div className="mb-12 max-w-2xl">
+          <h2 className="section-title mb-4">Tecnología con Propósito</h2>
+          <p className="section-subtitle">
+            No solo escribo código: diseño soluciones digitales que hacen crecer tu
+            negocio, automatizan procesos y convierten visitantes en clientes.
+          </p>
+        </div>
+
+        {/* Bento grid */}
+        <div className="grid auto-rows-auto grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-6">
+          <BentoCard {...cards[0]} className="lg:col-span-3 lg:row-span-2" />
+          <BentoCard {...cards[1]} className="lg:col-span-2 lg:row-span-2" />
+          <BentoCard {...cards[2]} className="lg:col-span-4" />
+          <BentoCard {...cards[3]} className="lg:col-span-2" />
+          <BentoCard {...cards[4]} className="lg:col-span-2" />
+        </div>
+
+        {/* Tech stack (se mantiene) */}
+        <div className="mt-24">
+          <div className="mb-12 max-w-2xl">
+            <h3 className="section-title mb-4">Dominio Tecnológico</h3>
+            <p className="section-subtitle">
+              Tecnologías y herramientas con las que construyo soluciones robustas,
+              escalables y mantenibles en el tiempo.
             </p>
           </div>
-
-          {/* Main Content */}
-          <div className="grid md:grid-cols-2 gap-12 mb-20 items-start">
-            {/* Left Column: Profile + Benefits */}
-            <div className="space-y-6">
-              <div className="flex justify-center md:justify-start">
-                <ProfileCard />
-              </div>
-              
-              {/* Benefits Grid - Compact 2x3 layout */}
-              <div className="opacity-0 animate-[fadeIn_0.6s_ease-out_0.3s_forwards]">
-                <h4 className="text-sm font-medium text-muted-foreground mb-3 uppercase tracking-wider">¿Qué ofrezco?</h4>
-                <div className="grid grid-cols-2 gap-x-4 gap-y-3">
-                  <div className="flex items-center gap-2">
-                    <TrendingUp className="h-4 w-4 text-primary shrink-0" />
-                    <span className="text-sm">Escalabilidad garantizada</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Clock className="h-4 w-4 text-primary shrink-0" />
-                    <span className="text-sm">Automatización</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Users className="h-4 w-4 text-primary shrink-0" />
-                    <span className="text-sm">UX que convierte</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Rocket className="h-4 w-4 text-primary shrink-0" />
-                    <span className="text-sm">Alto rendimiento</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Smartphone className="h-4 w-4 text-primary shrink-0" />
-                    <span className="text-sm">Diseño responsive</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Shield className="h-4 w-4 text-primary shrink-0" />
-                    <span className="text-sm">Código mantenible</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Column: Text Content */}
-            <div
-              className="space-y-6 opacity-0 animate-[fadeIn_0.6s_ease-out_0.2s_forwards]"
-            >
-              <h3 className="text-2xl font-semibold mb-4">
-                Impulsando Negocios con Tecnología
-              </h3>
-
-              <p className="text-muted-foreground leading-relaxed">
-                Como <strong>desarrollador de software</strong>, he colaborado con startups y empresas establecidas para transformar sus operaciones manualmente intensivas en sistemas digitales eficientes. Mi experiencia abarca desde el diseño de arquitecturas escalables hasta la implementación de interfaces que los usuarios realmente disfrutan usar.
-              </p>
-
-              <p className="text-muted-foreground leading-relaxed">
-                <strong>Mi diferencia:</strong> Combino pensamiento analítico con visión de negocio. No solo construyo lo que me piden; identifico oportunidades de mejora, anticipo problemas de escalabilidad y propongo soluciones que maximizan el retorno de inversión. Trabajo con metodologías ágiles, mantengo código limpio y documentado, y priorizo la comunicación constante para asegurar que cada entrega supere expectativas.
-              </p>
-            </div>
-          </div>
-
-          {/* Value Proposition Cards */}
-          <div
-            className="grid md:grid-cols-3 gap-6 mb-12 opacity-0 animate-[fadeIn_0.6s_ease-out_0.4s_forwards]"
-          >
-            <div className="glass-card p-6 rounded-2xl text-center">
-              <div className="text-4xl font-bold text-primary mb-2">100%</div>
-              <h4 className="font-semibold mb-2">Proyectos Entregados</h4>
-              <p className="text-muted-foreground text-sm">Compromiso total desde la planificación hasta el despliegue.</p>
-            </div>
-
-            <div className="glass-card p-6 rounded-2xl text-center">
-              <div className="text-4xl font-bold text-primary mb-2">&lt;2s</div>
-              <h4 className="font-semibold mb-2">Tiempo de Carga</h4>
-              <p className="text-muted-foreground text-sm">Optimización extrema para mejorar SEO y experiencia de usuario.</p>
-            </div>
-
-            <div className="glass-card p-6 rounded-2xl text-center">
-              <div className="text-4xl font-bold text-primary mb-2">24/7</div>
-              <h4 className="font-semibold mb-2">Sistemas Robustos</h4>
-              <p className="text-muted-foreground text-sm">Infraestructura confiable que trabaja ininterrumpidamente.</p>
-            </div>
-          </div>
-
-          <TechStackCarousel />
+          <TechMarquee />
         </div>
       </div>
     </section>

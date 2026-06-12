@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import { cn } from '@/lib/utils';
 import { scrollToElement } from '@/hooks/use-lenis';
 import gsap from 'gsap';
@@ -10,9 +11,10 @@ interface FlipLinkProps {
   children: string;
   href: string;
   className?: string;
+  ariaLabel: string;
 }
 
-const FlipLink = ({ children, href, className = '' }: FlipLinkProps) => {
+const FlipLink = ({ children, href, className = '', ariaLabel }: FlipLinkProps) => {
   return (
     <a
       href={href}
@@ -22,19 +24,15 @@ const FlipLink = ({ children, href, className = '' }: FlipLinkProps) => {
         "group text-primary relative block overflow-hidden whitespace-nowrap text-5xl font-black uppercase sm:text-7xl md:text-8xl lg:text-[7.5rem]",
         className
       )}
-      style={{
-        lineHeight: 0.75,
-      }}
-      aria-label={`Visitar mi ${children}`}
+      style={{ lineHeight: 0.75 }}
+      aria-label={ariaLabel}
     >
       <div className="flex">
         {children.split("").map((letter, i) => (
           <span
             key={i}
             className="inline-block transition-transform duration-300 ease-in-out group-hover:-translate-y-[110%]"
-            style={{
-              transitionDelay: `${i * 25}ms`,
-            }}
+            style={{ transitionDelay: `${i * 25}ms` }}
           >
             {letter}
           </span>
@@ -45,9 +43,7 @@ const FlipLink = ({ children, href, className = '' }: FlipLinkProps) => {
           <span
             key={i}
             className="inline-block translate-y-[110%] transition-transform duration-300 ease-in-out group-hover:translate-y-0"
-            style={{
-              transitionDelay: `${i * 25}ms`,
-            }}
+            style={{ transitionDelay: `${i * 25}ms` }}
           >
             {letter}
           </span>
@@ -58,14 +54,13 @@ const FlipLink = ({ children, href, className = '' }: FlipLinkProps) => {
 };
 
 const Footer = () => {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
   const footerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!footerRef.current) return;
-
     const ctx = gsap.context(() => {
-      // Staggered entry animation for the giant social links
       gsap.fromTo(
         '.footer-social-link',
         { opacity: 0, y: 30 },
@@ -83,7 +78,6 @@ const Footer = () => {
         }
       );
     }, footerRef);
-
     return () => ctx.revert();
   }, []);
 
@@ -91,44 +85,53 @@ const Footer = () => {
     scrollToElement(`#${sectionId}`, { offset: -80, duration: 1.5 });
   };
 
+  const socials = [
+    { name: 'Github', href: 'https://github.com/Aisaac2205' },
+    { name: 'Linkedin', href: 'https://www.linkedin.com/in/isaac-sarce%C3%B1o-aa2850374?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app' },
+    { name: 'Instagram', href: 'https://www.instagram.com/_isaac.webp?igsh=d2N4NWV4YTlyNDll&utm_source=qr' },
+    { name: 'Email', href: 'mailto:isaac.flores.dev@gmail.com' },
+  ];
+
   return (
     <footer ref={footerRef} className="py-16 border-t border-border/30 bg-background overflow-hidden">
       <div className="w-full px-6 md:px-12">
         <div className="flex flex-col gap-12 md:gap-16">
-          
-          {/* Main Content Layout - Giant Social Links */}
           <div className="flex flex-col gap-4 py-8 select-none">
-            <FlipLink href="https://github.com/Aisaac2205" className="footer-social-link">Github</FlipLink>
-            <FlipLink href="https://www.linkedin.com/in/isaac-sarce%C3%B1o-aa2850374?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" className="footer-social-link">Linkedin</FlipLink>
-            <FlipLink href="https://www.instagram.com/_isaac.webp?igsh=d2N4NWV4YTlyNDll&utm_source=qr" className="footer-social-link">Instagram</FlipLink>
-            <FlipLink href="mailto:isaac.flores.dev@gmail.com" className="footer-social-link">Email</FlipLink>
+            {socials.map(({ name, href }) => (
+              <FlipLink
+                key={name}
+                href={href}
+                className="footer-social-link"
+                ariaLabel={t('footer.visitAriaLabel', { name })}
+              >
+                {name}
+              </FlipLink>
+            ))}
           </div>
 
-          {/* Footer bottom metadata */}
           <div className="pt-8 border-t border-border/30 flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center space-x-6">
-              <button 
-                onClick={() => scrollToSection('sobre-mi')} 
+              <button
+                onClick={() => scrollToSection('sobre-mi')}
                 className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
               >
-                Sobre mí
+                {t('footer.about')}
               </button>
-              <button 
-                onClick={() => scrollToSection('proyectos')} 
+              <button
+                onClick={() => scrollToSection('proyectos')}
                 className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
               >
-                Proyectos
+                {t('footer.projects')}
               </button>
-              <button 
-                onClick={() => scrollToSection('contacto')} 
+              <button
+                onClick={() => scrollToSection('contacto')}
                 className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
               >
-                Contacto
+                {t('footer.contact')}
               </button>
             </div>
-            
             <p className="text-sm text-muted-foreground text-center md:text-right">
-              © {currentYear} Isaac Sarceño. Todos los derechos reservados.
+              {t('footer.copyright', { year: currentYear })}
             </p>
           </div>
         </div>

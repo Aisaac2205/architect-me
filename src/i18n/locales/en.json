@@ -1,0 +1,154 @@
+{
+  "hero": {
+    "headline": "SOFTWARE ENGINEER",
+    "name": "ISAAC SARCEÑO",
+    "location": "BASED IN GUATEMALA",
+    "services": [
+      "/ ANALYSIS & DESIGN",
+      "/ DEVELOPMENT",
+      "/ ARCHITECTURE"
+    ],
+    "tagline": [
+      "SOFTWARE ENGINEER DEDICATED TO",
+      "DESIGNING AND BUILDING SCALABLE SYSTEMS,",
+      "FOCUSED ON CLEAN CODE AND HIGH PERFORMANCE."
+    ],
+    "cta": "Contact me",
+    "recentWork": {
+      "label": "RECENT WORK",
+      "title": "Code without limits"
+    },
+    "imageAlt": "Project preview",
+    "portraitAlt": "Isaac Sarceño"
+  },
+  "about": {
+    "title": "Technology with Purpose",
+    "subtitle": "I don't just write code: I design digital solutions that grow your business, automate processes, and turn visitors into customers.",
+    "techTitle": "Technical Expertise",
+    "techSubtitle": "Technologies and tools I use to build robust, scalable, and maintainable solutions.",
+    "cards": {
+      "solutions": {
+        "title": "Tailored Solutions",
+        "description": "I transform your vision into a strategic digital presence, designed around your business goals and ready to grow with you."
+      },
+      "partnership": {
+        "title": "End-to-End Partnership",
+        "description": "I'm present at every stage, with direct communication and on-time delivery, so you never lose control or visibility of your project."
+      },
+      "results": {
+        "title": "Results-Driven",
+        "description": "I don't just deliver a website: I deliver an investment that attracts customers, builds trust in your brand, and creates real impact for your business."
+      },
+      "quality": {
+        "title": "Lasting Quality",
+        "description": "Every project is built to last: reliable, stable, and ready to evolve as your business grows and changes."
+      },
+      "devices": {
+        "title": "Available on Every Device",
+        "description": "Your business accessible on any screen — mobile, tablet, or desktop — always with the same polished look and seamless experience."
+      },
+      "speed": {
+        "title": "Speed that Converts",
+        "description": "A slow site loses customers before they even get to know you. I prioritize load speed and search engine visibility so nothing holds back your brand's growth."
+      }
+    }
+  },
+  "projects": {
+    "eyebrow": "Portfolio",
+    "title": "Solutions Portfolio",
+    "prevAriaLabel": "Previous project",
+    "nextAriaLabel": "Next project",
+    "visit": "Visit site",
+    "visitAriaLabel": "Visit the site for {{title}}",
+    "items": {
+      "ecommerce": {
+        "title": "Modern B2B E-commerce",
+        "description": "Online store dedicated to selling soccer jerseys in Guatemala, with order processing directly via the owner's WhatsApp. Offers an agile and intuitive shopping experience with a fully responsive design, optimized to drive business sales."
+      },
+      "saas1": {
+        "title": "Order SaaS & Digital Menu — Urban Design",
+        "description": "Restaurant SaaS with a website and internal order management system. Allows full customization of the landing page, interactive digital menu, and PDF version download. Focused on performance and customer conversion."
+      },
+      "saas2": {
+        "title": "Order SaaS & Digital Menu — Elegant Design",
+        "description": "Restaurant SaaS with a website and internal order management system. Allows full customization of the landing page, interactive digital menu, and PDF version download. Features a premium-tier interface with fluid animations and ultra-fast load times."
+      },
+      "turboauto": {
+        "title": "Turbo Auto - Mechanic Shop & Carwash",
+        "description": "Digital presence for a mechanic shop and carwash located in Quesada, Jutiapa. Clearly presents the business's services, includes a section to redeem exclusive offers, and is designed to attract local customers with a modern and professional look."
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let's build your vision",
+    "subtitle": "I turn complex ideas into efficient, fast web solutions designed to meet your business goals. Fill in the details and let's define the ideal path for your project.",
+    "form": {
+      "heading": "Let's talk about your project",
+      "subheading": "Fill in the details below and I'll get back to you in less than 24 hours.",
+      "projectType": "Project Type",
+      "name": "Your name or Company *",
+      "email": "Email address *",
+      "budget": "Estimated Budget",
+      "message": "Project details or requirements *",
+      "collaboration": "Required Collaboration Model *",
+      "placeholders": {
+        "select": "Select",
+        "name": "e.g. John Smith / Acme Inc.",
+        "email": "example@gmail.com",
+        "message": "Tell me a bit more about the idea, goals, and timeline..."
+      },
+      "projectTypes": {
+        "landing": "Landing Page",
+        "ecommerce": "B2B E-commerce",
+        "system": "Management System",
+        "consulting": "Consulting / Other"
+      },
+      "budgets": {
+        "low": "< $1,000 USD",
+        "medium": "$1,000 - $3,000 USD",
+        "high": "$3,000 - $5,000 USD",
+        "premium": "> $5,000 USD"
+      },
+      "plans": {
+        "creator": {
+          "name": "Interface Design",
+          "features": [
+            "Interactive visual proposal",
+            "Custom interface design",
+            "Project structure and layout",
+            "Ongoing design revisions"
+          ]
+        },
+        "team": {
+          "name": "Website & Platform Development",
+          "features": [
+            "Complete and optimized development",
+            "Performance and load speed",
+            "Feature connections and integrations",
+            "Deployment and go-live"
+          ]
+        },
+        "agency": {
+          "name": "Full Digital Solution",
+          "features": [
+            "From initial idea to launch",
+            "Payment systems and advanced integrations",
+            "Post-launch maintenance support",
+            "Custom administration and control panel"
+          ]
+        }
+      },
+      "recommended": "Recommended",
+      "submitting": "Sending...",
+      "submit": "Send proposal"
+    }
+  },
+  "footer": {
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact",
+    "copyright": "© {{year}} Isaac Sarceño. All rights reserved.",
+    "visitAriaLabel": "Visit my {{name}}"
+  }
+}

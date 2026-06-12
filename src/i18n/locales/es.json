@@ -1,0 +1,154 @@
+{
+  "hero": {
+    "headline": "INGENIERO DE SOFTWARE",
+    "name": "ISAAC SARCEÑO",
+    "location": "BASED IN GUATEMALA",
+    "services": [
+      "/ ANÁLISIS & DISEÑO",
+      "/ DESARROLLO",
+      "/ ARQUITECTURA"
+    ],
+    "tagline": [
+      "INGENIERO DE SOFTWARE DEDICADO AL",
+      "DISEÑO Y DESARROLLO DE SISTEMAS ESCALABLES,",
+      "CON ENFOQUE EN CÓDIGO LIMPIO Y ALTO RENDIMIENTO."
+    ],
+    "cta": "Contactar",
+    "recentWork": {
+      "label": "TRABAJO RECIENTE",
+      "title": "Código sin límites"
+    },
+    "imageAlt": "Project preview",
+    "portraitAlt": "Isaac Sarceño"
+  },
+  "about": {
+    "title": "Tecnología con Propósito",
+    "subtitle": "No solo escribo código: diseño soluciones digitales que hacen crecer tu negocio, automatizan procesos y convierten visitantes en clientes.",
+    "techTitle": "Dominio Tecnológico",
+    "techSubtitle": "Tecnologías y herramientas con las que construyo soluciones robustas, escalables y mantenibles en el tiempo.",
+    "cards": {
+      "solutions": {
+        "title": "Soluciones a tu medida",
+        "description": "Transformo tu visión en una presencia digital estratégica, diseñada para los objetivos reales de tu negocio y preparada para crecer con él."
+      },
+      "partnership": {
+        "title": "Acompañamiento de principio a fin",
+        "description": "Estoy presente en cada etapa, con comunicación directa y cumplimiento puntual, para que en ningún momento pierdas el control o la visibilidad de tu proyecto."
+      },
+      "results": {
+        "title": "Enfoque en resultados",
+        "description": "No entrego solo un sitio web: entrego una inversión que atrae clientes, refuerza la confianza en tu marca y genera impacto real en tu negocio."
+      },
+      "quality": {
+        "title": "Calidad que perdura",
+        "description": "Cada proyecto está pensado para durar: confiable, estable y listo para evolucionar a medida que tu negocio crece y cambia."
+      },
+      "devices": {
+        "title": "Presencia en cada dispositivo",
+        "description": "Tu negocio disponible en cualquier pantalla — móvil, tablet o computadora — siempre con la misma imagen cuidada y experiencia fluida."
+      },
+      "speed": {
+        "title": "Velocidad que convierte",
+        "description": "Un sitio lento pierde clientes antes de que lleguen a conocerte. Priorizo la rapidez de carga y la visibilidad en buscadores para que nada frene el crecimiento de tu marca."
+      }
+    }
+  },
+  "projects": {
+    "eyebrow": "Portfolio",
+    "title": "Portafolio de Soluciones",
+    "prevAriaLabel": "Proyecto anterior",
+    "nextAriaLabel": "Proyecto siguiente",
+    "visit": "Visitar sitio",
+    "visitAriaLabel": "Visitar el sitio de {{title}}",
+    "items": {
+      "ecommerce": {
+        "title": "E-commerce B2B Moderno",
+        "description": "Tienda en línea dedicada a la venta de camisolas de fútbol en Guatemala, con procesamiento de pedidos directo por WhatsApp del propietario. Ofrece una experiencia de compra ágil e intuitiva y un diseño totalmente adaptable, optimizado para impulsar las ventas del negocio."
+      },
+      "saas1": {
+        "title": "SaaS de Pedidos & Menú Digital Diseño Urbano",
+        "description": "SaaS gastronómico con página web y sistema interno de pedidos para restaurantes. Permite la personalización total de la landing page, menú digital interactivo y descarga de versión PDF. Enfocado en el rendimiento y la conversión de clientes."
+      },
+      "saas2": {
+        "title": "SaaS de Pedidos & Menú Digital Diseño Elegante",
+        "description": "SaaS gastronómico con página web y sistema interno de pedidos para restaurantes. Permite la personalización total de la landing page, menú digital interactivo y descarga de versión PDF. Presenta una interfaz de categoría premium con animaciones fluidas y carga ultra rápida."
+      },
+      "turboauto": {
+        "title": "Turbo Auto - Taller y Carwash",
+        "description": "Presencia digital para un taller mecánico y carwash ubicado en Quesada, Jutiapa. Presenta los servicios del negocio de forma clara, incluye una sección para canjear ofertas exclusivas y está diseñada para atraer clientes locales con un aspecto moderno y profesional."
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "Contacto",
+    "title": "Construyamos tu visión",
+    "subtitle": "Transformo ideas complejas en soluciones web eficientes, rápidas y diseñadas para alcanzar los objetivos de tu negocio. Completa la información y definamos la ruta ideal para tu proyecto.",
+    "form": {
+      "heading": "Hablemos de tu proyecto",
+      "subheading": "Completa los detalles a continuación y te responderé en menos de 24 horas.",
+      "projectType": "Tipo de Proyecto",
+      "name": "Tu nombre o Empresa *",
+      "email": "Correo electrónico *",
+      "budget": "Presupuesto Estimado",
+      "message": "Detalles o requerimientos del proyecto *",
+      "collaboration": "Modelo de Colaboración Requerido *",
+      "placeholders": {
+        "select": "Seleccionar",
+        "name": "Ej. Juan Pérez / Acme Inc.",
+        "email": "example@gmail.com",
+        "message": "Cuéntame un poco más sobre la idea, objetivos y tiempos..."
+      },
+      "projectTypes": {
+        "landing": "Landing Page",
+        "ecommerce": "E-commerce B2B",
+        "system": "Sistema de Gestión",
+        "consulting": "Consultoría / Otro"
+      },
+      "budgets": {
+        "low": "< $1,000 USD",
+        "medium": "$1,000 - $3,000 USD",
+        "high": "$3,000 - $5,000 USD",
+        "premium": "> $5,000 USD"
+      },
+      "plans": {
+        "creator": {
+          "name": "Diseño de Interfaz",
+          "features": [
+            "Propuesta visual interactiva",
+            "Diseño de interfaz personalizado",
+            "Estructura y distribución del proyecto",
+            "Revisiones constantes del diseño"
+          ]
+        },
+        "team": {
+          "name": "Desarrollo de Sitios y Plataformas",
+          "features": [
+            "Desarrollo completo y optimizado",
+            "Rendimiento y velocidad de carga",
+            "Conexión de funciones e integraciones",
+            "Despliegue y puesta en marcha en línea"
+          ]
+        },
+        "agency": {
+          "name": "Solución Digital Completa",
+          "features": [
+            "Desde la idea inicial hasta el lanzamiento",
+            "Sistemas de cobro e integración avanzada",
+            "Soporte de mantenimiento pos-lanzamiento",
+            "Panel de administración y control a medida"
+          ]
+        }
+      },
+      "recommended": "Recomendado",
+      "submitting": "Enviando...",
+      "submit": "Enviar propuesta"
+    }
+  },
+  "footer": {
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "contact": "Contacto",
+    "copyright": "© {{year}} Isaac Sarceño. Todos los derechos reservados.",
+    "visitAriaLabel": "Visitar mi {{name}}"
+  }
+}

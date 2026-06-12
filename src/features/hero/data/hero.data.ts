@@ -16,14 +16,18 @@ export interface HeroData {
 
 export const heroData: HeroData = {
     year: '2,026',
-    headline: 'SOFTWARE ENGINEER',
+    headline: 'INGENIERO DE SOFTWARE',
     name: 'ISAAC SARCEÑO',
-    services: ['/ ARQUITECTURA DE SOFTWARE', '/ DESARROLLO DE SOFTWARE', '/ BACKEND & APIS'],
+    services: [
+        '/ ANÁLISIS & DISEÑO',
+        '/ DESARROLLO',
+        '/ ARQUITECTURA',
+    ],
     location: 'BASED IN GUATEMALA',
     tagline: [
-        'SOY DESARROLLADOR DE SOFTWARE,',
-        'CREO EXPERIENCIAS WEB MEMORABLES CON',
-        'ARQUITECTURA LIMPIA Y TECNOLOGÍA MODERNA',
+        'INGENIERO DE SOFTWARE DEDICADO AL',
+        'DISEÑO Y DESARROLLO DE SISTEMAS ESCALABLES,',
+        'CON ENFOQUE EN CÓDIGO LIMPIO Y ALTO RENDIMIENTO.',
     ],
     cta: { label: 'Contactar', target: '#contacto' },
     recentWork: {

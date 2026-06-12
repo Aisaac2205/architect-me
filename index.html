@@ -11,6 +11,7 @@
     content="desarrollador full stack, react, typescript, node.js, desarrollo web, portfolio, guatemala" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#0a0a0a" />
+  <meta name="color-scheme" content="dark" />
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="canonical" href="https://portafolioisaac-production.up.railway.app/" />
@@ -54,42 +55,12 @@
 </head>
 
 <body>
-  <div id="root">
-    <!-- Critical Hero HTML for Instant LCP -->
-    <div class="hero-critical">
-      <div class="hero-content-critical">
-        <div style="margin-bottom: 1.5rem;">
-          <span
-            style="display: inline-block; padding: 0.5rem 1rem; border-radius: 9999px; background-color: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); color: #fafafa; font-size: 0.875rem; font-weight: 500;">
-            ¡Hola! Soy Full Stack Developer
-          </span>
-        </div>
-
-        <h1 class="hero-title-critical">
-          Isaac Sarceño
-        </h1>
-
-        <p class="hero-subtitle-critical">
-          Especializado en <span style="color: #fafafa; font-weight: 600;">tecnologías modernas</span> y desarrollo web
-          completo.
-          Creo experiencias web excepcionales que combinan diseño elegante con funcionalidad robusta.
-        </p>
-
-        <!-- Placeholder for buttons to prevent layout shift, but not interactive yet -->
-        <div style="height: 3rem;"></div>
-      </div>
-    </div>
-  </div>
+  <div id="root"></div>
 
   <style>
-    @keyframes initial-spin {
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
     /* Critical CSS for instant rendering - prevents FOUC */
     html {
+      color-scheme: dark;
       background-color: #0a0a0a;
     }
 
@@ -100,60 +71,8 @@
       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     }
 
-    /* Prevent layout shift for hero */
     #root {
       min-height: 100vh;
-    }
-
-    /* Critical Hero styles to prevent LCP delay */
-    .hero-critical {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-content-critical {
-      text-align: center;
-      max-width: 56rem;
-      margin: 0 auto;
-      padding: 5rem 1.5rem;
-      position: relative;
-      z-index: 10;
-    }
-
-    .hero-title-critical {
-      font-size: 3rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-      line-height: 1.1;
-      background: linear-gradient(135deg, #fafafa, #a3a3a3);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    @media (min-width: 768px) {
-      .hero-title-critical {
-        font-size: 4.5rem;
-      }
-    }
-
-    .hero-subtitle-critical {
-      font-size: 1.25rem;
-      color: #a1a1aa;
-      margin-bottom: 2rem;
-      max-width: 48rem;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    @media (min-width: 768px) {
-      .hero-subtitle-critical {
-        font-size: 1.5rem;
-      }
     }
   </style>
 

@@ -5,16 +5,16 @@ export const HeroHeadline = () => {
 
     return (
         <div className="relative">
-            <p className="text-sm absolute -top-4 left-6 sm:left-20 font-medium tracking-wider">
+            <p className="hero-headline-year opacity-0 text-sm absolute -top-4 left-20 font-medium tracking-wider">
                 {year}
             </p>
-            <h1 className="z-20 text-primary relative font-bold text-center break-words tracking-tighter text-6xl sm:text-7xl sm:tracking-[-7px] md:text-9xl md:tracking-[-14px] xl:text-[10rem] xl:tracking-[-1rem]">
+            <h1 className="hero-headline-title opacity-0 z-20 text-primary relative font-bold text-center tracking-[-3px] sm:tracking-[-7px] text-5xl sm:text-7xl md:text-9xl xl:tracking-[-1rem] md:tracking-[-14px] xl:text-[11rem]">
                 {headline}
             </h1>
-            <p className="hidden xl:block absolute z-30 -bottom-10 right-12 text-xl font-thin tracking-[4px]">
+            <p className="hero-headline-name opacity-0 text-4xl hidden xl:block absolute -bottom-12 xl:right-2 2xl:-right-32 font-thin tracking-[6px]">
                 {name}
             </p>
-            <p className="xl:hidden absolute z-30 -bottom-9 left-6 sm:left-24 text-2xl sm:text-4xl font-thin tracking-[4px] sm:tracking-[6px]">
+            <p className="hero-headline-name opacity-0 text-lg sm:text-2xl md:text-4xl absolute xl:hidden -bottom-10 sm:-bottom-14 md:-bottom-16 left-12 sm:left-16 md:left-20 font-thin tracking-[6px]">
                 {name}
             </p>
         </div>

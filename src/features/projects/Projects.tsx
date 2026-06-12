@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
@@ -15,6 +16,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const Projects = () => {
+  const { t } = useTranslation();
   const [carouselApi, setCarouselApi] = useState<CarouselApi>();
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
@@ -85,8 +87,8 @@ const Projects = () => {
       <div className="w-full px-6 md:px-12">
         <div className="mb-8 flex flex-col justify-between gap-6 md:mb-12 md:flex-row md:items-end">
           <div>
-            <p className="projects-header-eyebrow section-eyebrow mb-3">Portfolio</p>
-            <h2 className="projects-header-title section-title max-w-md">Portafolio de Soluciones</h2>
+            <p className="projects-header-eyebrow section-eyebrow mb-3">{t('projects.eyebrow')}</p>
+            <h2 className="projects-header-title section-title max-w-md">{t('projects.title')}</h2>
           </div>
           <div className="projects-header-nav flex shrink-0 items-center gap-2">
             <Button
@@ -95,7 +97,7 @@ const Projects = () => {
               onClick={() => carouselApi?.scrollPrev()}
               disabled={!canScrollPrev}
               className="disabled:pointer-events-auto"
-              aria-label="Proyecto anterior"
+              aria-label={t('projects.prevAriaLabel')}
             >
               <ArrowLeft className="size-5" />
             </Button>
@@ -105,7 +107,7 @@ const Projects = () => {
               onClick={() => carouselApi?.scrollNext()}
               disabled={!canScrollNext}
               className="disabled:pointer-events-auto"
-              aria-label="Proyecto siguiente"
+              aria-label={t('projects.nextAriaLabel')}
             >
               <ArrowRight className="size-5" />
             </Button>

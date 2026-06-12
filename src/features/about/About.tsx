@@ -56,32 +56,32 @@ const cards: BentoCardProps[] = [
   {
     title: 'Soluciones a tu medida',
     description:
-      'Convierto ideas en productos digitales sólidos, pensados para los objetivos reales de tu negocio y preparados para acompañar su crecimiento.',
+      'Transformo tu visión en una presencia digital estratégica, diseñada para los objetivos reales de tu negocio y preparada para crecer con él.',
   },
   {
     title: 'Acompañamiento de principio a fin',
     description:
-      'Me involucro en cada etapa del proyecto, con comunicación clara y entregas a tiempo, para que tengas total claridad en cada paso del proceso.',
+      'Estoy presente en cada etapa, con comunicación directa y cumplimiento puntual, para que en ningún momento pierdas el control o la visibilidad de tu proyecto.',
   },
   {
     title: 'Enfoque en resultados',
     description:
-      'No entrego solo un sitio web: entrego una herramienta que aporta valor, mejora la experiencia de tus clientes y potencia tu marca.',
+      'No entrego solo un sitio web: entrego una inversión que atrae clientes, refuerza la confianza en tu marca y genera impacto real en tu negocio.',
   },
   {
     title: 'Calidad que perdura',
     description:
-      'Construyo sobre bases sólidas para que tu producto siga funcionando de forma confiable mucho después del lanzamiento.',
+      'Cada proyecto está pensado para durar: confiable, estable y listo para evolucionar a medida que tu negocio crece y cambia.',
   },
   {
     title: 'Presencia en cada dispositivo',
     description:
-      'Experiencias que se ven y funcionan de manera impecable en cualquier pantalla, para llegar a tus clientes donde estén.',
+      'Tu negocio disponible en cualquier pantalla — móvil, tablet o computadora — siempre con la misma imagen cuidada y experiencia fluida.',
   },
   {
-    title: 'Rendimiento y velocidad',
+    title: 'Velocidad que convierte',
     description:
-      'Optimizo cada línea de código y recurso para garantizar tiempos de carga ultrarrápidos y un excelente posicionamiento en buscadores (SEO).',
+      'Un sitio lento pierde clientes antes de que lleguen a conocerte. Priorizo la rapidez de carga y la visibilidad en buscadores para que nada frene el crecimiento de tu marca.',
   },
 ];
 

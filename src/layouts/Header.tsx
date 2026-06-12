@@ -29,19 +29,19 @@ const Header = () => {
           <div className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection('sobre-mi')}
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Sobre mí
             </button>
             <button
               onClick={() => scrollToSection('proyectos')}
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Proyectos
             </button>
             <button
               onClick={() => scrollToSection('contacto')}
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Contacto
             </button>

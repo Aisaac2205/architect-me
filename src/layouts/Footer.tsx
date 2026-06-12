@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             {/* Información personal */}
             <div className="space-y-4">
-              <h3 className="text-xl font-bold text-gradient">Isaac Sarceño</h3>
+              <h3 className="text-xl font-bold uppercase tracking-tight text-primary">Isaac Sarceño</h3>
               <p className="text-muted-foreground">
                 Desarrollador Full Stack especializado en crear experiencias web excepcionales 
                 con tecnologías modernas y desarrollo web completo.
@@ -19,7 +19,7 @@ const Footer = () => {
 
             {/* Enlaces rápidos */}
             <div className="space-y-4">
-              <h4 className="font-semibold">Enlaces rápidos</h4>
+              <h4 className="section-eyebrow">Enlaces rápidos</h4>
               <nav className="space-y-2">
                 <a 
                   href="#sobre-mi" 
@@ -44,7 +44,7 @@ const Footer = () => {
 
             {/* Redes sociales */}
             <div className="space-y-4">
-              <h4 className="font-semibold">Conecta conmigo</h4>
+              <h4 className="section-eyebrow">Conecta conmigo</h4>
               <div className="flex gap-4">
                 <a
                   href="https://github.com/Aisaac2205"

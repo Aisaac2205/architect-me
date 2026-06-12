@@ -2,60 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Isaac Sarceño Portfolio Design System - Dark Theme with Purple Accents */
+/* Isaac Sarceño Portfolio Design System - Dark Neutral Monochrome Theme */
 
 @layer base {
   :root {
-    /* Base dark background */
-    --background: 240 10% 4%;
+    /* Base dark background (neutral monochrome) */
+    --background: 0 0% 4%;
     --foreground: 0 0% 95%;
 
     /* Card styling with subtle contrast */
-    --card: 240 8% 6%;
+    --card: 0 0% 7%;
     --card-foreground: 0 0% 95%;
 
     /* Popover styling */
-    --popover: 240 8% 6%;
+    --popover: 0 0% 7%;
     --popover-foreground: 0 0% 95%;
 
-    /* Primary purple theme */
-    --primary: 258 90% 66%;
-    --primary-foreground: 0 0% 100%;
-    --primary-glow: 258 90% 76%;
+    /* Primary: white on dark — drives headings and solid buttons */
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --primary-glow: 0 0% 80%;
 
-    /* Secondary grays */
-    --secondary: 240 5% 15%;
+    /* Secondary grays (Hero-04 panel) */
+    --secondary: 0 0% 14%;
     --secondary-foreground: 0 0% 90%;
 
     /* Muted elements */
-    --muted: 240 5% 12%;
-    --muted-foreground: 240 5% 65%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 60%;
 
-    /* Accent colors */
-    --accent: 258 90% 66%;
-    --accent-foreground: 0 0% 100%;
+    /* Accent colors (neutral, no longer purple) */
+    --accent: 0 0% 16%;
+    --accent-foreground: 0 0% 95%;
 
-    /* Destructive colors */
+    /* Destructive colors (kept red — semantic error state) */
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
     /* Borders and inputs */
-    --border: 240 5% 18%;
-    --input: 240 5% 15%;
-    --ring: 258 90% 66%;
+    --border: 0 0% 18%;
+    --input: 0 0% 14%;
+    --ring: 0 0% 70%;
 
     /* Design system tokens */
     --radius: 0.75rem;
 
-    /* Custom gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(240 8% 6%));
-    --gradient-card: linear-gradient(145deg, hsl(240 8% 7%), hsl(240 5% 5%));
+    /* Custom gradients (white -> gray) */
+    --gradient-primary: linear-gradient(135deg, hsl(0 0% 98%), hsl(0 0% 70%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 4%), hsl(0 0% 7%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 8%), hsl(0 0% 5%));
 
-    /* Shadows with purple glow */
+    /* Shadows with neutral glow */
     --shadow-primary: 0 10px 30px -10px hsl(var(--primary) / 0.3);
     --shadow-card: 0 4px 20px -2px hsl(0 0% 0% / 0.3);
-    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.2);
+    --shadow-glow: 0 0 40px hsl(0 0% 90% / 0.12);
 
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -141,6 +141,31 @@
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  /* Hero-consistent typographic system — shared vocabulary for all features */
+  .section-eyebrow {
+    @apply text-sm font-medium text-muted-foreground;
+  }
+
+  .section-title {
+    @apply font-bold uppercase tracking-tighter text-primary text-5xl md:text-7xl;
+  }
+
+  .section-subtitle {
+    @apply text-base md:text-lg text-muted-foreground;
+  }
+
+  .flat-panel {
+    @apply bg-secondary border border-border;
+  }
+
+  .tag-chip {
+    @apply px-2 py-1 bg-background border border-border text-xs font-medium text-secondary-foreground;
+  }
+
+  .media-mono {
+    @apply grayscale transition-[filter] duration-500 group-hover:grayscale-0;
   }
 }
 

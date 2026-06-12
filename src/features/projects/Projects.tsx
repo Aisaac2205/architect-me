@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
@@ -9,11 +9,16 @@ import {
 } from '@/components/ui/carousel';
 import { projects } from './data/projects.data';
 import { ProjectCard } from './components/ProjectCard';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Projects = () => {
   const [carouselApi, setCarouselApi] = useState<CarouselApi>();
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!carouselApi) return;
@@ -30,15 +35,60 @@ const Projects = () => {
     };
   }, [carouselApi]);
 
+  useEffect(() => {
+    if (!sectionRef.current) return;
+
+    const ctx = gsap.context(() => {
+      // 1. Header elements entrance
+      gsap.fromTo(
+        ['.projects-header-eyebrow', '.projects-header-title', '.projects-header-nav'],
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          stagger: 0.1,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 85%',
+            toggleActions: 'play none none none',
+          },
+        }
+      );
+
+      // 2. Carousel items entrance
+      gsap.fromTo(
+        '.projects-carousel-item',
+        { opacity: 0, y: 50, scale: 0.97 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.8,
+          stagger: 0.1,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: '.projects-carousel-track',
+            start: 'top 80%',
+            toggleActions: 'play none none none',
+          },
+        }
+      );
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section id="proyectos" className="py-20">
-      <div className="container mx-auto px-6">
+    <section ref={sectionRef} id="proyectos" className="py-20">
+      <div className="w-full px-6 md:px-12">
         <div className="mb-8 flex flex-col justify-between gap-6 md:mb-12 md:flex-row md:items-end">
           <div>
-            <p className="section-eyebrow mb-3">Portfolio</p>
-            <h2 className="section-title max-w-md">Portafolio de Soluciones</h2>
+            <p className="projects-header-eyebrow section-eyebrow mb-3">Portfolio</p>
+            <h2 className="projects-header-title section-title max-w-md">Portafolio de Soluciones</h2>
           </div>
-          <div className="flex shrink-0 items-center gap-2">
+          <div className="projects-header-nav flex shrink-0 items-center gap-2">
             <Button
               size="icon"
               variant="outline"
@@ -63,19 +113,20 @@ const Projects = () => {
         </div>
       </div>
 
-      <div className="w-full">
+      <div className="projects-carousel-track w-full">
         <Carousel
           setApi={setCarouselApi}
           opts={{
+            align: 'start',
             breakpoints: {
-              '(max-width: 768px)': { dragFree: true },
+              '(max-width: 768px)': { align: 'center' },
             },
           }}
-          className="relative left-[-1rem]"
+          className="relative left-0 md:left-[-1rem]"
         >
-          <CarouselContent className="-mr-4 ml-8 2xl:ml-[max(8rem,calc(50vw-700px+1rem))] 2xl:mr-[max(0rem,calc(50vw-700px-1rem))]">
+          <CarouselContent className="ml-0 md:pl-12">
             {projects.map((project) => (
-              <CarouselItem key={project.id} className="pl-4 md:max-w-[452px]">
+              <CarouselItem key={project.id} className="projects-carousel-item px-3 md:pl-4 md:pr-0 basis-full md:basis-auto md:max-w-[452px] flex">
                 <ProjectCard project={project} />
               </CarouselItem>
             ))}

@@ -3,7 +3,7 @@ import { Project } from '../types/project.types';
 export const projects: Project[] = [
     {
         id: 1,
-        title: "E-commerce Moderno",
+        title: "E-commerce B2B Moderno",
         description: "Página web dedicada a la venta de camisolas de fútbol en Guatemala, procesamiento de pedidos mediante WhatsApp del Dueño. Diseño adaptable y optimizado para ventas.",
         image: "/assets/Mock-Ecomerce.webp",
         tags: ["React", "Node.js", "Vite", "TypeScript", "Tailwind CSS", "PostgreSQL", "NestJS", "Railway"],
@@ -11,16 +11,16 @@ export const projects: Project[] = [
     },
     {
         id: 2,
-        title: "Sistema de Pedidos Quick-Service",
-        description: "Plataforma de comercio ágil diseñada para restaurantes de alto volumen. Digitaliza el menú y automatiza la toma de órdenes vía WhatsApp, eliminando fricción en el proceso de compra. Enfocado en el rendimiento (Lighthouse 100) y la conversión móvil.",
+        title: "SaaS de Pedidos & Menú Digital Diseño Urbano",
+        description: "SaaS gastronómico con página web y sistema interno de pedidos para restaurantes. Permite la personalización total de la landing page, menú digital interactivo y descarga de versión PDF. Enfocado en el rendimiento y la conversión de clientes.",
         image: "/assets/Mock-Landing-Demo-1.webp",
         tags: ["React", "Astro", "TypeScript", "Tailwind CSS", "PostgreSQL", "Railway"],
         storeUrl: "https://demo1.restaurantegt.com/"
     },
     {
         id: 3,
-        title: "Experiencia Digital Gastronómica",
-        description: "Interfaz inmersiva desarrollada para restaurantes de categoría premium. Integra cabeceras de video dinámicas (Video-Header) y galerías de alta definición sin sacrificar velocidad de carga. Una arquitectura pensada para potenciar la identidad de marca del cliente.",
+        title: "SaaS de Pedidos & Menú Digital Diseño Elegante",
+        description: "SaaS gastronómico con página web y sistema interno de pedidos para restaurantes. Permite la personalización total de la landing page, menú digital interactivo y descarga de versión PDF. Presenta una interfaz de categoría premium con animaciones fluidas y carga ultra rápida.",
         image: "/assets/Mock-Landing-Demo-2.webp",
         tags: ["React", "Astro", "Tailwind CSS", "Motion", "UX/UI"],
         storeUrl: "https://demo2.restaurantegt.com/"

@@ -1,7 +1,10 @@
+import { useTranslation } from 'react-i18next';
 import { heroData } from '../data/hero.data';
 
 export const HeroServices = () => {
-    const { services, portrait } = heroData;
+    const { t } = useTranslation();
+    const { portrait } = heroData;
+    const services = t('hero.services', { returnObjects: true }) as string[];
 
     return (
         <div className="grid relative">
@@ -15,25 +18,24 @@ export const HeroServices = () => {
                     <div className="hero-services-portrait opacity-0 absolute hidden md:flex left-1/2 -top-16 w-72 overflow-hidden bg-secondary">
                         <img
                             src={portrait.url}
-                            alt={portrait.alt}
+                            alt={t('hero.portraitAlt')}
                             className="h-[28rem] w-64 object-cover object-top grayscale"
                         />
                         <div className="text-left p-2 rotate-180 [writing-mode:vertical-rl] text-xs font-medium tracking-widest flex-1 flex items-center justify-center">
-                            {portrait.caption}
+                            {t('hero.location')}
                         </div>
                     </div>
                 </div>
             </div>
-            
-            {/* Mobile portrait */}
+
             <div className="hero-services-portrait opacity-0 flex md:hidden w-full overflow-hidden bg-secondary mt-20">
                 <img
                     src={portrait.url}
-                    alt={portrait.alt}
+                    alt={t('hero.portraitAlt')}
                     className="h-[25rem] flex-1 object-cover object-top grayscale"
                 />
                 <div className="text-left p-2 rotate-180 [writing-mode:vertical-rl] text-xs font-medium tracking-widest w-8 flex-shrink-0 flex items-center justify-center">
-                    {portrait.caption}
+                    {t('hero.location')}
                 </div>
             </div>
         </div>

@@ -1,9 +1,14 @@
+import { useTranslation } from 'react-i18next';
 import { ArrowDownRight } from 'lucide-react';
 import { scrollToElement } from '@/hooks/use-lenis';
 import { heroData } from '../data/hero.data';
 
 export const HeroRecentWork = () => {
+    const { t } = useTranslation();
     const { thumbnails, recentWork } = heroData;
+    const recentWorkLabel = t('hero.recentWork.label');
+    const recentWorkTitle = t('hero.recentWork.title');
+    const imageAlt = t('hero.imageAlt');
 
     return (
         <div className="flex flex-col md:flex-row mt-20 md:mt-14 items-start md:items-end justify-between gap-12 md:gap-0">
@@ -17,7 +22,7 @@ export const HeroRecentWork = () => {
                         >
                             <img
                                 src={thumb.url}
-                                alt={thumb.alt}
+                                alt={imageAlt}
                                 className="w-full h-full object-cover"
                             />
                         </div>
@@ -29,18 +34,17 @@ export const HeroRecentWork = () => {
                     type="button"
                     onClick={() => scrollToElement(recentWork.target)}
                     className="hero-recent-work-btn text-left md:text-right group w-full"
-                    aria-label={`${recentWork.label}: ${recentWork.title}`}
+                    aria-label={`${recentWorkLabel}: ${recentWorkTitle}`}
                 >
                     <div className="flex items-center md:justify-end gap-2">
                         <span className="text-lg font-medium tracking-wider">
-                            {recentWork.label}
+                            {recentWorkLabel}
                         </span>
                         <ArrowDownRight className="size-6 transition-transform group-hover:translate-x-1 group-hover:translate-y-1" />
                     </div>
-
                     <div className="mt-3 md:text-right">
                         <h2 className="text-4xl sm:text-5xl uppercase tracking-[-2px] sm:tracking-[-4px]">
-                            {recentWork.title}
+                            {recentWorkTitle}
                         </h2>
                     </div>
                 </button>

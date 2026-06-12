@@ -1,10 +1,13 @@
 import { Fragment } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { scrollToElement } from '@/hooks/use-lenis';
 import { heroData } from '../data/hero.data';
 
 export const HeroIntro = () => {
-    const { tagline, cta } = heroData;
+    const { t } = useTranslation();
+    const { cta } = heroData;
+    const tagline = t('hero.tagline', { returnObjects: true }) as string[];
 
     return (
         <div className="hero-intro opacity-0">
@@ -20,7 +23,7 @@ export const HeroIntro = () => {
             </div>
             <div className="flex justify-center pt-6">
                 <Button size="lg" onClick={() => scrollToElement(cta.target)}>
-                    {cta.label}
+                    {t('hero.cta')}
                 </Button>
             </div>
         </div>

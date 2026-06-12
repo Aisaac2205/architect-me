@@ -4,7 +4,7 @@ export const projects: Project[] = [
     {
         id: 1,
         title: "E-commerce B2B Moderno",
-        description: "Página web dedicada a la venta de camisolas de fútbol en Guatemala, procesamiento de pedidos mediante WhatsApp del Dueño. Diseño adaptable y optimizado para ventas.",
+        description: "Tienda en línea dedicada a la venta de camisolas de fútbol en Guatemala, con procesamiento de pedidos directo por WhatsApp del propietario. Ofrece una experiencia de compra ágil e intuitiva y un diseño totalmente adaptable, optimizado para impulsar las ventas del negocio.",
         image: "/assets/Mock-Ecomerce.webp",
         tags: ["React", "Node.js", "Vite", "TypeScript", "Tailwind CSS", "PostgreSQL", "NestJS", "Railway"],
         storeUrl: "https://www.lacasadelbalompie.com/"
@@ -28,7 +28,7 @@ export const projects: Project[] = [
     {
         id: 4,
         title: "Turbo Auto - Taller y Carwash",
-        description: "Página web informativa sobre servicios de taller mecánico y carwash ubicado en Quesada, Jutiapa. Incluye información de servicios, sección de canjear ofertas y más. Diseño moderno y funcional.",
+        description: "Presencia digital para un taller mecánico y carwash ubicado en Quesada, Jutiapa. Presenta los servicios del negocio de forma clara, incluye una sección para canjear ofertas exclusivas y está diseñada para atraer clientes locales con un aspecto moderno y profesional.",
         image: "/assets/Mock-Landing-Turbo-Auto.webp",
         tags: ["React", "Node.js", "Vite", "TypeScript", "Tailwind CSS"],
         storeUrl: "https://turboautogt.com/"

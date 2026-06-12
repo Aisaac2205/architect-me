@@ -1,22 +1,31 @@
 import { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
-import { FORMSPREE_CONFIG, getFormspreeEndpoint } from '@/config/formspree';
+import { getFormspreeEndpoint } from '@/config/formspree';
 
 export const useContactForm = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
-        subject: '',
+        projectType: 'landing',
+        budget: 'medium',
+        planType: 'Team',
         message: ''
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
     const { toast } = useToast();
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        setFormData({
-            ...formData,
+        setFormData(prev => ({
+            ...prev,
             [e.target.name]: e.target.value
-        });
+        }));
+    };
+
+    const handleValueChange = (name: string, value: string) => {
+        setFormData(prev => ({
+            ...prev,
+            [name]: value
+        }));
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -57,6 +66,42 @@ export const useContactForm = () => {
             return;
         }
 
+        // Mapeos legibles para el envío
+        const projectTypes: Record<string, string> = {
+            landing: "Landing Page",
+            ecommerce: "E-commerce B2B",
+            system: "Sistema de Gestión",
+            consulting: "Consultoría / Otro"
+        };
+
+        const budgetRanges: Record<string, string> = {
+            low: "Menos de $1,000 USD",
+            medium: "$1,000 - $3,000 USD",
+            high: "$3,000 - $5,000 USD",
+            premium: "Más de $5,000 USD"
+        };
+
+        const planTypes: Record<string, string> = {
+            Creator: "Diseño de Interfaz (Creator)",
+            Team: "Desarrollo de Sitios y Plataformas (Team)",
+            Agency: "Solución Digital Completa (Agency)"
+        };
+
+        const displayProjectType = projectTypes[formData.projectType] || formData.projectType;
+        const displayBudget = budgetRanges[formData.budget] || formData.budget;
+        const displayPlanType = planTypes[formData.planType] || formData.planType;
+
+        const emailMessage = `
+Nombre: ${formData.name}
+Email: ${formData.email}
+Tipo de Proyecto: ${displayProjectType}
+Presupuesto Estimado: ${displayBudget}
+Modelo de Colaboración: ${displayPlanType}
+
+Mensaje:
+${formData.message}
+        `.trim();
+
         try {
             // Usar Formspree
             const response = await fetch(getFormspreeEndpoint(), {
@@ -67,10 +112,13 @@ export const useContactForm = () => {
                 body: JSON.stringify({
                     name: formData.name,
                     email: formData.email,
-                    subject: formData.subject || FORMSPREE_CONFIG.settings.subject,
+                    projectType: displayProjectType,
+                    budget: displayBudget,
+                    planType: displayPlanType,
                     message: formData.message,
+                    fullMessage: emailMessage,
                     _replyto: formData.email,
-                    _subject: `Nuevo mensaje de ${formData.name} - ${formData.subject || 'Contacto desde portfolio'}`,
+                    _subject: `Nuevo contacto de ${formData.name} - Presupuesto: ${displayBudget}`,
                 }),
             });
 
@@ -84,7 +132,9 @@ export const useContactForm = () => {
                 setFormData({
                     name: '',
                     email: '',
-                    subject: '',
+                    projectType: 'webapp',
+                    budget: 'medium',
+                    planType: 'Team',
                     message: ''
                 });
             } else {
@@ -95,9 +145,9 @@ export const useContactForm = () => {
             console.error('Error al enviar email:', error);
 
             // Fallback: usar mailto si Formspree falla
-            const mailtoLink = `mailto:isaac.flores.dev@gmail.com?subject=${encodeURIComponent(formData.subject || 'Contacto desde portfolio')}&body=${encodeURIComponent(
-                `Nombre: ${formData.name}\nEmail: ${formData.email}\n\nMensaje:\n${formData.message}`
-            )}`;
+            const mailtoLink = `mailto:isaac.flores.dev@gmail.com?subject=${encodeURIComponent(
+                `Contacto desde portfolio - ${displayProjectType}`
+            )}&body=${encodeURIComponent(emailMessage)}`;
 
             window.location.href = mailtoLink;
 
@@ -113,6 +163,7 @@ export const useContactForm = () => {
     return {
         formData,
         handleChange,
+        handleValueChange,
         handleSubmit,
         isSubmitting
     };

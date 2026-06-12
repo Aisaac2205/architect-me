@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import { cn } from '@/lib/utils';
 import { TechMarquee } from './components/TechMarquee';
 import gsap from 'gsap';
@@ -52,42 +53,19 @@ const BentoCard = ({ title, description, className }: BentoCardProps) => (
   </div>
 );
 
-const cards: BentoCardProps[] = [
-  {
-    title: 'Soluciones a tu medida',
-    description:
-      'Transformo tu visión en una presencia digital estratégica, diseñada para los objetivos reales de tu negocio y preparada para crecer con él.',
-  },
-  {
-    title: 'Acompañamiento de principio a fin',
-    description:
-      'Estoy presente en cada etapa, con comunicación directa y cumplimiento puntual, para que en ningún momento pierdas el control o la visibilidad de tu proyecto.',
-  },
-  {
-    title: 'Enfoque en resultados',
-    description:
-      'No entrego solo un sitio web: entrego una inversión que atrae clientes, refuerza la confianza en tu marca y genera impacto real en tu negocio.',
-  },
-  {
-    title: 'Calidad que perdura',
-    description:
-      'Cada proyecto está pensado para durar: confiable, estable y listo para evolucionar a medida que tu negocio crece y cambia.',
-  },
-  {
-    title: 'Presencia en cada dispositivo',
-    description:
-      'Tu negocio disponible en cualquier pantalla — móvil, tablet o computadora — siempre con la misma imagen cuidada y experiencia fluida.',
-  },
-  {
-    title: 'Velocidad que convierte',
-    description:
-      'Un sitio lento pierde clientes antes de que lleguen a conocerte. Priorizo la rapidez de carga y la visibilidad en buscadores para que nada frene el crecimiento de tu marca.',
-  },
-];
-
 const About = () => {
+  const { t } = useTranslation();
   const gridRef = useRef<HTMLDivElement>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
+
+  const cards: BentoCardProps[] = [
+    { title: t('about.cards.solutions.title'), description: t('about.cards.solutions.description') },
+    { title: t('about.cards.partnership.title'), description: t('about.cards.partnership.description') },
+    { title: t('about.cards.results.title'), description: t('about.cards.results.description') },
+    { title: t('about.cards.quality.title'), description: t('about.cards.quality.description') },
+    { title: t('about.cards.devices.title'), description: t('about.cards.devices.description') },
+    { title: t('about.cards.speed.title'), description: t('about.cards.speed.description') },
+  ];
 
   useEffect(() => {
     if (!gridRef.current || !sectionRef.current) return;
@@ -162,10 +140,9 @@ const About = () => {
       <div className="w-full px-6 md:px-12">
         {/* Intro */}
         <div className="about-intro-trigger mb-12 max-w-2xl">
-          <h2 className="about-intro-title opacity-0 section-title mb-4">Tecnología con Propósito</h2>
+          <h2 className="about-intro-title opacity-0 section-title mb-4">{t('about.title')}</h2>
           <p className="about-intro-subtitle opacity-0 section-subtitle">
-             No solo escribo código: diseño soluciones digitales que hacen crecer tu
-             negocio, automatizan procesos y convierten visitantes en clientes.
+            {t('about.subtitle')}
           </p>
         </div>
 
@@ -190,10 +167,9 @@ const About = () => {
         {/* Tech stack (se mantiene) */}
         <div>
           <div className="tech-stack-trigger mb-12 max-w-2xl">
-            <h3 className="tech-stack-title opacity-0 section-title mb-4">Dominio Tecnológico</h3>
+            <h3 className="tech-stack-title opacity-0 section-title mb-4">{t('about.techTitle')}</h3>
             <p className="tech-stack-subtitle opacity-0 section-subtitle">
-              Tecnologías y herramientas con las que construyo soluciones robustas,
-              escalables y mantenibles en el tiempo.
+              {t('about.techSubtitle')}
             </p>
           </div>
           <div className="tech-stack-marquee opacity-0">

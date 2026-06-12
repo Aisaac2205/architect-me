@@ -15,9 +15,9 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
             className="group flex flex-col h-full"
         >
             <div className="flex flex-col flex-1">
-                <div className="flex aspect-[3/2] overflow-clip rounded-xl border border-border">
+                <div className="flex aspect-[3/2] overflow-clip rounded-xl border border-border bg-[#d9d9d9]">
                     <div className="flex-1">
-                        <div className="relative h-full w-full origin-bottom transition duration-300 group-hover:scale-105">
+                        <div className="relative h-full w-full origin-bottom transition duration-300 group-hover:scale-[1.02]">
                             <picture>
                                 <source
                                     srcSet={`${project.image.replace('.jpg', '-400w.webp')} 400w`}
@@ -27,7 +27,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
                                 <img
                                     src={project.image}
                                     alt={project.title}
-                                    className="h-full w-full object-cover object-top"
+                                    className="h-full w-full object-contain object-top"
                                     loading="lazy"
                                     decoding="async"
                                 />

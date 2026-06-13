@@ -72,7 +72,7 @@ export const ContactForm: React.FC = () => {
                 value={formData.projectType}
                 onValueChange={(value) => handleValueChange("projectType", value)}
               >
-                <SelectTrigger id="projectType" className="mt-2 w-full bg-secondary/40 border-border">
+                <SelectTrigger id="projectType" className="mt-2 w-full bg-secondary/40 border-border text-base">
                   <SelectValue placeholder={t('contact.form.placeholders.select')} />
                 </SelectTrigger>
                 <SelectContent className="bg-popover border-border text-foreground">
@@ -104,7 +104,7 @@ export const ContactForm: React.FC = () => {
                 value={formData.name}
                 onChange={handleChange}
                 placeholder={t('contact.form.placeholders.name')}
-                className="mt-2 bg-secondary/40 border-border"
+                className="mt-2 bg-secondary/40 border-border text-base"
               />
             </div>
           </div>
@@ -122,7 +122,7 @@ export const ContactForm: React.FC = () => {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder={t('contact.form.placeholders.email')}
-                className="mt-2 bg-secondary/40 border-border"
+                className="mt-2 bg-secondary/40 border-border text-base"
               />
             </div>
 
@@ -134,7 +134,7 @@ export const ContactForm: React.FC = () => {
                 value={formData.budget}
                 onValueChange={(value) => handleValueChange("budget", value)}
               >
-                <SelectTrigger id="budget" className="mt-2 w-full bg-secondary/40 border-border">
+                <SelectTrigger id="budget" className="mt-2 w-full bg-secondary/40 border-border text-base">
                   <SelectValue placeholder={t('contact.form.placeholders.select')} />
                 </SelectTrigger>
                 <SelectContent className="bg-popover border-border text-foreground">
@@ -167,7 +167,7 @@ export const ContactForm: React.FC = () => {
               onChange={handleChange}
               placeholder={t('contact.form.placeholders.message')}
               rows={4}
-              className="mt-2 bg-secondary/40 border-border resize-none"
+              className="mt-2 bg-secondary/40 border-border resize-none text-base"
             />
           </div>
 

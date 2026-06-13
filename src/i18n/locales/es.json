@@ -144,6 +144,10 @@
       "submit": "Enviar propuesta"
     }
   },
+  "seo": {
+    "title": "Isaac Sarceño - Desarrollador Full Stack | Portfolio",
+    "description": "Portfolio de Isaac Sarceño - Desarrollador Full Stack especializado en React, TypeScript, Node.js y tecnologías modernas. Creando experiencias web excepcionales."
+  },
   "footer": {
     "about": "Sobre mí",
     "projects": "Proyectos",

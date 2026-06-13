@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { cn } from '@/lib/utils';
 import { TechMarquee } from './components/TechMarquee';
+import { InfiniteTextMarquee } from './components/InfiniteTextMarquee';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -174,6 +175,7 @@ const About = () => {
           </div>
           <div className="tech-stack-marquee opacity-0">
             <TechMarquee />
+            <InfiniteTextMarquee />
           </div>
         </div>
       </div>

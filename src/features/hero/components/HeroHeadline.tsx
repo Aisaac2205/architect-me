@@ -11,7 +11,7 @@ export const HeroHeadline = () => {
                 {year}
             </p>
             {/* Reference: tracking-[-7px] text-7xl md:text-9xl xl:text-[10rem] */}
-            <h1 className="hero-headline-title opacity-0 z-20 text-primary relative font-bold text-center tracking-[-7px] text-7xl sm:text-7xl md:text-9xl xl:tracking-[-1rem] md:tracking-[-14px] xl:text-[10rem]">
+            <h1 className="hero-headline-title opacity-0 z-20 text-primary relative font-bold text-center tracking-[-3px] sm:tracking-[-7px] text-5xl xs:text-6xl sm:text-7xl md:text-9xl xl:tracking-[-1rem] md:tracking-[-14px] xl:text-[10rem]">
                 {t('hero.headline')}
             </h1>
             {/* xl: right-24 gives 96px breathing room from edge — reference value */}

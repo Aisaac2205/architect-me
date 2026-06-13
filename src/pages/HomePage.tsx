@@ -4,6 +4,7 @@ import { About } from '@/features/about';
 import { Projects } from '@/features/projects';
 import { Contact } from '@/features/contact';
 import { useLenis } from '@/hooks/use-lenis';
+import { SeoHead } from '@/components/SeoHead';
 
 // Simple loading skeleton (kept for reference or other uses if needed)
 const SectionSkeleton = () => (
@@ -29,6 +30,7 @@ const Index = () => {
 
   return (
     <MainLayout>
+      <SeoHead />
       <Hero />
 
       <SectionDivider />

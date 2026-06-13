@@ -1,13 +1,23 @@
 import React from "react";
 import {
   FaReact, FaAws, FaDocker, FaNodeJs, FaGithub,
-  FaLinkedin, FaInstagram, FaGoogle, FaApple, FaJava
+  FaLinkedin, FaInstagram, FaApple
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import {
-  SiNextdotjs, SiVercel, SiRedux, SiTypescript, SiFacebook,
-  SiTailwindcss, SiFigma, SiAngular, SiRailway
+  SiNextdotjs, SiVercel, SiTypescript, SiFacebook,
+  SiTailwindcss, SiFigma, SiAngular
 } from "react-icons/si";
+
+// Custom SVG icon components
+const SvgIcon = ({ src, name, className }: { src: string; name: string; className?: string }) => (
+  <img
+    src={src}
+    alt={name}
+    className={className}
+    style={{ width: '100%', height: '100%', objectFit: 'contain', maxWidth: '1.5rem', maxHeight: '1.5rem' }}
+  />
+);
 
 const iconConfigs = [
   { Icon: FaReact, name: "React", color: "#61DAFB" },
@@ -21,15 +31,15 @@ const iconConfigs = [
   { Icon: FaLinkedin, name: "LinkedIn", color: "#0077B5" },
   { Icon: FaXTwitter, name: "X", color: "#FFFFFF" },
   { Icon: FaInstagram, name: "Instagram", color: "#E1306C" },
-  { Icon: SiRedux, name: "Redux", color: "#764ABC" },
-  { Icon: FaGoogle, name: "Google", color: "#DB4437" },
+  { Icon: ({ className }: React.SVGProps<SVGSVGElement>) => <SvgIcon src="/assets/claudecode-color.svg" name="Claude Code" className={className} />, name: "Claude Code", color: "transparent" },
+  { Icon: FaReact, name: "React", color: "#61DAFB" },
   { Icon: FaApple, name: "Apple", color: "#FFFFFF" },
   { Icon: SiFacebook, name: "Facebook", color: "#1877F2" },
   { Icon: SiTailwindcss, name: "Tailwind CSS", color: "#06B6D4" },
   { Icon: SiFigma, name: "Figma", color: "#F24E1E" },
   { Icon: SiAngular, name: "Angular", color: "#DD0031" },
-  { Icon: FaJava, name: "Java", color: "#007396" },
-  { Icon: SiRailway, name: "Railway", color: "#FFFFFF" },
+  { Icon: ({ className }: React.SVGProps<SVGSVGElement>) => <SvgIcon src="/assets/Java.svg" name="Java" className={className} />, name: "Java", color: "transparent" },
+  { Icon: ({ className }: React.SVGProps<SVGSVGElement>) => <SvgIcon src="/assets/PostgresSQL.svg" name="PostgreSQL" className={className} />, name: "PostgreSQL", color: "transparent" },
 ];
 
 export const OrbitAnimation: React.FC = () => {
@@ -43,7 +53,7 @@ export const OrbitAnimation: React.FC = () => {
       <div className="relative w-[26rem] h-[26rem] flex items-center justify-center scale-75 min-[380px]:scale-90 sm:scale-100 lg:scale-95 xl:scale-110">
         {/* Center Circle */}
         <div className="w-20 h-20 sm:w-22 sm:h-22 rounded-full bg-secondary border border-border shadow-card flex items-center justify-center z-10 transition-all duration-300 hover:border-primary/40 hover:shadow-glow">
-          <FaReact className="w-10 h-10 sm:w-11 sm:h-11 text-[#61DAFB] animate-pulse" />
+          <img src="/assets/google-icon.svg" alt="Google" className="w-10 h-10 sm:w-11 sm:h-11 animate-pulse" style={{ objectFit: 'contain' }} />
         </div>
 
         {/* Generate Orbits */}

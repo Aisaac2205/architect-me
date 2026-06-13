@@ -21,6 +21,7 @@ const TechCircle = ({ tech }: { tech: Tech }) => (
 const MarqueeRow = ({ items, reverse = false }: { items: Tech[]; reverse?: boolean }) => (
     <div
         className={`flex w-max gap-10 animate-scroll ${reverse ? '[animation-direction:reverse]' : ''}`}
+        style={{ willChange: 'transform', transform: 'translateZ(0)' }}
     >
         {[...items, ...items].map((tech, i) => (
             <TechCircle key={`${tech.name}-${i}`} tech={tech} />

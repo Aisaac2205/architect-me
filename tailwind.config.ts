@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate";
 
 export default {
 	darkMode: ["class"],
@@ -116,10 +117,10 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'scroll': 'scroll 40s linear infinite',
-				'scroll-slow': 'scroll-third 60s linear infinite',
+				'scroll': 'scroll 45s linear infinite',
+				'scroll-slow': 'scroll-third 65s linear infinite',
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [tailwindcssAnimate],
 } satisfies Config;

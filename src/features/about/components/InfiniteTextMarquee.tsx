@@ -1,92 +1,119 @@
-import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import React, { useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
 
 type InfiniteTextMarqueeProps = {
-  text?: string;
-  speed?: number;
-  showTooltip?: boolean;
-  tooltipText?: string;
   fontSize?: string;
   hoverColor?: string;
 };
 
 export const InfiniteTextMarquee: React.FC<InfiniteTextMarqueeProps> = ({
-  text = "ARQUITECTURA DE SOFTWARE - CÓDIGO LIMPIO - ALTA PERFORMANCE - ESCALABILIDAD - UX FLUIDA",
-  speed = 25,
-  showTooltip = true,
-  tooltipText = "CONSTRUYENDO EL FUTURO ⚡",
-  fontSize = "text-5xl md:text-7xl",
+  fontSize = "text-4xl md:text-6xl",
   hoverColor = "#3b82f6", // Azul moderno
 }) => {
-  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
-  const [isHovered, setIsHovered] = useState(false);
-  const [rotation, setRotation] = useState(0);
-  const maxRotation = 6;
+  const { t } = useTranslation();
+  const containerRef = useRef<HTMLDivElement>(null);
+  
+  // Obtenemos los arreglos traducidos directamente del locale activo
+  const words = t('about.techKeywords', { returnObjects: true }) as string[] || [];
 
   useEffect(() => {
-    if (!showTooltip) return;
+    let animationFrameId: number;
 
-    const handleMouseMove = (e: MouseEvent) => {
-      setCursorPosition({ x: e.clientX, y: e.clientY });
-      const midpoint = window.innerWidth / 2;
-      const distanceFromMidpoint = Math.abs(e.clientX - midpoint);
-      const rot = (distanceFromMidpoint / midpoint) * maxRotation;
-      setRotation(e.clientX > midpoint ? rot : -rot);
+    const updateWordHighlight = () => {
+      const container = containerRef.current;
+      if (!container) return;
+
+      const rect = container.getBoundingClientRect();
+      const containerCenter = rect.left + rect.width / 2;
+
+      // Obtenemos todas las palabras con la clase "hoverable-text"
+      const wordElements = container.querySelectorAll(".hoverable-text");
+      
+      // Umbral de activación: la distancia al centro en la que se pinta de azul instantáneamente.
+      const threshold = window.innerWidth < 768 ? 90 : 130;
+
+      wordElements.forEach((el) => {
+        const htmlEl = el as HTMLElement;
+        const elRect = htmlEl.getBoundingClientRect();
+        const elCenter = elRect.left + elRect.width / 2;
+        const distance = Math.abs(elCenter - containerCenter);
+
+        // Activación inmediata (de golpe) al cruzar el umbral del centro
+        if (distance < threshold) {
+          htmlEl.setAttribute("data-active", "true");
+        } else {
+          htmlEl.removeAttribute("data-active");
+        }
+      });
+
+      animationFrameId = requestAnimationFrame(updateWordHighlight);
     };
 
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, [showTooltip]);
+    animationFrameId = requestAnimationFrame(updateWordHighlight);
 
-  const repeatedText = Array(4).fill(text).join(" - ") + " -";
+    return () => {
+      cancelAnimationFrame(animationFrameId);
+    };
+  }, []);
+
+  // Renderiza una sola fila completa de elementos
+  const renderRowItems = (keyPrefix: string) => (
+    <span className="flex items-center gap-10">
+      {words.map((word, index) => (
+        <React.Fragment key={`${keyPrefix}-${index}`}>
+          <span className="hoverable-text font-black uppercase tracking-tighter text-white cursor-pointer select-none">
+            {word}
+          </span>
+          {/* Indicador estilizado: una barra diagonal o un punto elegante en lugar del guión */}
+          <span className="text-foreground/25 font-light text-3xl select-none">/</span>
+        </React.Fragment>
+      ))}
+    </span>
+  );
 
   return (
-    <>
-      {showTooltip && (
-        <div
-          className={`following-tooltip fixed z-[99] pointer-events-none transition-opacity duration-300 font-mono text-xs font-bold px-4 py-2 rounded-full border border-border
-            ${isHovered ? "opacity-100 scale-100" : "opacity-0 scale-90"}
-            bg-background text-foreground shadow-lg
-          `}
-          style={{
-            top: `${cursorPosition.y}px`,
-            left: `${cursorPosition.x}px`,
-            transform: `rotateZ(${rotation}deg) translate(-50%, -140%)`,
-          }}
-        >
-          <p>{tooltipText}</p>
+    <div 
+      ref={containerRef}
+      className="marquee-container relative w-full overflow-hidden py-4 bg-transparent mt-6 select-none"
+    >
+      <div 
+        className="flex w-max gap-10 animate-scroll-slow" 
+        style={{ 
+          willChange: "transform", 
+          transform: "translateZ(0)",
+          animationDuration: "var(--marquee-duration)",
+        }}
+      >
+        <div className={`flex items-center gap-10 ${fontSize}`}>
+          {renderRowItems("row1")}
+          {renderRowItems("row2")}
+          {renderRowItems("row3")}
         </div>
-      )}
-
-      <div className="relative w-full overflow-hidden py-12 border-t border-b border-border/30 bg-muted/5 mt-10">
-        <motion.div
-          className="whitespace-nowrap"
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-          animate={{
-            x: [0, -1000],
-          }}
-          transition={{
-            repeat: Infinity,
-            duration: speed,
-            ease: "linear",
-          }}
-        >
-          <span
-            className={`font-black uppercase tracking-tighter m-0 transition-colors duration-300 select-none text-foreground/45 ${fontSize}`}
-          >
-            <span className="hoverable-text">{repeatedText}</span>
-            <style>{`
-              .hoverable-text {
-                transition: color 0.3s ease;
-              }
-              .hoverable-text:hover {
-                color: ${hoverColor};
-              }
-            `}</style>
-          </span>
-        </motion.div>
       </div>
-    </>
+      <style>{`
+        .marquee-container {
+          --marquee-duration: 30s;
+        }
+        @media (min-width: 768px) {
+          .marquee-container {
+            --marquee-duration: 45s;
+          }
+        }
+        .hoverable-text {
+          color: #ffffff;
+          transition: color 0.4s ease-out;
+        }
+        .hoverable-text[data-active="true"] {
+          color: ${hoverColor};
+          transition: none;
+        }
+        .hoverable-text:hover {
+          color: ${hoverColor} !important;
+          transition: none;
+        }
+      `}</style>
+    </div>
   );
 };
+
+export default InfiniteTextMarquee;

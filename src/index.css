@@ -179,11 +179,6 @@
 @layer utilities {
   /* Removed scroll keyframes as they are now in tailwind.config.ts */
 
-  .animate-scroll:hover,
-  .animate-scroll-slow:hover {
-    animation-play-state: paused;
-  }
-
   @keyframes blob {
     0% {
       transform: translate(0px, 0px) scale(1);

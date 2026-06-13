@@ -20,12 +20,19 @@ const TechCircle = ({ tech }: { tech: Tech }) => (
 
 const MarqueeRow = ({ items, reverse = false }: { items: Tech[]; reverse?: boolean }) => (
     <div
-        className={`flex w-max gap-10 animate-scroll ${reverse ? '[animation-direction:reverse]' : ''}`}
+        className={`flex animate-scroll ${reverse ? '[animation-direction:reverse]' : ''}`}
         style={{ willChange: 'transform', transform: 'translateZ(0)' }}
     >
-        {[...items, ...items].map((tech, i) => (
-            <TechCircle key={`${tech.name}-${i}`} tech={tech} />
-        ))}
+        <div className="flex gap-10 pr-10 shrink-0">
+            {items.map((tech, i) => (
+                <TechCircle key={`a-${i}`} tech={tech} />
+            ))}
+        </div>
+        <div className="flex gap-10 pr-10 shrink-0" aria-hidden>
+            {items.map((tech, i) => (
+                <TechCircle key={`b-${i}`} tech={tech} />
+            ))}
+        </div>
     </div>
 );
 

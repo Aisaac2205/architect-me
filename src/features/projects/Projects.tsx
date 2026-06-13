@@ -86,9 +86,9 @@ const Projects = () => {
     <section ref={sectionRef} id="proyectos" className="py-20">
       <div className="w-full px-6 md:px-12">
         <div className="mb-8 flex flex-col justify-between gap-6 md:mb-12 md:flex-row md:items-end">
-          <div>
+          <div className="max-w-2xl">
             <p className="projects-header-eyebrow section-eyebrow mb-3">{t('projects.eyebrow')}</p>
-            <h2 className="projects-header-title section-title max-w-md">{t('projects.title')}</h2>
+            <h2 className="projects-header-title section-title max-w-[20rem] xs:max-w-xs md:max-w-[36rem]">{t('projects.title')}</h2>
           </div>
           <div className="projects-header-nav flex shrink-0 items-center gap-2">
             <Button

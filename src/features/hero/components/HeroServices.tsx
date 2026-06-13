@@ -11,7 +11,7 @@ export const HeroServices = () => {
             {/* Desktop: reference structure — w-full max-w-xl + justify-center */}
             {/* Services text stays on the LEFT of the card; portrait (absolute) sits center-right */}
             <div className="space-y-8 pt-20 flex gap-6 justify-center">
-                <div className="hero-services-card opacity-0 flex gap-6 bg-secondary w-full max-w-xl h-fit p-10 items-end space-y-2">
+                <div className="hero-services-card opacity-0 hidden md:flex gap-6 bg-secondary w-full max-w-xl h-fit p-10 items-end space-y-2">
                     <div className="font-semibold text-base md:text-lg xl:text-xl tracking-wide space-y-1">
                         {services.map((service) => (
                             <div key={service}>{service}</div>
@@ -23,7 +23,7 @@ export const HeroServices = () => {
                             src={portrait.url}
                             alt={t('hero.portraitAlt')}
                             className="h-[28rem] w-64 object-cover object-top grayscale"
-                            fetchPriority="high"
+                            fetchpriority="high"
                             loading="eager"
                         />
                         <div className="text-left p-2 rotate-180 [writing-mode:vertical-rl] text-xs font-medium tracking-widest flex-1 flex items-center justify-center">
@@ -39,7 +39,7 @@ export const HeroServices = () => {
                     src={portrait.url}
                     alt={t('hero.portraitAlt')}
                     className="h-[25rem] flex-1 object-cover object-top grayscale"
-                    fetchPriority="high"
+                    fetchpriority="high"
                     loading="eager"
                 />
                 <div className="text-left p-2 rotate-180 [writing-mode:vertical-rl] text-xs font-medium tracking-widest w-8 flex-shrink-0 flex items-center justify-center">

@@ -23,33 +23,41 @@
   },
   "about": {
     "title": "Technology with Purpose",
-    "subtitle": "I don't just write code: I design digital solutions that grow your business, automate processes, and turn visitors into customers.",
+    "subtitle": "I build digital solutions that grow your business, streamline your operations, and turn visitors into customers.",
     "techTitle": "Technical Expertise",
-    "techSubtitle": "Technologies and tools I use to build robust, scalable, and maintainable solutions. I boost my development workflow by integrating advanced AI tools to accelerate building phases, ensure code quality, and focus on solving complex business logic.",
+    "techSubtitle": "The technologies and tools behind every project I deliver. I integrate AI into my development process to move faster without cutting corners, keeping the focus on what actually matters: your business problem.",
+    "techKeywords": [
+      "ARCHITECTURE",
+      "SCALABILITY",
+      "AUTOMATION",
+      "PERFORMANCE",
+      "CLEAN CODE",
+      "BUSINESS LOGIC"
+    ],
     "cards": {
       "solutions": {
         "title": "Tailored Solutions",
-        "description": "I transform your vision into a strategic digital presence, designed around your business goals and ready to grow with you."
+        "description": "I take your vision and turn it into a digital presence built around your actual goals, ready to grow alongside your business."
       },
       "partnership": {
         "title": "End-to-End Partnership",
-        "description": "I'm present at every stage, with direct communication and on-time delivery, so you never lose control or visibility of your project."
+        "description": "From kickoff to launch, I stay involved, communicate directly, and deliver on time so you always know where your project stands."
       },
       "results": {
         "title": "Results-Driven",
-        "description": "I don't just deliver a website: I deliver an investment that attracts customers, builds trust in your brand, and creates real impact for your business."
+        "description": "The goal is not just a website. It is a business asset that attracts customers, builds trust in your brand, and creates measurable impact."
       },
       "quality": {
         "title": "Lasting Quality",
-        "description": "Every project is built to last: reliable, stable, and ready to evolve as your business grows and changes."
+        "description": "Every project is built to last. Solid, stable, and ready to evolve as your business grows and its needs change."
       },
       "devices": {
         "title": "Available on Every Device",
-        "description": "Your business accessible on any screen — mobile, tablet, or desktop — always with the same polished look and seamless experience."
+        "description": "Your business looks and works great on any screen. Whether it is a phone, tablet, or desktop, the experience stays sharp and consistent."
       },
       "speed": {
         "title": "Speed that Converts",
-        "description": "A slow site loses customers before they even get to know you. I prioritize load speed and search engine visibility so nothing holds back your brand's growth."
+        "description": "A slow site loses customers before they see what you offer. Every project I build is fast by default, optimized for search engines, and designed to make a strong first impression."
       }
     }
   },
@@ -63,26 +71,26 @@
     "items": {
       "ecommerce": {
         "title": "Modern B2B E-commerce",
-        "description": "Online store dedicated to selling soccer jerseys in Guatemala, with order processing directly via the owner's WhatsApp. Offers an agile and intuitive shopping experience with a fully responsive design, optimized to drive business sales."
+        "description": "An online store for soccer jerseys in Guatemala, with orders handled directly via the owner's WhatsApp. Clean, responsive design built to turn visits into real sales."
       },
       "saas1": {
         "title": "Order SaaS & Digital Menu — Urban Design",
-        "description": "Restaurant SaaS with a website and internal order management system. Allows full customization of the landing page, interactive digital menu, and PDF version download. Focused on performance and customer conversion."
+        "description": "A SaaS platform for restaurants with a public website and internal order management. Owners can customize their landing page, publish an interactive menu, and export a PDF version. Built for speed and conversions."
       },
       "saas2": {
         "title": "Order SaaS & Digital Menu — Elegant Design",
-        "description": "Restaurant SaaS with a website and internal order management system. Allows full customization of the landing page, interactive digital menu, and PDF version download. Features a premium-tier interface with fluid animations and ultra-fast load times."
+        "description": "Same platform, different aesthetic. This version targets upscale venues with a refined interface, smooth animations, and load times that compete with native apps."
       },
       "turboauto": {
         "title": "Turbo Auto - Mechanic Shop & Carwash",
-        "description": "Digital presence for a mechanic shop and carwash located in Quesada, Jutiapa. Clearly presents the business's services, includes a section to redeem exclusive offers, and is designed to attract local customers with a modern and professional look."
+        "description": "Digital presence for a mechanic shop and carwash in Quesada, Jutiapa. Showcases their services, includes an exclusive deals section, and pulls in local customers with a clean, professional look."
       }
     }
   },
   "contact": {
     "eyebrow": "Contact",
     "title": "Let's build your vision",
-    "subtitle": "I turn complex ideas into efficient, fast web solutions designed to meet your business goals. Fill in the details and let's define the ideal path for your project.",
+    "subtitle": "I turn complex ideas into fast, efficient web solutions built around your goals. Tell me about your project and we will find the right path forward.",
     "form": {
       "heading": "Let's talk about your project",
       "subheading": "Fill in the details below and I'll get back to you in less than 24 hours.",

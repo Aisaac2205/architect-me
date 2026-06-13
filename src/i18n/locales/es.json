@@ -23,33 +23,41 @@
   },
   "about": {
     "title": "Tecnología con Propósito",
-    "subtitle": "No solo escribo código: diseño soluciones digitales que hacen crecer tu negocio, automatizan procesos y convierten visitantes en clientes.",
+    "subtitle": "Construyo soluciones digitales que hacen crecer tu negocio, eliminan ineficiencias y convierten visitantes en clientes.",
     "techTitle": "Dominio Tecnológico",
-    "techSubtitle": "Tecnologías y herramientas con las que construyo soluciones robustas, escalables y mantenibles en el tiempo. Potencio mi flujo de trabajo integrando herramientas avanzadas de Inteligencia Artificial para acelerar el desarrollo, asegurar la calidad del código y enfocarme en resolver los problemas de negocio más complejos.",
+    "techSubtitle": "Las tecnologías y herramientas detrás de cada proyecto que entrego. Integro IA en mi proceso de desarrollo para avanzar más rápido sin perder calidad, con foco en lo que realmente importa: el problema de negocio.",
+    "techKeywords": [
+      "ARQUITECTURA",
+      "ESCALABILIDAD",
+      "AUTOMATIZACIÓN",
+      "RENDIMIENTO",
+      "CLEAN CODE",
+      "LÓGICA DE NEGOCIO"
+    ],
     "cards": {
       "solutions": {
         "title": "Soluciones a tu medida",
-        "description": "Transformo tu visión en una presencia digital estratégica, diseñada para los objetivos reales de tu negocio y preparada para crecer con él."
+        "description": "Tomo tu visión y la convierto en una presencia digital construida para tus objetivos reales, lista para crecer con tu negocio."
       },
       "partnership": {
         "title": "Acompañamiento de principio a fin",
-        "description": "Estoy presente en cada etapa, con comunicación directa y cumplimiento puntual, para que en ningún momento pierdas el control o la visibilidad de tu proyecto."
+        "description": "Desde el arranque hasta el lanzamiento, me mantengo involucrado, comunico directo y entrego en tiempo para que siempre sepas en qué punto está tu proyecto."
       },
       "results": {
         "title": "Enfoque en resultados",
-        "description": "No entrego solo un sitio web: entrego una inversión que atrae clientes, refuerza la confianza en tu marca y genera impacto real en tu negocio."
+        "description": "El objetivo no es solo un sitio web. Es un activo de negocio que atrae clientes, refuerza tu marca y genera impacto medible."
       },
       "quality": {
         "title": "Calidad que perdura",
-        "description": "Cada proyecto está pensado para durar: confiable, estable y listo para evolucionar a medida que tu negocio crece y cambia."
+        "description": "Cada proyecto está pensado para durar. Sólido, estable y preparado para evolucionar cuando tu negocio lo necesite."
       },
       "devices": {
         "title": "Presencia en cada dispositivo",
-        "description": "Tu negocio disponible en cualquier pantalla — móvil, tablet o computadora — siempre con la misma imagen cuidada y experiencia fluida."
+        "description": "Tu negocio se ve y funciona perfecto en cualquier pantalla. Celular, tablet o computadora, la experiencia siempre está a la altura."
       },
       "speed": {
         "title": "Velocidad que convierte",
-        "description": "Un sitio lento pierde clientes antes de que lleguen a conocerte. Priorizo la rapidez de carga y la visibilidad en buscadores para que nada frene el crecimiento de tu marca."
+        "description": "Un sitio lento pierde clientes antes de que conozcan lo que ofrecés. Cada proyecto que construyo es rápido por defecto, optimizado para buscadores y diseñado para dar una primera impresión que vale."
       }
     }
   },
@@ -63,26 +71,26 @@
     "items": {
       "ecommerce": {
         "title": "E-commerce B2B Moderno",
-        "description": "Tienda en línea dedicada a la venta de camisolas de fútbol en Guatemala, con procesamiento de pedidos directo por WhatsApp del propietario. Ofrece una experiencia de compra ágil e intuitiva y un diseño totalmente adaptable, optimizado para impulsar las ventas del negocio."
+        "description": "Tienda en línea para la venta de camisolas de fútbol en Guatemala, con pedidos gestionados directo por WhatsApp del propietario. Diseño responsivo y limpio, pensado para convertir visitas en ventas reales."
       },
       "saas1": {
         "title": "SaaS de Pedidos & Menú Digital Diseño Urbano",
-        "description": "SaaS gastronómico con página web y sistema interno de pedidos para restaurantes. Permite la personalización total de la landing page, menú digital interactivo y descarga de versión PDF. Enfocado en el rendimiento y la conversión de clientes."
+        "description": "Plataforma SaaS para restaurantes con sitio web y sistema interno de pedidos. Los dueños pueden personalizar su landing page, publicar un menú digital interactivo y exportarlo en PDF. Construida para velocidad y conversión."
       },
       "saas2": {
         "title": "SaaS de Pedidos & Menú Digital Diseño Elegante",
-        "description": "SaaS gastronómico con página web y sistema interno de pedidos para restaurantes. Permite la personalización total de la landing page, menú digital interactivo y descarga de versión PDF. Presenta una interfaz de categoría premium con animaciones fluidas y carga ultra rápida."
+        "description": "La misma plataforma, con una estética diferente. Esta versión apunta a negocios de categoría superior con una interfaz refinada, animaciones fluidas y tiempos de carga que compiten con apps nativas."
       },
       "turboauto": {
         "title": "Turbo Auto - Taller y Carwash",
-        "description": "Presencia digital para un taller mecánico y carwash ubicado en Quesada, Jutiapa. Presenta los servicios del negocio de forma clara, incluye una sección para canjear ofertas exclusivas y está diseñada para atraer clientes locales con un aspecto moderno y profesional."
+        "description": "Presencia digital para un taller mecánico y carwash en Quesada, Jutiapa. Presenta los servicios del negocio, incluye una sección de ofertas exclusivas y atrae clientes locales con una imagen limpia y profesional."
       }
     }
   },
   "contact": {
     "eyebrow": "Contacto",
     "title": "Construyamos tu visión",
-    "subtitle": "Transformo ideas complejas en soluciones web eficientes, rápidas y diseñadas para alcanzar los objetivos de tu negocio. Completa la información y definamos la ruta ideal para tu proyecto.",
+    "subtitle": "Transformo ideas complejas en soluciones web rápidas y eficientes, construidas para los objetivos de tu negocio. Cuéntame sobre tu proyecto y encontraremos el camino adecuado.",
     "form": {
       "heading": "Hablemos de tu proyecto",
       "subheading": "Completa los detalles a continuación y te responderé en menos de 24 horas.",

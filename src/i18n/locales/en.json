@@ -22,8 +22,16 @@
     "portraitAlt": "Isaac Sarceño"
   },
   "about": {
-    "title": "Technology with Purpose",
-    "subtitle": "I build digital solutions that grow your business, streamline your operations, and turn visitors into customers.",
+    "eyebrow": "RESULTS",
+    "headline": "Sites that turn visits into sales.",
+    "headlineAccent": "Your online business can triple its results with the right strategy and development.",
+    "cta": "Let's talk",
+    "stats": {
+      "projects": { "value": "20+", "label": "Projects delivered" },
+      "uptime": { "value": "99.9%", "label": "Uptime guaranteed" },
+      "speed": { "value": "+3x", "label": "Avg. online sales growth" },
+      "response": { "value": "<1.5s", "label": "Load time" }
+    },
     "techTitle": "Technical Expertise",
     "techSubtitle": "The technologies and tools behind every project I deliver. I integrate AI into my development process to move faster without cutting corners, keeping the focus on what actually matters: your business problem.",
     "techKeywords": [
@@ -34,31 +42,9 @@
       "CLEAN CODE",
       "BUSINESS LOGIC"
     ],
-    "cards": {
-      "solutions": {
-        "title": "Tailored Solutions",
-        "description": "I take your vision and turn it into a digital presence built around your actual goals, ready to grow alongside your business."
-      },
-      "partnership": {
-        "title": "End-to-End Partnership",
-        "description": "From kickoff to launch, I stay involved, communicate directly, and deliver on time so you always know where your project stands."
-      },
-      "results": {
-        "title": "Results-Driven",
-        "description": "The goal is not just a website. It is a business asset that attracts customers, builds trust in your brand, and creates measurable impact."
-      },
-      "quality": {
-        "title": "Lasting Quality",
-        "description": "Every project is built to last. Solid, stable, and ready to evolve as your business grows and its needs change."
-      },
-      "devices": {
-        "title": "Available on Every Device",
-        "description": "Your business looks and works great on any screen. Whether it is a phone, tablet, or desktop, the experience stays sharp and consistent."
-      },
-      "speed": {
-        "title": "Speed that Converts",
-        "description": "A slow site loses customers before they see what you offer. Every project I build is fast by default, optimized for search engines, and designed to make a strong first impression."
-      }
+    "chart": {
+      "label": "Online sales growth",
+      "after": "after launch"
     }
   },
   "projects": {

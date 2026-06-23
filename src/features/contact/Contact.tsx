@@ -17,7 +17,7 @@ const Contact: React.FC = () => {
     const ctx = gsap.context(() => {
       // 1. Header elements entrance
       gsap.fromTo(
-        ['.contact-header-eyebrow', '.contact-header-title', '.contact-header-subtitle'],
+        ['.contact-header-title', '.contact-header-subtitle'],
         { opacity: 0, y: 30 },
         {
           opacity: 1,
@@ -79,7 +79,6 @@ const Contact: React.FC = () => {
           {/* Left Column: Heading and Tech Orbit Animation */}
           <div className="lg:col-span-5 flex flex-col justify-between space-y-8">
             <div className="space-y-4">
-              <p className="contact-header-eyebrow opacity-0 section-eyebrow">{t('contact.eyebrow')}</p>
               <h2 className="contact-header-title opacity-0 section-title text-gradient">
                 {t('contact.title')}
               </h2>

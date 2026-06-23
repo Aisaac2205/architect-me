@@ -10,7 +10,7 @@ export const HeroServices = () => {
         <div className="grid relative">
             {/* Desktop: reference structure — w-full max-w-xl + justify-center */}
             {/* Services text stays on the LEFT of the card; portrait (absolute) sits center-right */}
-            <div className="space-y-8 pt-20 flex gap-6 justify-center">
+            <div className="md:space-y-8 md:pt-20 md:flex md:gap-6 md:justify-center">
                 <div className="hero-services-card opacity-0 hidden md:flex gap-6 bg-secondary w-full max-w-xl h-fit p-10 items-end space-y-2">
                     <div className="font-semibold text-base md:text-lg xl:text-xl tracking-wide space-y-1">
                         {services.map((service) => (
@@ -22,7 +22,7 @@ export const HeroServices = () => {
                         <img
                             src={portrait.url}
                             alt={t('hero.portraitAlt')}
-                            className="h-[28rem] w-64 object-cover object-top grayscale"
+                            className="md:h-[18rem] lg:h-[20rem] xl:h-[22rem] 2xl:h-[28rem] w-64 object-cover object-top grayscale"
                             fetchpriority="high"
                             loading="eager"
                         />

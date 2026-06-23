@@ -76,7 +76,7 @@ const Hero = () => {
     }, []);
 
     return (
-        <section ref={heroRef} className="min-h-screen overflow-hidden relative py-20">
+        <section ref={heroRef} className="min-h-screen overflow-hidden relative pt-16 pb-20 md:pt-20">
             <div className="mx-auto max-w-7xl relative z-20 px-6">
                 <HeroHeadline />
                 <HeroServices />

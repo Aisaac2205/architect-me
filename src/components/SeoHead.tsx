@@ -19,9 +19,9 @@ export const SeoHead = () => {
       <meta name="description" content={description} />
       <link rel="canonical" href={canonical} />
 
-      <link rel="alternate" hreflang="es" href={`${BASE_URL}/`} />
-      <link rel="alternate" hreflang="en" href={`${BASE_URL}/en`} />
-      <link rel="alternate" hreflang="x-default" href={`${BASE_URL}/`} />
+      <link rel="alternate" hrefLang="es" href={`${BASE_URL}/`} />
+      <link rel="alternate" hrefLang="en" href={`${BASE_URL}/en`} />
+      <link rel="alternate" hrefLang="x-default" href={`${BASE_URL}/`} />
 
       <meta property="og:url" content={canonical} />
       <meta property="og:title" content={title} />

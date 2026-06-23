@@ -14,7 +14,7 @@ export const HeroHeadline = () => {
                 {year}
             </p>
             {/* Reference: tracking-[-7px] text-7xl md:text-9xl xl:text-[10rem] */}
-            <h1 className="hero-headline-title opacity-0 z-20 text-primary relative font-bold text-center tracking-[-3px] sm:tracking-[-7px] text-6xl xs:text-7xl sm:text-7xl md:text-9xl xl:tracking-[-1rem] md:tracking-[-14px] xl:text-[10rem]">
+            <h1 className="hero-headline-title opacity-0 z-20 text-primary relative font-bold text-center tracking-[-3px] sm:tracking-[-7px] text-6xl xs:text-7xl sm:text-7xl md:text-9xl xl:tracking-[-1rem] md:tracking-[-14px] 2xl:text-[10rem]">
                 {headlineParts.map((part, index) => 
                     part.toLowerCase() === 'software' ? (
                         <span key={index} className="text-[#3b82f6]">{part}</span>

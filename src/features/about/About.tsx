@@ -1,12 +1,7 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { AreaChart, Area, ResponsiveContainer } from 'recharts';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger);
-
-// Chart data — steep upward trend (3x growth narrative)
 const chartData = [
   { month: 'Mes 1', ventas: 50 },
   { month: 'Mes 2', ventas: 90 },
@@ -16,7 +11,6 @@ const chartData = [
   { month: 'Mes 6', ventas: 300 },
 ];
 
-/** Count-up hook — animates from 0 to `end` when `active` becomes true */
 function useCountUp(end: number, duration = 1600, active = false) {
   const [count, setCount] = useState(0);
   useEffect(() => {
@@ -35,169 +29,121 @@ function useCountUp(end: number, duration = 1600, active = false) {
 
 const About = () => {
   const { t } = useTranslation();
-  const sectionRef = useRef<HTMLDivElement>(null);
   const [chartVisible, setChartVisible] = useState(false);
   const multiplier = useCountUp(3, 1600, chartVisible);
 
   useEffect(() => {
-    if (!sectionRef.current) return;
-
-    const ctx = gsap.context(() => {
-      // Left column entrance
-      gsap.fromTo(
-        '.about-left > *',
-        { opacity: 0, y: 30 },
-        {
-          opacity: 1, y: 0, duration: 0.8, stagger: 0.12, ease: 'power2.out',
-          scrollTrigger: {
-            trigger: '.about-left',
-            start: 'top 80%',
-            toggleActions: 'play none none none',
-          },
-        }
-      );
-
-      // Chart panel entrance + trigger count-up
-      gsap.fromTo(
-        '.about-chart-panel',
-        { opacity: 0, x: 30 },
-        {
-          opacity: 1, x: 0, duration: 0.9, ease: 'power2.out',
-          scrollTrigger: {
-            trigger: '.about-chart-panel',
-            start: 'top 80%',
-            toggleActions: 'play none none none',
-            onEnter: () => setChartVisible(true),
-          },
-        }
-      );
-
-
-    }, sectionRef);
-
-    return () => ctx.revert();
+    const timer = setTimeout(() => setChartVisible(true), 400);
+    return () => clearTimeout(timer);
   }, []);
 
+  const stats = [
+    { value: t('about.stats.projects.value'), label: t('about.stats.projects.label') },
+    { value: t('about.stats.uptime.value'),   label: t('about.stats.uptime.label') },
+    { value: t('about.stats.speed.value'),    label: t('about.stats.speed.label') },
+    { value: t('about.stats.response.value'), label: t('about.stats.response.label') },
+  ];
+
   return (
-    <section ref={sectionRef} id="sobre-mi" className="py-20">
-      <div className="w-full px-6 md:px-12">
+    <>
+      <p className="text-xs font-bold uppercase tracking-[0.2em]">01 — {t('footer.about')}</p>
 
-        {/* Two-column layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <hr className="border-none border-t border-current opacity-30" />
 
-          {/* ── Left: Headline + stats ── */}
-          <div className="about-left flex flex-col gap-6">
-            <h2 className="section-title opacity-0">
-              {t('about.headline')}
-            </h2>
-            <p className="section-subtitle opacity-0 max-w-lg">
-              {t('about.headlineAccent')}
-            </p>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center flex-1">
+        {/* Left: headline + stats */}
+        <div className="flex flex-col gap-8">
+          <h2
+            className="font-bold leading-[0.85] uppercase tracking-tight"
+            style={{ fontSize: 'clamp(3rem, 8vw, 10rem)' }}
+          >
+            {t('about.headline')}
+          </h2>
+          <div className="grid grid-cols-2 gap-5">
+            {stats.map((s) => (
+              <div key={s.label} className="space-y-1">
+                <p className="text-3xl md:text-4xl font-bold tracking-tight">{s.value}</p>
+                <p className="text-sm opacity-60">{s.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
 
-            {/* Stats grid */}
-            <div className="grid grid-cols-2 gap-5 pt-2 opacity-0">
+        {/* Right: chart panel */}
+        <div className="rounded-xl border border-current/20 overflow-hidden bg-black/10">
+          <div className="relative w-full h-[220px] sm:h-[360px]">
+            <ResponsiveContainer width="100%" height="100%">
+              <AreaChart data={chartData} margin={{ top: 0, right: 0, left: 0, bottom: 0 }}>
+                <defs>
+                  <linearGradient id="salesGradient" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="5%"  stopColor="currentColor" stopOpacity={0.2} />
+                    <stop offset="95%" stopColor="currentColor" stopOpacity={0} />
+                  </linearGradient>
+                </defs>
+                <Area
+                  type="monotone"
+                  dataKey="ventas"
+                  stroke="currentColor"
+                  strokeWidth={1.5}
+                  fill="url(#salesGradient)"
+                  fillOpacity={1}
+                  dot={false}
+                />
+              </AreaChart>
+            </ResponsiveContainer>
+
+            <div className="hidden sm:flex absolute inset-0 flex-col items-center justify-center text-center pointer-events-none">
+              <p className="text-7xl sm:text-8xl font-extrabold leading-none">
+                +{multiplier}x
+              </p>
+              <p className="text-sm opacity-40 font-mono mt-2">{t('about.stats.speed.label')}</p>
+            </div>
+
+            <div className="hidden sm:flex absolute right-4 top-4 rounded-xl border border-current/20 bg-black/20 backdrop-blur-md p-4 flex-col gap-4">
               {[
-                { value: t('about.stats.projects.value'), label: t('about.stats.projects.label') },
-                { value: t('about.stats.uptime.value'),   label: t('about.stats.uptime.label') },
-                { value: t('about.stats.speed.value'),    label: t('about.stats.speed.label') },
-                { value: t('about.stats.response.value'), label: t('about.stats.response.label') },
+                { value: '20+',   label: t('about.stats.projects.label') },
+                { value: '99.9%', label: t('about.stats.uptime.label') },
+                { value: '<1.5s', label: t('about.stats.response.label') },
               ].map((s) => (
-                <div key={s.label} className="space-y-1">
-                  <p className="text-3xl md:text-4xl font-bold text-foreground tracking-tight">{s.value}</p>
-                  <p className="text-sm text-muted-foreground">{s.label}</p>
+                <div key={s.label}>
+                  <p className="text-lg font-semibold leading-none">{s.value}</p>
+                  <p className="text-[10px] opacity-40 font-mono mt-0.5">{s.label}</p>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* ── Right: RuixenStats-style chart panel ── */}
-          <div className="about-chart-panel opacity-0">
-            <div className="rounded-xl bg-card border border-border/60 overflow-hidden">
-
-              {/* Chart — shorter on mobile (overlays hidden), full height on sm+ */}
-              <div className="relative w-full h-[220px] sm:h-[400px]">
-                <ResponsiveContainer width="100%" height="100%">
-                  <AreaChart data={chartData} margin={{ top: 0, right: 0, left: 0, bottom: 0 }}>
-                    <defs>
-                      <linearGradient id="salesGradient" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="5%"  stopColor="hsl(var(--foreground))" stopOpacity={0.18} />
-                        <stop offset="95%" stopColor="hsl(var(--foreground))" stopOpacity={0} />
-                      </linearGradient>
-                    </defs>
-                    <Area
-                      type="monotone"
-                      dataKey="ventas"
-                      stroke="hsl(var(--foreground))"
-                      strokeWidth={1.5}
-                      fill="url(#salesGradient)"
-                      fillOpacity={1}
-                      dot={false}
-                    />
-                  </AreaChart>
-                </ResponsiveContainer>
-
-                {/* Centered hero overlay — sm+ only */}
-                <div className="hidden sm:flex absolute inset-0 flex-col items-center justify-center text-center pointer-events-none">
-                  <p className="text-7xl sm:text-8xl font-extrabold text-foreground leading-none drop-shadow-lg">
-                    +{multiplier}x
-                  </p>
-                  <p className="text-sm text-foreground/40 font-mono mt-2">
-                    {t('about.stats.speed.label')}
-                  </p>
+          {/* Mobile strip */}
+          <div className="flex sm:hidden border-t border-current/20 divide-x divide-current/20">
+            <div className="flex-1 flex flex-col justify-center px-5 py-4">
+              <p className="text-5xl font-extrabold leading-none">+{multiplier}x</p>
+              <p className="text-[11px] opacity-40 font-mono mt-1.5">{t('about.stats.speed.label')}</p>
+            </div>
+            <div className="flex flex-col divide-y divide-current/20">
+              {[
+                { value: '20+',   label: t('about.stats.projects.label') },
+                { value: '99.9%', label: t('about.stats.uptime.label') },
+                { value: '<1.5s', label: t('about.stats.response.label') },
+              ].map((s) => (
+                <div key={s.label} className="px-4 py-2.5">
+                  <p className="text-base font-semibold leading-none">{s.value}</p>
+                  <p className="text-[10px] opacity-40 font-mono mt-0.5">{s.label}</p>
                 </div>
-
-                {/* Floating side stats — sm+ only */}
-                <div className="hidden sm:flex absolute right-4 top-4 rounded-xl border border-border/50 bg-card/80 backdrop-blur-md p-4 flex-col gap-4 shadow-lg">
-                  {[
-                    { value: '20+',   label: t('about.stats.projects.label') },
-                    { value: '99.9%', label: t('about.stats.uptime.label') },
-                    { value: '<1.5s', label: t('about.stats.response.label') },
-                  ].map((s) => (
-                    <div key={s.label}>
-                      <p className="text-lg font-semibold text-foreground leading-none">{s.value}</p>
-                      <p className="text-[10px] text-foreground/40 font-mono mt-0.5">{s.label}</p>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Bottom corner label — sm+ only */}
-                <div className="hidden sm:block absolute bottom-4 left-5 pointer-events-none">
-                  <p className="text-[10px] font-mono text-foreground/20 uppercase tracking-widest">
-                    {t('about.chart.after')}
-                  </p>
-                </div>
-              </div>
-
-              {/* Mobile-only: 2-column strip below the chart */}
-              <div className="flex sm:hidden border-t border-border/40 divide-x divide-border/40">
-                {/* Left: hero stat */}
-                <div className="flex-1 flex flex-col justify-center px-5 py-4">
-                  <p className="text-5xl font-extrabold text-foreground leading-none">+{multiplier}x</p>
-                  <p className="text-[11px] text-foreground/40 font-mono mt-1.5">{t('about.stats.speed.label')}</p>
-                </div>
-                {/* Right: supporting stats grid */}
-                <div className="flex flex-col divide-y divide-border/40">
-                  {[
-                    { value: '20+',   label: t('about.stats.projects.label') },
-                    { value: '99.9%', label: t('about.stats.uptime.label') },
-                    { value: '<1.5s', label: t('about.stats.response.label') },
-                  ].map((s) => (
-                    <div key={s.label} className="px-4 py-2.5">
-                      <p className="text-base font-semibold text-foreground leading-none">{s.value}</p>
-                      <p className="text-[10px] text-foreground/40 font-mono mt-0.5">{s.label}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
+              ))}
             </div>
           </div>
-
         </div>
       </div>
 
+      <hr className="border-none border-t border-current opacity-30" />
 
-    </section>
+      <p
+        className="mt-auto max-w-[50ch] font-normal leading-relaxed"
+        style={{ fontSize: 'clamp(1rem, 2.5vw, 2rem)' }}
+      >
+        {t('about.headlineAccent')}
+      </p>
+    </>
   );
 };
 

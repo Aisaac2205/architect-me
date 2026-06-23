@@ -17,19 +17,31 @@ const Index = () => {
       <Hero />
 
       <FlowArt>
-        <FlowSection aria-label="About">
+        <FlowSection
+          aria-label="About"
+          style={{ backgroundColor: '#fd5200', color: '#ffffff' }}
+        >
           <About />
         </FlowSection>
 
-        <FlowSection aria-label="Tech Stack">
+        <FlowSection
+          aria-label="Tech Stack"
+          style={{ backgroundColor: '#000000', color: '#ffffff' }}
+        >
           <TechStack />
         </FlowSection>
 
-        <FlowSection aria-label="Projects">
+        <FlowSection
+          aria-label="Projects"
+          style={{ backgroundColor: '#F5F0E8', color: '#000000' }}
+        >
           <Projects />
         </FlowSection>
 
-        <FlowSection aria-label="Contact">
+        <FlowSection
+          aria-label="Contact"
+          style={{ backgroundColor: '#1A3DE8', color: '#ffffff' }}
+        >
           <Contact />
         </FlowSection>
       </FlowArt>

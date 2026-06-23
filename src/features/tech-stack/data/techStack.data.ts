@@ -19,8 +19,7 @@ const PythonIcon = (props: IconProps) =>
         style: { width: '1.2em', height: '1.2em', ...props.style }
     });
 
-
-const ClaudeCodeIcon = (props: IconProps) => 
+const ClaudeCodeIcon = (props: IconProps) =>
     React.createElement('img', {
         src: '/assets/claudecode-color.svg',
         alt: 'Claude Code',

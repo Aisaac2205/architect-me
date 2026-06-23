@@ -46,7 +46,6 @@ export const TechMarquee = () => {
                 <MarqueeRow items={rowTwo} reverse />
             </div>
 
-            {/* Fade overlays */}
             <div className="absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-background to-transparent pointer-events-none" />
             <div className="absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-background to-transparent pointer-events-none" />
         </div>

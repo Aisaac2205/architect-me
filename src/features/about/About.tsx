@@ -1,7 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { TechMarquee } from './components/TechMarquee';
-import { InfiniteTextMarquee } from './components/InfiniteTextMarquee';
 import { AreaChart, Area, ResponsiveContainer } from 'recharts';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -74,19 +72,7 @@ const About = () => {
         }
       );
 
-      // Tech Stack entrance
-      gsap.fromTo(
-        ['.tech-stack-title', '.tech-stack-subtitle', '.tech-stack-marquee'],
-        { opacity: 0, y: 30 },
-        {
-          opacity: 1, y: 0, duration: 0.8, stagger: 0.1, ease: 'power2.out',
-          scrollTrigger: {
-            trigger: '.tech-stack-trigger',
-            start: 'top 85%',
-            toggleActions: 'play none none none',
-          },
-        }
-      );
+
     }, sectionRef);
 
     return () => ctx.revert();
@@ -210,26 +196,7 @@ const About = () => {
         </div>
       </div>
 
-      {/* Separator */}
-      <div className="w-full h-px bg-border/30 relative my-20">
-        <span className="absolute left-6 -top-[9px] text-foreground/20 font-light text-sm font-mono">+</span>
-        <span className="absolute right-6 -top-[9px] text-foreground/20 font-light text-sm font-mono">+</span>
-      </div>
 
-      <div className="w-full px-6 md:px-12">
-        <div>
-          <div className="tech-stack-trigger mb-12 max-w-2xl">
-            <h3 className="tech-stack-title opacity-0 section-title mb-4">{t('about.techTitle')}</h3>
-            <p className="tech-stack-subtitle opacity-0 section-subtitle">
-              {t('about.techSubtitle')}
-            </p>
-          </div>
-          <div className="tech-stack-marquee opacity-0">
-            <TechMarquee />
-            <InfiniteTextMarquee />
-          </div>
-        </div>
-      </div>
     </section>
   );
 };

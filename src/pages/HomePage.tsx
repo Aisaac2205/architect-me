@@ -1,6 +1,7 @@
 import { MainLayout } from '@/layouts';
 import { Hero } from '@/features/hero';
 import { About } from '@/features/about';
+import { TechStack } from '@/features/tech-stack';
 import { Projects } from '@/features/projects';
 import { Contact } from '@/features/contact';
 import { useLenis } from '@/hooks/use-lenis';
@@ -35,6 +36,9 @@ const Index = () => {
 
       <SectionDivider />
       <About />
+
+      <SectionDivider />
+      <TechStack />
 
       <SectionDivider />
       <Projects />

@@ -8,12 +8,11 @@ type InfiniteTextMarqueeProps = {
 
 export const InfiniteTextMarquee: React.FC<InfiniteTextMarqueeProps> = ({
   fontSize = "text-4xl md:text-6xl",
-  hoverColor = "#3b82f6", // Azul moderno
+  hoverColor = "#3b82f6",
 }) => {
   const { t } = useTranslation();
   const containerRef = useRef<HTMLDivElement>(null);
-  
-  // Obtenemos los arreglos traducidos directamente del locale activo
+
   const words = t('about.techKeywords', { returnObjects: true }) as string[] || [];
 
   useEffect(() => {
@@ -25,11 +24,7 @@ export const InfiniteTextMarquee: React.FC<InfiniteTextMarqueeProps> = ({
 
       const rect = container.getBoundingClientRect();
       const containerCenter = rect.left + rect.width / 2;
-
-      // Obtenemos todas las palabras con la clase "hoverable-text"
       const wordElements = container.querySelectorAll(".hoverable-text");
-      
-      // Umbral de activación: la distancia al centro en la que se pinta de azul instantáneamente.
       const threshold = window.innerWidth < 768 ? 90 : 130;
 
       wordElements.forEach((el) => {
@@ -38,7 +33,6 @@ export const InfiniteTextMarquee: React.FC<InfiniteTextMarqueeProps> = ({
         const elCenter = elRect.left + elRect.width / 2;
         const distance = Math.abs(elCenter - containerCenter);
 
-        // Activación inmediata (de golpe) al cruzar el umbral del centro
         if (distance < threshold) {
           htmlEl.setAttribute("data-active", "true");
         } else {
@@ -56,7 +50,6 @@ export const InfiniteTextMarquee: React.FC<InfiniteTextMarqueeProps> = ({
     };
   }, []);
 
-  // Renderiza una sola fila completa de elementos
   const renderRowItems = (keyPrefix: string) => (
     <span className="flex items-center gap-10">
       {words.map((word, index) => (
@@ -64,7 +57,6 @@ export const InfiniteTextMarquee: React.FC<InfiniteTextMarqueeProps> = ({
           <span className="hoverable-text font-black uppercase tracking-tighter text-white cursor-pointer select-none">
             {word}
           </span>
-          {/* Indicador estilizado: una barra diagonal o un punto elegante en lugar del guión */}
           <span className="text-foreground/25 font-light text-3xl select-none">/</span>
         </React.Fragment>
       ))}
@@ -72,14 +64,14 @@ export const InfiniteTextMarquee: React.FC<InfiniteTextMarqueeProps> = ({
   );
 
   return (
-    <div 
+    <div
       ref={containerRef}
       className="marquee-container relative w-full overflow-hidden py-4 bg-transparent mt-6 select-none"
     >
-      <div 
-        className="flex w-max gap-10 animate-scroll-slow" 
-        style={{ 
-          willChange: "transform", 
+      <div
+        className="flex w-max gap-10 animate-scroll-slow"
+        style={{
+          willChange: "transform",
           transform: "translateZ(0)",
           animationDuration: "var(--marquee-duration)",
         }}

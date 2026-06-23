@@ -10,7 +10,7 @@ export const HeroIntro = () => {
     const tagline = t('hero.tagline', { returnObjects: true }) as string[];
 
     return (
-        <div className="hero-intro opacity-0">
+        <div className="hero-intro opacity-0 hidden md:block">
             {/* Reference uses md:mt-40 (160px). Our portrait is h-[28rem] (448px) so we need
                 md:mt-52 (208px) to guarantee 40px clearance under the portrait at all md+ sizes. */}
             <div className="mt-10 lg:mt-16 xl:mt-24 2xl:mt-52">

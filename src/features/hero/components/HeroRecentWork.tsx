@@ -11,7 +11,7 @@ export const HeroRecentWork = () => {
     const imageAlt = t('hero.imageAlt');
 
     return (
-        <div className="flex flex-col md:flex-row mt-20 md:mt-14 items-start md:items-end justify-between gap-12 md:gap-0">
+        <div className="hidden md:flex md:flex-row mt-20 md:mt-14 items-start md:items-end justify-between gap-12 md:gap-0">
             <div className="relative w-60 h-36 mx-auto md:mx-0 mt-12 md:mt-0 order-2 md:order-1">
                 {thumbnails.map((thumb, index) => {
                     const offsets = ['', 'absolute left-6 -top-6', 'absolute left-12 -top-12'];

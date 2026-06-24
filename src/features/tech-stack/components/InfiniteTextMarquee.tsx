@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 
 type InfiniteTextMarqueeProps = {
   fontSize?: string;
@@ -71,9 +72,13 @@ export const InfiniteTextMarquee: React.FC<InfiniteTextMarqueeProps> = ({
   );
 
   return (
-    <div
+    <motion.div
       ref={containerRef}
       className="marquee-container relative w-full overflow-hidden py-4 bg-transparent mt-6 select-none"
+      initial={{ opacity: 0, y: 32 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-60px' }}
+      transition={{ duration: 0.7, ease: 'easeOut' }}
     >
       <div
         className="flex w-max animate-scroll-slow"
@@ -111,7 +116,7 @@ export const InfiniteTextMarquee: React.FC<InfiniteTextMarqueeProps> = ({
           transition: none;
         }
       `}</style>
-    </div>
+    </motion.div>
   );
 };
 

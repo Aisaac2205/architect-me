@@ -13,8 +13,10 @@ export const HeroHeadline = () => {
             <p className="hero-headline-year opacity-0 text-base absolute -top-7 left-20 font-medium tracking-wider">
                 {year}
             </p>
-            {/* Reference: tracking-[-7px] text-7xl md:text-9xl xl:text-[10rem] */}
-            <h1 className="hero-headline-title opacity-0 z-20 text-primary relative font-bold text-center tracking-[-3px] sm:tracking-[-7px] text-6xl xs:text-7xl sm:text-7xl md:text-9xl xl:tracking-[-1rem] md:tracking-[-14px] 2xl:text-[10rem]">
+            <h1
+                className="hero-headline-title opacity-0 z-20 text-primary relative font-bold text-center leading-[0.85] tracking-[-3px] md:tracking-[-8px] xl:tracking-[-14px] 2xl:tracking-[-1rem] whitespace-pre-line"
+                style={{ fontSize: 'clamp(3.5rem, 10vw, 10rem)' }}
+            >
                 {headlineParts.map((part, index) => 
                     part.toLowerCase() === 'software' ? (
                         <span key={index} className="text-[#3b82f6]">{part}</span>

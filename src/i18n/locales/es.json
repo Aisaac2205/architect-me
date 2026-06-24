@@ -27,7 +27,7 @@
     "headlineAccent": "Tu negocio en línea puede triplicar sus resultados con la estrategia y el desarrollo correctos.",
     "cta": "Hablemos",
     "stats": {
-      "projects": { "value": "20+", "label": "Proyectos entregados" },
+      "projects": { "value": "10+", "label": "Proyectos entregados" },
       "uptime": { "value": "99.9%", "label": "Disponibilidad garantizada" },
       "speed": { "value": "+3x", "label": "Ventas en línea promedio" },
       "response": { "value": "<1.5s", "label": "Tiempo de carga" }

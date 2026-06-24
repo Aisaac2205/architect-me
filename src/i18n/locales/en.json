@@ -27,7 +27,7 @@
     "headlineAccent": "Your online business can triple its results with the right strategy and development.",
     "cta": "Let's talk",
     "stats": {
-      "projects": { "value": "20+", "label": "Projects delivered" },
+      "projects": { "value": "10+", "label": "Projects delivered" },
       "uptime": { "value": "99.9%", "label": "Uptime guaranteed" },
       "speed": { "value": "+3x", "label": "Avg. online sales growth" },
       "response": { "value": "<1.5s", "label": "Load time" }

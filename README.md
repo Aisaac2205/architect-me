@@ -7,6 +7,7 @@
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![shadcn/ui](https://img.shields.io/badge/shadcn/ui-000000?style=for-the-badge&logo=radix-ui&logoColor=white)
+![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=black)
 ![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
 
 **[Live Demo](https://isaacsf-dev.vercel.app/)**
@@ -24,10 +25,11 @@
 Professional portfolio showcasing my skills, projects, and experience as a Full Stack Developer. Built with a modern tech stack focusing on performance, accessibility, and exceptional UX.
 
 **Highlights:**
-- Modern, high-performance responsive design
-- Dark/Light mode with persistence
-- Fluid animations powered by Framer Motion
-- Lazy loading with feature-based architecture
+- Modern, high-performance responsive design (mobile-first)
+- Bilingual — English / Spanish via react-i18next
+- Scroll-driven card stacking via GSAP ScrollTrigger (desktop)
+- Fluid micro-animations powered by Framer Motion and GSAP
+- Lenis smooth scrolling
 - Fully functional contact form via EmailJS
 
 ---
@@ -41,16 +43,19 @@ Professional portfolio showcasing my skills, projects, and experience as a Full 
 | TypeScript | 5.8 | Static Typing |
 | Vite | 5.4 | Build Tooling |
 | TailwindCSS | 3.4 | Styling |
-| shadcn/ui | - | Component Library |
+| shadcn/ui | — | Component Library |
 
 ### Libraries
-- **Framer Motion** - Declarative animations
-- **TanStack Query** - Server-state management
-- **React Hook Form + Zod** - Type-safe forms
-- **Lenis** - Smooth scrolling
-- **Sonner / Vaul** - Notifications & dialogs
-- **tsparticles** - Particle effects
-- **EmailJS** - Client-side email
+- **GSAP + ScrollTrigger** — Scroll-driven card stacking (FlowArt)
+- **Framer Motion** — Declarative micro-animations
+- **Lenis** — Smooth scrolling
+- **react-i18next** — Bilingual EN/ES support
+- **Embla Carousel** — Infinite-scroll tech marquee
+- **React Hook Form + Zod** — Type-safe forms
+- **TanStack Query** — Server-state management
+- **EmailJS** — Client-side email
+- **tsparticles** — Particle effects
+- **Sonner** — Toast notifications
 
 ---
 
@@ -60,11 +65,14 @@ Professional portfolio showcasing my skills, projects, and experience as a Full 
 architect-me/
 ├── public/              # Static assets
 ├── src/
-│   ├── components/ui/   # shadcn/ui primitives
+│   ├── components/
+│   │   ├── ui/          # shadcn/ui primitives
+│   │   └── FlowArt/     # Scroll-driven stacking layout
 │   ├── features/        # Feature modules (Hero, About, Projects, Contact)
-│   ├── layouts/         # Layout components
+│   ├── layouts/         # Layout components (Header, Footer, MainLayout)
 │   ├── pages/           # Route pages
 │   ├── hooks/           # Custom hooks
+│   ├── i18n/            # Translations (EN/ES)
 │   ├── lib/             # Utilities
 │   ├── config/          # App configuration
 │   ├── App.tsx          # App entry

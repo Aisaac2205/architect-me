@@ -133,6 +133,14 @@ const NextIcon = (props: IconProps) =>
         style: { color: '#000000', width: '100%', height: '100%' }
     }));
 
+const CloudflareIcon = (props: IconProps) =>
+    React.createElement('img', {
+        src: '/assets/cloudflare (1).svg',
+        alt: 'Cloudflare',
+        className: props.className,
+        style: { width: '1.2em', height: '1.2em', ...props.style }
+    });
+
 const DockerIcon = (props: IconProps) =>
     React.createElement('img', {
         src: '/assets/docker-svgrepo-com.svg',
@@ -179,4 +187,5 @@ export const techStack = [
     { name: 'PostgreSQL', Icon: PostgresSqlIcon, color: '#4169E1', bgColor: 'transparent' },
     { name: 'Express', Icon: ExpressIcon, color: '#ffffff', bgColor: 'transparent' },
     { name: 'Docker', Icon: DockerIcon, color: '#2496ED', bgColor: 'transparent' },
+    { name: 'Cloudflare', Icon: CloudflareIcon, color: '#F38020', bgColor: 'transparent' },
 ];

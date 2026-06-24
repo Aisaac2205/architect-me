@@ -32,7 +32,7 @@ const iconConfigs = [
   { Icon: FaXTwitter, name: "X", color: "#FFFFFF" },
   { Icon: FaInstagram, name: "Instagram", color: "#E1306C" },
   { Icon: ({ className }: React.SVGProps<SVGSVGElement>) => <SvgIcon src="/assets/claudecode-color.svg" name="Claude Code" className={className} />, name: "Claude Code", color: "transparent" },
-  { Icon: FaReact, name: "React", color: "#61DAFB" },
+  { Icon: ({ className }: React.SVGProps<SVGSVGElement>) => <SvgIcon src="/assets/cloudflare (1).svg" name="Cloudflare" className={className} />, name: "Cloudflare", color: "transparent" },
   { Icon: FaApple, name: "Apple", color: "#FFFFFF" },
   { Icon: SiFacebook, name: "Facebook", color: "#1877F2" },
   { Icon: SiTailwindcss, name: "Tailwind CSS", color: "#06B6D4" },

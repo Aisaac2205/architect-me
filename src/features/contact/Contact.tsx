@@ -8,10 +8,6 @@ const Contact: React.FC = () => {
 
   return (
     <>
-      <p className="text-xs font-bold uppercase tracking-[0.2em]">04 — {t('footer.contact')}</p>
-
-      <hr className="border-none border-t border-current opacity-30" />
-
       <div>
         <h2
           className="font-bold leading-[0.85] uppercase tracking-tight"

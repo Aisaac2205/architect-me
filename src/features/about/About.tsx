@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 import { AreaChart, Area, ResponsiveContainer } from 'recharts';
 
 const chartData = [
@@ -46,10 +47,6 @@ const About = () => {
 
   return (
     <>
-      <p className="text-xs font-bold uppercase tracking-[0.2em]">01 — {t('footer.about')}</p>
-
-      <hr className="border-none border-t border-current opacity-30" />
-
       <div className="grid grid-cols-1 lg:grid-cols-[7fr_5fr] gap-6 md:gap-10 lg:gap-16 items-center flex-1">
         {/* Left: headline + stats */}
         <div className="flex flex-col gap-8">
@@ -59,14 +56,27 @@ const About = () => {
           >
             {t('about.headline')}
           </h2>
-          <div className="grid grid-cols-2 gap-3 sm:gap-5">
+          <motion.div
+            className="grid grid-cols-2 gap-3 sm:gap-5"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-60px' }}
+            variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}
+          >
             {stats.map((s) => (
-              <div key={s.label} className="space-y-1">
+              <motion.div
+                key={s.label}
+                className="space-y-1"
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 70, damping: 14 } },
+                }}
+              >
                 <p className="text-3xl md:text-4xl font-bold tracking-tight">{s.value}</p>
                 <p className="text-sm opacity-60">{s.label}</p>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
 
         {/* Right: chart panel */}
@@ -99,43 +109,17 @@ const About = () => {
               <p className="text-sm opacity-40 font-mono mt-2">{t('about.stats.speed.label')}</p>
             </div>
 
-            <div className="hidden sm:flex absolute right-4 top-4 rounded-xl border border-current/20 bg-black/20 backdrop-blur-md p-4 flex-col gap-4">
-              {[
-                { value: '20+',   label: t('about.stats.projects.label') },
-                { value: '99.9%', label: t('about.stats.uptime.label') },
-                { value: '<1.5s', label: t('about.stats.response.label') },
-              ].map((s) => (
-                <div key={s.label}>
-                  <p className="text-lg font-semibold leading-none">{s.value}</p>
-                  <p className="text-[10px] opacity-40 font-mono mt-0.5">{s.label}</p>
-                </div>
-              ))}
-            </div>
           </div>
 
           {/* Mobile strip */}
-          <div className="flex sm:hidden border-t border-current/20 divide-x divide-current/20">
+          <div className="flex sm:hidden border-t border-current/20">
             <div className="flex-1 flex flex-col justify-center px-5 py-4">
               <p className="text-5xl font-extrabold leading-none">+{multiplier}x</p>
               <p className="text-[11px] opacity-40 font-mono mt-1.5">{t('about.stats.speed.label')}</p>
             </div>
-            <div className="flex flex-col divide-y divide-current/20">
-              {[
-                { value: '20+',   label: t('about.stats.projects.label') },
-                { value: '99.9%', label: t('about.stats.uptime.label') },
-                { value: '<1.5s', label: t('about.stats.response.label') },
-              ].map((s) => (
-                <div key={s.label} className="px-4 py-2.5">
-                  <p className="text-base font-semibold leading-none">{s.value}</p>
-                  <p className="text-[10px] opacity-40 font-mono mt-0.5">{s.label}</p>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </div>
-
-      <hr className="border-none border-t border-current opacity-30" />
 
       <p
         className="mt-auto max-w-[50ch] font-normal leading-relaxed"

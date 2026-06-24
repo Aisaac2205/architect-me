@@ -31,7 +31,6 @@ const Projects = () => {
   return (
     <>
       <div className="flex items-center justify-between">
-        <p className="text-xs font-bold uppercase tracking-[0.2em]">03 — {t('footer.projects')}</p>
         <div className="flex shrink-0 items-center gap-2">
           <Button
             size="icon"

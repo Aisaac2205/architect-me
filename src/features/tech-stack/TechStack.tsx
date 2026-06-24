@@ -7,8 +7,6 @@ const TechStack = () => {
 
   return (
     <>
-      <p className="text-xs font-bold uppercase tracking-[0.2em]">02 — {t('footer.about')} / Stack</p>
-
       <hr className="border-none border-t border-current opacity-30" />
 
       <div>

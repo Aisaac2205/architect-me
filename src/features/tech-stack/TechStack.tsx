@@ -14,7 +14,7 @@ const TechStack = () => {
       <div>
         <h2
           className="font-bold leading-[0.85] uppercase tracking-tight"
-          style={{ fontSize: 'clamp(3rem, 8vw, 10rem)' }}
+          style={{ fontSize: 'clamp(2.75rem, 5.5vw, 8rem)' }}
         >
           {t('about.techTitle')}
         </h2>

@@ -48,9 +48,9 @@ export const OrbitAnimation: React.FC = () => {
   const iconsPerOrbit = Math.ceil(iconConfigs.length / orbitCount);
 
   return (
-    <div className="relative w-full h-[28rem] lg:h-full flex items-center justify-center overflow-visible select-none">
+    <div className="relative w-full h-[16rem] sm:h-[22rem] lg:h-full flex items-center justify-center overflow-visible select-none">
       {/* Centered in its column space, using overflow-visible and responsive scaling */}
-      <div className="relative w-[26rem] h-[26rem] flex items-center justify-center scale-75 min-[380px]:scale-90 sm:scale-100 lg:scale-95 xl:scale-110">
+      <div className="relative w-[26rem] h-[26rem] flex items-center justify-center scale-[0.52] min-[380px]:scale-[0.62] sm:scale-75 md:scale-[0.85] lg:scale-95 xl:scale-110">
         {/* Center Circle */}
         <div className="w-20 h-20 sm:w-22 sm:h-22 rounded-full bg-secondary border border-border shadow-card flex items-center justify-center z-10 transition-all duration-300 hover:border-primary/40 hover:shadow-glow">
           <img src="/assets/google-icon.svg" alt="Google" className="w-10 h-10 sm:w-11 sm:h-11 animate-pulse" style={{ objectFit: 'contain' }} />

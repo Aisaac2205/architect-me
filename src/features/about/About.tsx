@@ -50,16 +50,16 @@ const About = () => {
 
       <hr className="border-none border-t border-current opacity-30" />
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center flex-1">
+      <div className="grid grid-cols-1 lg:grid-cols-[7fr_5fr] gap-6 md:gap-10 lg:gap-16 items-center flex-1">
         {/* Left: headline + stats */}
         <div className="flex flex-col gap-8">
           <h2
             className="font-bold leading-[0.85] uppercase tracking-tight"
-            style={{ fontSize: 'clamp(3rem, 8vw, 10rem)' }}
+            style={{ fontSize: 'clamp(2.75rem, 5.5vw, 8rem)' }}
           >
             {t('about.headline')}
           </h2>
-          <div className="grid grid-cols-2 gap-5">
+          <div className="grid grid-cols-2 gap-3 sm:gap-5">
             {stats.map((s) => (
               <div key={s.label} className="space-y-1">
                 <p className="text-3xl md:text-4xl font-bold tracking-tight">{s.value}</p>
@@ -73,7 +73,7 @@ const About = () => {
         <div className="rounded-xl border border-current/20 overflow-hidden bg-black/10">
           <div className="relative w-full h-[220px] sm:h-[360px]">
             <ResponsiveContainer width="100%" height="100%">
-              <AreaChart data={chartData} margin={{ top: 0, right: 0, left: 0, bottom: 0 }}>
+              <AreaChart data={chartData} margin={{ top: 24, right: 0, left: 0, bottom: 0 }}>
                 <defs>
                   <linearGradient id="salesGradient" x1="0" y1="0" x2="0" y2="1">
                     <stop offset="5%"  stopColor="currentColor" stopOpacity={0.2} />

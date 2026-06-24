@@ -4,47 +4,54 @@ import { About } from '@/features/about';
 import { TechStack } from '@/features/tech-stack';
 import { Projects } from '@/features/projects';
 import { Contact } from '@/features/contact';
+import Footer from '@/layouts/Footer';
+import { FlowArt, FlowSection } from '@/components/FlowArt';
 import { useLenis } from '@/hooks/use-lenis';
 import { SeoHead } from '@/components/SeoHead';
 
-// Simple loading skeleton (kept for reference or other uses if needed)
-const SectionSkeleton = () => (
-  <div className="py-20">
-    <div className="container mx-auto px-6">
-      <div className="max-w-4xl mx-auto">
-        <div className="h-12 bg-muted/50 rounded-lg mb-8 animate-pulse" />
-        <div className="h-64 bg-muted/30 rounded-lg animate-pulse" />
-      </div>
-    </div>
-  </div>
-);
-
-const SectionDivider = () => (
-  <div className="w-full h-px bg-border/30 relative">
-    <span className="absolute left-6 -top-[9px] text-foreground/20 font-light text-sm font-mono">+</span>
-    <span className="absolute right-6 -top-[9px] text-foreground/20 font-light text-sm font-mono">+</span>
-  </div>
-);
+const FLOW_STYLE = {
+  backgroundColor: 'hsl(var(--flow-bg))',
+  color: 'hsl(var(--flow-fg))',
+} as const;
 
 const Index = () => {
-  useLenis(); // Inicializar Lenis para scroll suave
+  useLenis();
 
   return (
     <MainLayout>
       <SeoHead />
-      <Hero />
 
-      <SectionDivider />
-      <About />
+      <FlowArt>
+        <FlowSection
+          aria-label="Hero"
+          style={{
+            backgroundColor: 'hsl(var(--background))',
+            color: 'hsl(var(--foreground))',
+          }}
+        >
+          <Hero />
+        </FlowSection>
 
-      <SectionDivider />
-      <TechStack />
+        <FlowSection aria-label="About" style={FLOW_STYLE}>
+          <About />
+        </FlowSection>
 
-      <SectionDivider />
-      <Projects />
+        <FlowSection aria-label="Tech Stack" style={FLOW_STYLE}>
+          <TechStack />
+        </FlowSection>
 
-      <SectionDivider />
-      <Contact />
+        <FlowSection aria-label="Projects" style={FLOW_STYLE}>
+          <Projects />
+        </FlowSection>
+
+        <FlowSection aria-label="Contact" style={FLOW_STYLE}>
+          <Contact />
+        </FlowSection>
+
+        <FlowSection aria-label="Footer" style={FLOW_STYLE}>
+          <Footer />
+        </FlowSection>
+      </FlowArt>
     </MainLayout>
   );
 };

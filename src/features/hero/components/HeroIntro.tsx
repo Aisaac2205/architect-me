@@ -10,10 +10,10 @@ export const HeroIntro = () => {
     const tagline = t('hero.tagline', { returnObjects: true }) as string[];
 
     return (
-        <div className="hero-intro opacity-0">
+        <div className="hero-intro opacity-0 hidden md:block">
             {/* Reference uses md:mt-40 (160px). Our portrait is h-[28rem] (448px) so we need
                 md:mt-52 (208px) to guarantee 40px clearance under the portrait at all md+ sizes. */}
-            <div className="mt-10 lg:mt-16 xl:mt-24 2xl:mt-52">
+            <div className="md:mt-32 lg:mt-40 xl:mt-48 2xl:mt-72">
                 <p className="mx-auto max-w-2xl font-mono text-center text-sm font-medium tracking-wide md:text-base">
                     {tagline.map((line, index) => (
                         <Fragment key={line}>

@@ -16,37 +16,44 @@ export const InfiniteTextMarquee: React.FC<InfiniteTextMarqueeProps> = ({
   const words = t('about.techKeywords', { returnObjects: true }) as string[] || [];
 
   useEffect(() => {
-    let animationFrameId: number;
+    const container = containerRef.current;
+    if (!container) return;
 
-    const updateWordHighlight = () => {
-      const container = containerRef.current;
-      if (!container) return;
+    const threshold = window.innerWidth < 768 ? 90 : 130;
+    let intervalId: ReturnType<typeof setInterval> | null = null;
 
+    const update = () => {
       const rect = container.getBoundingClientRect();
       const containerCenter = rect.left + rect.width / 2;
-      const wordElements = container.querySelectorAll(".hoverable-text");
-      const threshold = window.innerWidth < 768 ? 90 : 130;
+      const wordElements = Array.from(container.querySelectorAll<HTMLElement>('.hoverable-text'));
 
-      wordElements.forEach((el) => {
-        const htmlEl = el as HTMLElement;
-        const elRect = htmlEl.getBoundingClientRect();
-        const elCenter = elRect.left + elRect.width / 2;
-        const distance = Math.abs(elCenter - containerCenter);
-
-        if (distance < threshold) {
-          htmlEl.setAttribute("data-active", "true");
-        } else {
-          htmlEl.removeAttribute("data-active");
-        }
+      const centers = wordElements.map(el => {
+        const r = el.getBoundingClientRect();
+        return r.left + r.width / 2;
       });
 
-      animationFrameId = requestAnimationFrame(updateWordHighlight);
+      wordElements.forEach((el, i) => {
+        if (Math.abs(centers[i] - containerCenter) < threshold) {
+          el.setAttribute('data-active', 'true');
+        } else {
+          el.removeAttribute('data-active');
+        }
+      });
     };
 
-    animationFrameId = requestAnimationFrame(updateWordHighlight);
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        intervalId = setInterval(update, 50);
+      } else {
+        if (intervalId !== null) { clearInterval(intervalId); intervalId = null; }
+      }
+    }, { threshold: 0 });
+
+    observer.observe(container);
 
     return () => {
-      cancelAnimationFrame(animationFrameId);
+      observer.disconnect();
+      if (intervalId !== null) clearInterval(intervalId);
     };
   }, []);
 
@@ -69,17 +76,17 @@ export const InfiniteTextMarquee: React.FC<InfiniteTextMarqueeProps> = ({
       className="marquee-container relative w-full overflow-hidden py-4 bg-transparent mt-6 select-none"
     >
       <div
-        className="flex w-max gap-10 animate-scroll-slow"
+        className="flex w-max animate-scroll-slow"
         style={{
           willChange: "transform",
-          transform: "translateZ(0)",
           animationDuration: "var(--marquee-duration)",
         }}
       >
-        <div className={`flex items-center gap-10 ${fontSize}`}>
+        <div className={`flex items-center gap-10 shrink-0 ${fontSize}`}>
           {renderRowItems("row1")}
+        </div>
+        <div className={`flex items-center gap-10 shrink-0 ${fontSize}`} aria-hidden>
           {renderRowItems("row2")}
-          {renderRowItems("row3")}
         </div>
       </div>
       <style>{`

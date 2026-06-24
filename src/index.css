@@ -57,6 +57,10 @@
     --shadow-card: 0 4px 20px -2px hsl(0 0% 0% / 0.3);
     --shadow-glow: 0 0 40px hsl(0 0% 90% / 0.12);
 
+    /* Flow section tokens — change here to affect all sections globally */
+    --flow-bg: 0 0% 0%;
+    --flow-fg: 0 0% 95%;
+
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);

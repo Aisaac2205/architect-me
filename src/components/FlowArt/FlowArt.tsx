@@ -69,6 +69,7 @@ const FlowArt: React.FC<FlowArtProps> = ({
       if (!containerRef.current || reducedMotion) return;
 
       const isMobile = window.innerWidth < 768;
+      if (isMobile) return;
 
       const sections = Array.from(
         containerRef.current.querySelectorAll<HTMLElement>('[data-flow-section]'),
@@ -84,33 +85,18 @@ const FlowArt: React.FC<FlowArtProps> = ({
         if (!inner) return;
 
         if (i > 0) {
-          if (!isMobile) {
-            gsap.set(inner, { rotation: 30, transformOrigin: 'bottom left' });
-            const tween = gsap.to(inner, {
-              rotation: 0,
-              ease: 'none',
-              scrollTrigger: {
-                trigger: section,
-                start: 'top bottom',
-                end: 'top 25%',
-                scrub: true,
-              },
-            });
-            if (tween.scrollTrigger) triggers.push(tween.scrollTrigger);
-          } else {
-            gsap.set(inner, { rotation: 15, transformOrigin: 'bottom left' });
-            const tween = gsap.to(inner, {
-              rotation: 0,
-              ease: 'none',
-              scrollTrigger: {
-                trigger: section,
-                start: 'top bottom',
-                end: 'top 35%',
-                scrub: true,
-              },
-            });
-            if (tween.scrollTrigger) triggers.push(tween.scrollTrigger);
-          }
+          gsap.set(inner, { rotation: 30, transformOrigin: 'bottom left' });
+          const tween = gsap.to(inner, {
+            rotation: 0,
+            ease: 'none',
+            scrollTrigger: {
+              trigger: section,
+              start: 'top bottom',
+              end: 'top 25%',
+              scrub: true,
+            },
+          });
+          if (tween.scrollTrigger) triggers.push(tween.scrollTrigger);
         }
 
         if (i < sections.length - 1) {

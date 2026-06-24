@@ -33,7 +33,7 @@ const Contact: React.FC = () => {
       <hr className="border-none border-t border-current opacity-30" />
 
       <div className="flex-1 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center">
-        <div className="hidden sm:flex lg:col-span-5 items-center justify-center sm:min-h-[16rem] lg:min-h-[18rem]">
+        <div className="flex lg:col-span-5 items-center justify-center min-h-[16rem] sm:min-h-[16rem] lg:min-h-[18rem]">
           <OrbitAnimation />
         </div>
         <div className="lg:col-span-7">

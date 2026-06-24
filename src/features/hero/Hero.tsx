@@ -59,8 +59,8 @@ const Hero = () => {
     }, []);
 
     return (
-        <div ref={heroRef} className="w-full overflow-hidden relative pt-14 pb-10 md:pt-10 md:pb-10 md:flex md:flex-col md:flex-1 lg:flex-none lg:block">
-            <div className="relative z-20 md:flex md:flex-col md:justify-between md:flex-1 lg:block">
+        <div ref={heroRef} className="w-full overflow-hidden relative pt-14 pb-10 md:pt-10 md:pb-10 md:flex md:flex-col md:flex-1">
+            <div className="relative z-20 md:flex md:flex-col md:justify-between md:flex-1 lg:flex lg:flex-col lg:justify-between lg:flex-1">
                 <HeroHeadline />
                 <HeroServices />
                 <HeroRecentWork />

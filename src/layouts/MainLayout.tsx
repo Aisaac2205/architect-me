@@ -13,7 +13,6 @@ export const MainLayout = ({ children }: MainLayoutProps) => {
             <main id="main-content">
                 {children}
             </main>
-            <Footer />
         </div>
     );
 };

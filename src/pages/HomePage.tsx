@@ -22,13 +22,7 @@ const Index = () => {
       <SeoHead />
 
       <FlowArt>
-        <FlowSection
-          aria-label="Hero"
-          style={{
-            backgroundColor: 'hsl(var(--background))',
-            color: 'hsl(var(--foreground))',
-          }}
-        >
+        <FlowSection aria-label="Hero" style={FLOW_STYLE}>
           <Hero />
         </FlowSection>
 

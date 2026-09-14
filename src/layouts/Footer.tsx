@@ -15,10 +15,10 @@ const FlipLink = ({ children, href, className = '', ariaLabel }: FlipLinkProps) 
     target="_blank"
     rel="noopener noreferrer"
     className={cn(
-      'group relative block overflow-hidden whitespace-nowrap text-6xl font-black uppercase sm:text-7xl md:text-8xl lg:text-[7.5rem]',
+      'group relative block overflow-hidden whitespace-nowrap font-black uppercase select-none py-1',
       className
     )}
-    style={{ lineHeight: 0.75 }}
+    style={{ lineHeight: 0.85, fontSize: 'clamp(2.5rem, 8.5vw, 7.5rem)' }}
     aria-label={ariaLabel}
   >
     <div className="flex">
@@ -63,7 +63,7 @@ const Footer = () => {
 
   return (
     <>
-      <div className="flex flex-col gap-4 py-8 select-none">
+      <div className="flex flex-col gap-3 py-6 select-none">
         {socials.map(({ name, href }) => (
           <FlipLink
             key={name}
@@ -75,23 +75,23 @@ const Footer = () => {
         ))}
       </div>
 
-      <div className="mt-auto border-t border-current/20 pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div className="mt-auto border-t border-current/20 pt-6 sm:pt-8 flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6">
         <div className="flex items-center space-x-6">
           <button
             onClick={() => scrollToSection('sobre-mi')}
-            className="text-sm font-medium opacity-60 hover:opacity-100 transition-opacity"
+            className="min-h-[44px] flex items-center text-sm font-medium opacity-60 hover:opacity-100 transition-opacity"
           >
             {t('footer.about')}
           </button>
           <button
             onClick={() => scrollToSection('proyectos')}
-            className="text-sm font-medium opacity-60 hover:opacity-100 transition-opacity"
+            className="min-h-[44px] flex items-center text-sm font-medium opacity-60 hover:opacity-100 transition-opacity"
           >
             {t('footer.projects')}
           </button>
           <button
             onClick={() => scrollToSection('contacto')}
-            className="text-sm font-medium opacity-60 hover:opacity-100 transition-opacity"
+            className="min-h-[44px] flex items-center text-sm font-medium opacity-60 hover:opacity-100 transition-opacity"
           >
             {t('footer.contact')}
           </button>

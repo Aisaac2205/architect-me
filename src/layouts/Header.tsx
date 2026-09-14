@@ -7,12 +7,12 @@ const LanguageToggle = () => {
   const currentLang = pathname.startsWith('/en') ? 'en' : 'es';
 
   return (
-    <div className="flex items-center gap-2 text-sm font-medium tracking-wider">
+    <div className="flex items-center gap-1 text-sm font-medium tracking-wider">
       <button
         onClick={() => navigate('/')}
-        className={currentLang === 'es'
-          ? 'text-primary'
-          : 'text-muted-foreground hover:text-primary transition-colors'}
+        className={`min-h-[44px] min-w-[36px] px-2 flex items-center justify-center transition-colors ${currentLang === 'es'
+          ? 'text-primary font-bold'
+          : 'text-muted-foreground hover:text-primary'}`}
         aria-label="Cambiar a español"
       >
         ES
@@ -20,9 +20,9 @@ const LanguageToggle = () => {
       <span className="text-border select-none">|</span>
       <button
         onClick={() => navigate('/en')}
-        className={currentLang === 'en'
-          ? 'text-primary'
-          : 'text-muted-foreground hover:text-primary transition-colors'}
+        className={`min-h-[44px] min-w-[36px] px-2 flex items-center justify-center transition-colors ${currentLang === 'en'
+          ? 'text-primary font-bold'
+          : 'text-muted-foreground hover:text-primary'}`}
         aria-label="Switch to English"
       >
         EN
@@ -49,7 +49,7 @@ const Header = () => {
         : 'bg-transparent'
         }`}
     >
-      <nav className="mx-auto max-w-7xl px-6 py-4 flex justify-end">
+      <nav className="mx-auto max-w-7xl px-6 sm:px-8 md:px-12 lg:px-16 py-3 flex justify-end">
         <LanguageToggle />
       </nav>
     </header>

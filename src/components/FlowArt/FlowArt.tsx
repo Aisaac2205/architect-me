@@ -26,16 +26,19 @@ export const FlowSection: React.FC<FlowSectionProps> = ({
     data-flow-section
     aria-label={ariaLabel}
     className={cx('relative min-h-screen w-full overflow-hidden', className)}
+    style={style}
   >
     <div
       data-flow-inner
       className={cx(
-        'flow-art-container relative flex min-h-screen w-full flex-col justify-between gap-6 px-4 sm:px-[4vw] pt-14 sm:pt-[clamp(2rem,8vw,4vw)] pb-20 sm:pb-[4vw]',
+        'flow-art-container relative flex min-h-screen w-full flex-col justify-between px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 pt-20 sm:pt-24 lg:pt-28 pb-16 sm:pb-20 lg:pb-24',
         'will-change-transform',
       )}
       style={{ transformOrigin: 'bottom left', ...style }}
     >
-      {children}
+      <div className="w-full max-w-7xl mx-auto flex flex-col justify-between flex-1 gap-6 sm:gap-8">
+        {children}
+      </div>
     </div>
   </section>
 );

@@ -21,7 +21,7 @@ const GRID_MASK = `
 
 export const HeroGridBackground = () => {
     return (
-        <>
+        <div className="absolute -top-20 -bottom-16 sm:-top-24 sm:-bottom-20 lg:-top-28 lg:-bottom-24 left-1/2 -translate-x-1/2 w-screen pointer-events-none z-0 overflow-hidden">
             <div
                 className="absolute block dark:hidden inset-0 z-0"
                 style={{
@@ -53,6 +53,6 @@ export const HeroGridBackground = () => {
                     WebkitMaskComposite: 'source-in',
                 }}
             />
-        </>
+        </div>
     );
 };

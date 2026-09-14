@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react';
-import { HeroGridBackground } from './components/HeroGridBackground';
 import { HeroHeadline } from './components/HeroHeadline';
 import { HeroServices } from './components/HeroServices';
 import { HeroRecentWork } from './components/HeroRecentWork';
+import { HeroGridBackground } from './components/HeroGridBackground';
 import gsap from 'gsap';
 
 const Hero = () => {
@@ -59,7 +59,7 @@ const Hero = () => {
     }, []);
 
     return (
-        <div ref={heroRef} className="w-full overflow-hidden relative pt-14 pb-10 md:pt-10 md:pb-10 md:flex md:flex-col md:flex-1">
+        <div ref={heroRef} className="w-full relative pt-14 pb-10 md:pt-10 md:pb-10 md:flex md:flex-col md:flex-1">
             <div className="relative z-20 md:flex md:flex-col md:justify-between md:flex-1 lg:flex lg:flex-col lg:justify-between lg:flex-1">
                 <HeroHeadline />
                 <HeroServices />

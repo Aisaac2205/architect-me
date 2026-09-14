@@ -7,11 +7,11 @@ export const HeroServices = () => {
     const services = t('hero.services', { returnObjects: true }) as string[];
 
     return (
-        <div className="grid relative">
+        <div className="grid relative mt-6 sm:mt-8 md:mt-10">
             {/* Desktop: reference structure — w-full max-w-xl + justify-center */}
             {/* Services text stays on the LEFT of the card; portrait (absolute) sits center-right */}
-            <div className="md:space-y-8 md:pt-10 md:flex md:gap-6 md:justify-center">
-                <div className="hero-services-card opacity-0 hidden md:flex gap-6 bg-secondary w-full max-w-xl h-fit p-10 items-end space-y-2">
+            <div className="md:space-y-8 md:pt-6 lg:pt-8 md:flex md:gap-6 md:justify-center">
+                <div className="hero-services-card opacity-0 hidden md:flex gap-6 bg-secondary w-full max-w-xl h-fit p-8 lg:p-10 items-end space-y-2">
                     <div className="font-semibold text-base md:text-lg xl:text-xl tracking-wide space-y-1">
                         {services.map((service) => (
                             <div key={service}>{service}</div>
@@ -22,7 +22,7 @@ export const HeroServices = () => {
                         <img
                             src={portrait.url}
                             alt={t('hero.portraitAlt')}
-                            className="md:h-[18rem] lg:h-[20rem] xl:h-[22rem] 2xl:h-[28rem] w-64 object-cover object-top grayscale"
+                            className="md:h-[17rem] lg:h-[19rem] xl:h-[22rem] 2xl:h-[26rem] w-56 lg:w-64 object-cover object-top grayscale"
                             fetchpriority="high"
                             loading="eager"
                         />
@@ -33,12 +33,12 @@ export const HeroServices = () => {
                 </div>
             </div>
 
-            {/* Mobile portrait — untouched */}
-            <div className="hero-services-portrait opacity-0 flex md:hidden w-full overflow-hidden bg-secondary mt-20">
+            {/* Mobile portrait — scaled with safe margin */}
+            <div className="hero-services-portrait opacity-0 flex md:hidden w-full overflow-hidden bg-secondary mt-8 sm:mt-12 rounded-lg">
                 <img
                     src={portrait.url}
                     alt={t('hero.portraitAlt')}
-                    className="h-[25rem] flex-1 object-cover object-top grayscale"
+                    className="h-[22rem] sm:h-[25rem] flex-1 object-cover object-top grayscale"
                     fetchpriority="high"
                     loading="eager"
                 />

@@ -35,7 +35,7 @@ export const HeroRecentWork = () => {
                 <button
                     type="button"
                     onClick={() => scrollToElement(recentWork.target)}
-                    className="hero-recent-work-btn text-left md:text-right group w-full"
+                    className="hero-recent-work-btn text-left md:text-right group w-full active:scale-[0.98] transition-transform duration-200 cursor-pointer"
                     aria-label={`${recentWorkLabel}: ${recentWorkTitle}`}
                 >
                     <div className="flex items-center md:justify-end gap-2">

@@ -9,13 +9,13 @@ export const HeroHeadline = () => {
     const headlineParts = headline.split(/(SOFTWARE)/i);
 
     return (
-        <div className="relative">
-            <p className="hero-headline-year opacity-0 text-base absolute -top-7 left-20 font-medium tracking-wider">
+        <div className="relative w-full">
+            <p className="hero-headline-year opacity-0 text-xs sm:text-sm md:text-base font-mono font-medium tracking-widest text-muted-foreground/80 absolute -top-5 sm:-top-7 left-1 sm:left-3 md:left-6">
                 {year}
             </p>
             <h1
-                className="hero-headline-title opacity-0 z-20 text-primary relative font-bold text-center leading-[0.85] tracking-[-3px] md:tracking-[-8px] xl:tracking-[-14px] 2xl:tracking-[-1rem] whitespace-pre-line"
-                style={{ fontSize: 'clamp(3.5rem, 10vw, 10rem)' }}
+                className="hero-headline-title opacity-0 z-20 text-primary relative font-bold text-center leading-[0.88] tracking-tight sm:tracking-tighter md:tracking-[-0.03em] whitespace-pre-line text-balance select-none"
+                style={{ fontSize: 'clamp(2.75rem, 8.2vw, 8.5rem)' }}
             >
                 {headlineParts.map((part, index) => 
                     part.toLowerCase() === 'software' ? (
@@ -25,14 +25,11 @@ export const HeroHeadline = () => {
                     )
                 )}
             </h1>
-            {/* xl: right-24 gives 96px breathing room from edge — reference value */}
-            <p className="hero-headline-name opacity-0 text-4xl hidden xl:block absolute -bottom-12 right-24 font-thin tracking-[6px]">
-                {t('hero.name')}
-            </p>
-            {/* Mobile/tablet: left-24 matches reference, scale text for smaller screens */}
-            <p className="hero-headline-name opacity-0 text-lg sm:text-2xl md:text-4xl absolute xl:hidden -bottom-10 sm:-bottom-12 md:-bottom-12 left-12 sm:left-20 md:left-24 font-thin tracking-[6px]">
-                {t('hero.name')}
-            </p>
+            <div className="flex justify-end pt-2 sm:pt-3 md:pt-4 pr-1 sm:pr-4 md:pr-8">
+                <p className="hero-headline-name opacity-0 text-base sm:text-xl md:text-2xl lg:text-3xl font-extralight tracking-[4px] sm:tracking-[6px] uppercase text-foreground/80">
+                    {t('hero.name')}
+                </p>
+            </div>
         </div>
     );
 };

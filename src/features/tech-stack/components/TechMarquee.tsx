@@ -46,8 +46,8 @@ export const TechMarquee = () => {
                 <MarqueeRow items={rowTwo} reverse />
             </div>
 
-            <div className="absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-background to-transparent pointer-events-none" />
-            <div className="absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-background to-transparent pointer-events-none" />
+            <div className="absolute left-0 top-0 h-full w-16 sm:w-28 md:w-44 bg-gradient-to-r from-background to-transparent pointer-events-none z-10" />
+            <div className="absolute right-0 top-0 h-full w-16 sm:w-28 md:w-44 bg-gradient-to-l from-background to-transparent pointer-events-none z-10" />
         </div>
     );
 };

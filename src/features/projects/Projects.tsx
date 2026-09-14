@@ -59,7 +59,7 @@ const Projects = () => {
 
       <div>
         <h2
-          className="font-bold leading-[0.85] uppercase tracking-tight"
+          className="font-bold leading-[0.88] uppercase tracking-tight text-balance"
           style={{ fontSize: 'clamp(2.75rem, 5.5vw, 8rem)' }}
         >
           {t('projects.title')}
@@ -68,20 +68,19 @@ const Projects = () => {
 
       <hr className="border-none border-t border-current opacity-30" />
 
-      <div className="flex-1 flex flex-col justify-center">
+      <div className="flex-1 flex flex-col justify-center -mr-6 sm:-mr-8 md:-mr-12 lg:-mr-16 xl:-mr-20">
         <Carousel
           setApi={setCarouselApi}
           opts={{
             align: 'start',
-            breakpoints: { '(max-width: 768px)': { align: 'center' } },
           }}
-          className="relative -mx-[4vw]"
+          className="relative w-full"
         >
-          <CarouselContent className="ml-0 pl-[4vw]">
+          <CarouselContent className="-ml-4 pr-6 sm:pr-8 md:pr-12 lg:pr-16 xl:pr-20">
             {projects.map((project) => (
               <CarouselItem
                 key={project.id}
-                className="px-3 basis-full md:basis-auto md:max-w-[452px] flex"
+                className="pl-4 basis-[86%] sm:basis-[80%] md:basis-[420px] lg:basis-[452px] flex"
               >
                 <ProjectCard project={project} />
               </CarouselItem>

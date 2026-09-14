@@ -22,18 +22,18 @@
     "portraitAlt": "Isaac Sarceño"
   },
   "about": {
-    "eyebrow": "RESULTADOS",
-    "headline": "Sitios que convierten visitas en ventas.",
-    "headlineAccent": "Tu negocio en línea puede triplicar sus resultados con la estrategia y el desarrollo correctos.",
-    "cta": "Hablemos",
+    "eyebrow": "INGENIERÍA E IMPACTO",
+    "headline": "Arquitectura de software construida para escalar.",
+    "headlineAccent": "Especializado en sistemas de alta concurrencia, APIs tolerantes a fallos y plataformas digitales de alto rendimiento preparadas para producción.",
+    "cta": "Conectemos",
     "stats": {
-      "projects": { "value": "10+", "label": "Proyectos entregados" },
-      "uptime": { "value": "99.9%", "label": "Disponibilidad garantizada" },
-      "speed": { "value": "+3x", "label": "Ventas en línea promedio" },
-      "response": { "value": "<1.5s", "label": "Tiempo de carga" }
+      "projects": { "value": "15+", "label": "Sistemas en producción" },
+      "uptime": { "value": "99.9%", "label": "Disponibilidad y estabilidad" },
+      "speed": { "value": "+3x", "label": "Eficiencia y rendimiento" },
+      "response": { "value": "< 1s", "label": "Tiempo de respuesta y carga" }
     },
     "techTitle": "Dominio Tecnológico",
-    "techSubtitle": "Las tecnologías y herramientas detrás de cada proyecto que entrego. Integro IA en mi proceso de desarrollo para avanzar más rápido sin perder calidad, con foco en lo que realmente importa: el problema de negocio.",
+    "techSubtitle": "Las tecnologías y herramientas detrás de cada sistema que desarrollo. Integro herramientas modernas y automatización en mi flujo de ingeniería para construir con rapidez manteniendo rigor técnico, calidad de código y rendimiento.",
     "techKeywords": [
       "ARQUITECTURA",
       "ESCALABILIDAD",
@@ -42,7 +42,8 @@
       "RENDIMIENTO"
     ],
     "chart": {
-      "after": "después del lanzamiento"
+      "label": "Escalabilidad y rendimiento",
+      "after": "en entornos de producción"
     }
   },
   "projects": {
@@ -72,68 +73,31 @@
     }
   },
   "contact": {
-    "eyebrow": "Contacto",
-    "title": "Construyamos tu visión",
-    "subtitle": "Transformo ideas complejas en soluciones web rápidas y eficientes, construidas para los objetivos de tu negocio. Cuéntame sobre tu proyecto y encontraremos el camino adecuado.",
+    "eyebrow": "OPORTUNIDADES",
+    "title": "Construyamos juntos",
+    "subtitle": "Disponible para roles de ingeniería de software a tiempo completo, arquitectura técnica y liderazgo de software de alto impacto. Conversemos sobre cómo aportar valor a tu equipo de ingeniería.",
     "form": {
-      "heading": "Hablemos de tu proyecto",
-      "subheading": "Completa los detalles a continuación y te responderé en menos de 24 horas.",
-      "projectType": "Tipo de Proyecto",
-      "name": "Tu nombre o Empresa *",
-      "email": "Correo electrónico *",
-      "budget": "Presupuesto Estimado",
-      "message": "Detalles o requerimientos del proyecto *",
-      "collaboration": "Modelo de Colaboración Requerido *",
+      "heading": "Inicia una conversación",
+      "subheading": "Déjame un mensaje directo o contáctame a través de GitHub o LinkedIn.",
+      "opportunityType": "Tipo de Oportunidad",
+      "name": "Tu nombre o Empresa / Reclutador *",
+      "email": "Correo electrónico corporativo *",
+      "message": "Detalles del rol, stack técnico o desafíos *",
+      "cv": "Descargar CV",
       "placeholders": {
-        "select": "Seleccionar",
-        "name": "Ej. Juan Pérez / Acme Inc.",
-        "email": "example@gmail.com",
-        "message": "Cuéntame un poco más sobre la idea, objetivos y tiempos..."
+        "select": "Seleccionar tipo de oportunidad",
+        "name": "Ej. Sarah Jenkins / Stripe",
+        "email": "reclutador@empresa.com",
+        "message": "Cuéntame sobre el rol de ingeniería, stack técnico o sistemas que están construyendo..."
       },
-      "projectTypes": {
-        "landing": "Landing Page",
-        "ecommerce": "E-commerce B2B",
-        "system": "Sistema de Gestión",
-        "consulting": "Consultoría / Otro"
+      "opportunityTypes": {
+        "fulltime": "Rol a Tiempo Completo (Senior / Lead)",
+        "contract": "Contrato / Arquitectura Técnica",
+        "consulting": "Diseño de Sistemas & Consultoría",
+        "general": "Consulta General / Networking"
       },
-      "budgets": {
-        "low": "< $1,000 USD",
-        "medium": "$1,000 - $3,000 USD",
-        "high": "$3,000 - $5,000 USD",
-        "premium": "> $5,000 USD"
-      },
-      "plans": {
-        "creator": {
-          "name": "Diseño de Interfaz",
-          "features": [
-            "Propuesta visual interactiva",
-            "Diseño de interfaz personalizado",
-            "Estructura y distribución del proyecto",
-            "Revisiones constantes del diseño"
-          ]
-        },
-        "team": {
-          "name": "Desarrollo de Sitios y Plataformas",
-          "features": [
-            "Desarrollo completo y optimizado",
-            "Rendimiento y velocidad de carga",
-            "Conexión de funciones e integraciones",
-            "Despliegue y puesta en marcha en línea"
-          ]
-        },
-        "agency": {
-          "name": "Solución Digital Completa",
-          "features": [
-            "Desde la idea inicial hasta el lanzamiento",
-            "Sistemas de cobro e integración avanzada",
-            "Soporte de mantenimiento pos-lanzamiento",
-            "Panel de administración y control a medida"
-          ]
-        }
-      },
-      "recommended": "Recomendado",
-      "submitting": "Enviando...",
-      "submit": "Enviar propuesta"
+      "submitting": "Enviando mensaje...",
+      "submit": "Enviar Mensaje"
     }
   },
   "seo": {

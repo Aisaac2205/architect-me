@@ -10,7 +10,7 @@ const Contact: React.FC = () => {
     <>
       <div>
         <h2
-          className="font-bold leading-[0.85] uppercase tracking-tight"
+          className="font-bold leading-[0.88] uppercase tracking-tight text-balance"
           style={{ fontSize: 'clamp(2.75rem, 5.5vw, 8rem)' }}
         >
           {t('contact.title')}
@@ -20,7 +20,7 @@ const Contact: React.FC = () => {
       <hr className="border-none border-t border-current opacity-30" />
 
       <p
-        className="max-w-[50ch] font-normal leading-relaxed"
+        className="max-w-[50ch] font-normal leading-relaxed text-pretty"
         style={{ fontSize: 'clamp(1rem, 2.5vw, 2rem)' }}
       >
         {t('contact.subtitle')}

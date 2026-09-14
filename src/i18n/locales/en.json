@@ -22,18 +22,18 @@
     "portraitAlt": "Isaac Sarceño"
   },
   "about": {
-    "eyebrow": "RESULTS",
-    "headline": "Sites that turn visits into sales.",
-    "headlineAccent": "Your online business can triple its results with the right strategy and development.",
-    "cta": "Let's talk",
+    "eyebrow": "ENGINEERING & IMPACT",
+    "headline": "Architecting software built to scale.",
+    "headlineAccent": "Focused on high-concurrency systems, fault-tolerant backend services, and high-performance digital platforms ready for production growth.",
+    "cta": "Let's connect",
     "stats": {
-      "projects": { "value": "10+", "label": "Projects delivered" },
-      "uptime": { "value": "99.9%", "label": "Uptime guaranteed" },
-      "speed": { "value": "+3x", "label": "Avg. online sales growth" },
-      "response": { "value": "<1.5s", "label": "Load time" }
+      "projects": { "value": "15+", "label": "Production systems delivered" },
+      "uptime": { "value": "99.9%", "label": "Uptime & availability" },
+      "speed": { "value": "+3x", "label": "System velocity & efficiency" },
+      "response": { "value": "< 1s", "label": "Average load & response time" }
     },
     "techTitle": "Technical Expertise",
-    "techSubtitle": "The technologies and tools behind every project I deliver. I integrate AI into my development process to move faster without cutting corners, keeping the focus on what actually matters: your business problem.",
+    "techSubtitle": "The technologies and tools behind every system I architect. I integrate modern tooling and automation into my engineering workflow to move fast while maintaining strict reliability, code quality, and performance.",
     "techKeywords": [
       "ARCHITECTURE",
       "SCALABILITY",
@@ -43,8 +43,8 @@
       "BUSINESS LOGIC"
     ],
     "chart": {
-      "label": "Online sales growth",
-      "after": "after launch"
+      "label": "Throughput & scalability",
+      "after": "under production load"
     }
   },
   "projects": {
@@ -74,68 +74,31 @@
     }
   },
   "contact": {
-    "eyebrow": "Contact",
-    "title": "Let's build your vision",
-    "subtitle": "I turn complex ideas into fast, efficient web solutions built around your goals. Tell me about your project and we will find the right path forward.",
+    "eyebrow": "OPPORTUNITIES",
+    "title": "Let's build together",
+    "subtitle": "Available for full-time software engineering roles, technical architecture, and high-impact engineering leadership. Let's discuss how I can bring value to your engineering team.",
     "form": {
-      "heading": "Let's talk about your project",
-      "subheading": "Fill in the details below and I'll get back to you in less than 24 hours.",
-      "projectType": "Project Type",
-      "name": "Your name or Company *",
-      "email": "Email address *",
-      "budget": "Estimated Budget",
-      "message": "Project details or requirements *",
-      "collaboration": "Required Collaboration Model *",
+      "heading": "Get in touch",
+      "subheading": "Send a direct inquiry or explore my professional profiles below.",
+      "opportunityType": "Opportunity Type",
+      "name": "Your name or Company / Recruiter *",
+      "email": "Work email address *",
+      "message": "Role details, tech stack, or engineering challenges *",
+      "cv": "Download Resume",
       "placeholders": {
-        "select": "Select",
-        "name": "e.g. John Smith / Acme Inc.",
-        "email": "example@gmail.com",
-        "message": "Tell me a bit more about the idea, goals, and timeline..."
+        "select": "Select opportunity type",
+        "name": "e.g. Sarah Jenkins / Stripe",
+        "email": "recruiter@company.com",
+        "message": "Tell me about the engineering role, team structure, or systems you're building..."
       },
-      "projectTypes": {
-        "landing": "Landing Page",
-        "ecommerce": "B2B E-commerce",
-        "system": "Management System",
-        "consulting": "Consulting / Other"
+      "opportunityTypes": {
+        "fulltime": "Full-Time Engineering Role (Senior / Lead)",
+        "contract": "Contract / Technical Architecture",
+        "consulting": "System Design & Consulting",
+        "general": "General Inquiry / Tech Discussion"
       },
-      "budgets": {
-        "low": "< $1,000 USD",
-        "medium": "$1,000 - $3,000 USD",
-        "high": "$3,000 - $5,000 USD",
-        "premium": "> $5,000 USD"
-      },
-      "plans": {
-        "creator": {
-          "name": "Interface Design",
-          "features": [
-            "Interactive visual proposal",
-            "Custom interface design",
-            "Project structure and layout",
-            "Ongoing design revisions"
-          ]
-        },
-        "team": {
-          "name": "Website & Platform Development",
-          "features": [
-            "Complete and optimized development",
-            "Performance and load speed",
-            "Feature connections and integrations",
-            "Deployment and go-live"
-          ]
-        },
-        "agency": {
-          "name": "Full Digital Solution",
-          "features": [
-            "From initial idea to launch",
-            "Payment systems and advanced integrations",
-            "Post-launch maintenance support",
-            "Custom administration and control panel"
-          ]
-        }
-      },
-      "recommended": "Recommended",
-      "submitting": "Sending...",
-      "submit": "Send proposal"
+      "submitting": "Sending message...",
+      "submit": "Send Message"
     }
   },
   "seo": {

@@ -6,9 +6,7 @@ export const useContactForm = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
-        projectType: 'landing',
-        budget: 'medium',
-        planType: 'Team',
+        opportunityType: 'fulltime',
         message: ''
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -66,44 +64,25 @@ export const useContactForm = () => {
             return;
         }
 
-        // Mapeos legibles para el envío
-        const projectTypes: Record<string, string> = {
-            landing: "Landing Page",
-            ecommerce: "E-commerce B2B",
-            system: "Sistema de Gestión",
-            consulting: "Consultoría / Otro"
+        const opportunityTypes: Record<string, string> = {
+            fulltime: "Rol a Tiempo Completo (Senior / Lead)",
+            contract: "Contrato / Arquitectura Técnica",
+            consulting: "Diseño de Sistemas & Consultoría",
+            general: "Consulta General / Networking"
         };
 
-        const budgetRanges: Record<string, string> = {
-            low: "Menos de $1,000 USD",
-            medium: "$1,000 - $3,000 USD",
-            high: "$3,000 - $5,000 USD",
-            premium: "Más de $5,000 USD"
-        };
-
-        const planTypes: Record<string, string> = {
-            Creator: "Diseño de Interfaz (Creator)",
-            Team: "Desarrollo de Sitios y Plataformas (Team)",
-            Agency: "Solución Digital Completa (Agency)"
-        };
-
-        const displayProjectType = projectTypes[formData.projectType] || formData.projectType;
-        const displayBudget = budgetRanges[formData.budget] || formData.budget;
-        const displayPlanType = planTypes[formData.planType] || formData.planType;
+        const displayOpportunity = opportunityTypes[formData.opportunityType] || formData.opportunityType;
 
         const emailMessage = `
 Nombre: ${formData.name}
 Email: ${formData.email}
-Tipo de Proyecto: ${displayProjectType}
-Presupuesto Estimado: ${displayBudget}
-Modelo de Colaboración: ${displayPlanType}
+Tipo de Oportunidad: ${displayOpportunity}
 
 Mensaje:
 ${formData.message}
         `.trim();
 
         try {
-            // Usar Formspree
             const response = await fetch(getFormspreeEndpoint(), {
                 method: 'POST',
                 headers: {
@@ -112,29 +91,24 @@ ${formData.message}
                 body: JSON.stringify({
                     name: formData.name,
                     email: formData.email,
-                    projectType: displayProjectType,
-                    budget: displayBudget,
-                    planType: displayPlanType,
+                    opportunityType: displayOpportunity,
                     message: formData.message,
                     fullMessage: emailMessage,
                     _replyto: formData.email,
-                    _subject: `Nuevo contacto de ${formData.name} - Presupuesto: ${displayBudget}`,
+                    _subject: `Nueva oportunidad de ${formData.name} - ${displayOpportunity}`,
                 }),
             });
 
             if (response.ok) {
                 toast({
                     title: "¡Mensaje enviado!",
-                    description: "Gracias por contactarme. Te responderé pronto.",
+                    description: "Gracias por contactarme. Te responderé a la brevedad.",
                 });
 
-                // Limpiar formulario
                 setFormData({
                     name: '',
                     email: '',
-                    projectType: 'webapp',
-                    budget: 'medium',
-                    planType: 'Team',
+                    opportunityType: 'fulltime',
                     message: ''
                 });
             } else {

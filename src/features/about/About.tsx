@@ -4,12 +4,12 @@ import { motion } from 'framer-motion';
 import { AreaChart, Area, ResponsiveContainer } from 'recharts';
 
 const chartData = [
-  { month: 'Mes 1', ventas: 50 },
-  { month: 'Mes 2', ventas: 90 },
-  { month: 'Mes 3', ventas: 140 },
-  { month: 'Mes 4', ventas: 200 },
-  { month: 'Mes 5', ventas: 240 },
-  { month: 'Mes 6', ventas: 300 },
+  { step: '1', throughput: 50 },
+  { step: '2', throughput: 110 },
+  { step: '3', throughput: 165 },
+  { step: '4', throughput: 220 },
+  { step: '5', throughput: 265 },
+  { step: '6', throughput: 310 },
 ];
 
 function useCountUp(end: number, duration = 1600, active = false) {
@@ -51,7 +51,7 @@ const About = () => {
         {/* Left: headline + stats */}
         <div className="flex flex-col gap-8">
           <h2
-            className="font-bold leading-[0.85] uppercase tracking-tight"
+            className="font-bold leading-[0.88] uppercase tracking-tight text-balance"
             style={{ fontSize: 'clamp(2.75rem, 5.5vw, 8rem)' }}
           >
             {t('about.headline')}
@@ -85,17 +85,17 @@ const About = () => {
             <ResponsiveContainer width="100%" height="100%">
               <AreaChart data={chartData} margin={{ top: 24, right: 0, left: 0, bottom: 0 }}>
                 <defs>
-                  <linearGradient id="salesGradient" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%"  stopColor="currentColor" stopOpacity={0.2} />
+                  <linearGradient id="performanceGradient" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="5%"  stopColor="currentColor" stopOpacity={0.25} />
                     <stop offset="95%" stopColor="currentColor" stopOpacity={0} />
                   </linearGradient>
                 </defs>
                 <Area
                   type="monotone"
-                  dataKey="ventas"
+                  dataKey="throughput"
                   stroke="currentColor"
                   strokeWidth={1.5}
-                  fill="url(#salesGradient)"
+                  fill="url(#performanceGradient)"
                   fillOpacity={1}
                   dot={false}
                 />
@@ -122,7 +122,7 @@ const About = () => {
       </div>
 
       <p
-        className="mt-auto max-w-[50ch] font-normal leading-relaxed"
+        className="mt-auto max-w-[50ch] font-normal leading-relaxed text-pretty"
         style={{ fontSize: 'clamp(1rem, 2.5vw, 2rem)' }}
       >
         {t('about.headlineAccent')}

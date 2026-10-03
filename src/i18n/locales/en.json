@@ -8,19 +8,11 @@
       "/ DEVELOPMENT",
       "/ ARCHITECTURE"
     ],
-    "tagline": [
-      "DESIGN AND DEVELOPMENT OF SAAS",
-      "AND E-COMMERCE PLATFORMS, FROM",
-      "ARCHITECTURE TO DEPLOYMENT."
-    ],
-    "cta": "Contact me",
     "portraitAlt": "Isaac Sarceño"
   },
   "about": {
-    "eyebrow": "ENGINEERING & IMPACT",
     "headline": "Software architecture",
     "headlineAccent": "Every technical decision accounts for maintainability, security, and scalability. Design precedes implementation, automated tests validate changes, and deployments are automated.",
-    "cta": "Let's connect",
     "features": {
       "performance": {
         "title": "Web performance & SEO",
@@ -59,7 +51,6 @@
     ]
   },
   "projects": {
-    "eyebrow": "Portfolio",
     "title": "Projects",
     "prevAriaLabel": "Previous project",
     "nextAriaLabel": "Next project",
@@ -93,7 +84,6 @@
     }
   },
   "contact": {
-    "eyebrow": "OPPORTUNITIES",
     "title": "From design to production",
     "subtitle": "Every project, whether personal or built for clients, follows the same cycle. It starts by analyzing the problem and designing an architecture built to grow without rewrites. Development relies on automated validation and deployment workflows that ensure the integrity and security of every product, and the cycle ends with stable software in production."
   },

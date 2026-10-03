@@ -8,19 +8,11 @@
       "/ DESARROLLO",
       "/ ARQUITECTURA"
     ],
-    "tagline": [
-      "DISEÑO Y DESARROLLO DE PLATAFORMAS",
-      "SAAS Y E-COMMERCE, DE LA",
-      "ARQUITECTURA AL DESPLIEGUE."
-    ],
-    "cta": "Contactar",
     "portraitAlt": "Isaac Sarceño"
   },
   "about": {
-    "eyebrow": "INGENIERÍA E IMPACTO",
     "headline": "Arquitectura de software",
     "headlineAccent": "Cada decisión técnica contempla la mantenibilidad, la seguridad y la escalabilidad. El diseño precede a la implementación, las pruebas automatizadas validan los cambios y los despliegues se automatizan.",
-    "cta": "Conectemos",
     "features": {
       "performance": {
         "title": "Rendimiento web y SEO",
@@ -59,7 +51,6 @@
     ]
   },
   "projects": {
-    "eyebrow": "Portfolio",
     "title": "Proyectos",
     "prevAriaLabel": "Proyecto anterior",
     "nextAriaLabel": "Proyecto siguiente",
@@ -93,7 +84,6 @@
     }
   },
   "contact": {
-    "eyebrow": "OPORTUNIDADES",
     "title": "Del diseño a la producción",
     "subtitle": "Todo proyecto, propio o desarrollado para clientes, sigue el mismo ciclo. Parte del análisis del problema y del diseño de una arquitectura preparada para crecer sin reescrituras. El desarrollo se apoya en flujos de validación y despliegue automatizados que aseguran la integridad y la seguridad de cada producto, y el ciclo culmina con un software estable en producción."
   },

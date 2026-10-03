@@ -22,7 +22,7 @@
 
 ## About
 
-Professional portfolio showcasing my skills, projects, and experience as a Full Stack Developer. Built with a modern tech stack focusing on performance, accessibility, and exceptional UX.
+Professional portfolio showcasing my skills, projects, and experience as a Software Engineer. Built with a modern tech stack focusing on performance, accessibility, and exceptional UX.
 
 **Highlights:**
 - Modern, high-performance responsive design (mobile-first)

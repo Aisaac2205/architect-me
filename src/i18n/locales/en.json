@@ -56,19 +56,27 @@
     "visitAriaLabel": "Visit the site for {{title}}",
     "items": {
       "ecommerce": {
-        "title": "Modern B2B E-commerce",
+        "title": "La Casa del Balompié",
         "description": "An online store for soccer jerseys in Guatemala, with orders handled directly via the owner's WhatsApp. Clean, responsive design built to turn visits into real sales."
       },
-      "saas1": {
-        "title": "Order SaaS & Digital Menu — Urban Design",
-        "description": "A SaaS platform for restaurants with a public website and internal order management. Owners can customize their landing page, publish an interactive menu, and export a PDF version. Built for speed and conversions."
+      "qably": {
+        "title": "Qably Development AI",
+        "description": "A software quality SaaS that ingests CI/CD reports, generates test cases with AI from every commit, and traces them end to end. Multi-tenant, with BullMQ and Redis queues and more than 4,900 automated tests."
       },
-      "saas2": {
-        "title": "Order SaaS & Digital Menu — Elegant Design",
-        "description": "Same platform, different aesthetic. This version targets upscale venues with a refined interface, smooth animations, and load times that compete with native apps."
+      "envault": {
+        "title": "EnVault Management",
+        "description": "A system that schedules, queues and ships PostgreSQL and MySQL dumps to Cloudflare R2 with Redis and BullMQ. Retries with backoff, distributed locks to run across replicas, SHA-256 checks before every restore, and real-time progress."
+      },
+      "saas": {
+        "title": "Restaurant SaaS",
+        "description": "A multi-tenant platform where each restaurant manages its own landing page with one of two designs, Urban or Elegant, and sells online. It includes a digital menu, direct orders, push notifications and a management dashboard with sales analytics."
+      },
+      "mps": {
+        "title": "MPS de Guatemala",
+        "description": "An online store for tech devices with server-side rendering, a role-based admin panel with analytics, oversell-proof stock control and real-time order tracking. Delivered and being prepared for launch."
       },
       "turboauto": {
-        "title": "Turbo Auto - Mechanic Shop & Carwash",
+        "title": "Turbo Auto",
         "description": "Digital presence for a mechanic shop and carwash in Quesada, Jutiapa. Showcases their services, includes an exclusive deals section, and pulls in local customers with a clean, professional look."
       }
     }

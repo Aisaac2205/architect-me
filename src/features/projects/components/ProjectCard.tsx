@@ -16,8 +16,8 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
             href={project.storeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={t('projects.visitAriaLabel', { title })}
-            className="group flex flex-col h-full"
+            aria-label={project.storeUrl ? t('projects.visitAriaLabel', { title }) : undefined}
+            className={`${project.storeUrl ? 'group ' : ''}flex flex-col h-full`}
         >
             <div className="flex flex-col flex-1">
                 <div className="flex aspect-[3/2] overflow-clip rounded-xl border border-border bg-[#d9d9d9]">
@@ -42,10 +42,12 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
                 </div>
             </div>
 
-            <div className="flex items-center text-sm font-medium mt-auto">
-                {t('projects.visit')}
-                <ArrowRight className="ml-2 size-4 transition-transform group-hover:translate-x-1" />
-            </div>
+            {project.storeUrl && (
+                <div className="flex items-center text-sm font-medium mt-auto">
+                    {t('projects.visit')}
+                    <ArrowRight className="ml-2 size-4 transition-transform group-hover:translate-x-1" />
+                </div>
+            )}
         </a>
     );
 };

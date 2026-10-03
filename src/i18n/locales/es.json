@@ -55,19 +55,27 @@
     "visitAriaLabel": "Visitar el sitio de {{title}}",
     "items": {
       "ecommerce": {
-        "title": "E-commerce B2B Moderno",
+        "title": "La Casa del Balompié",
         "description": "Tienda en línea para la venta de camisolas de fútbol en Guatemala, con pedidos gestionados directo por WhatsApp del propietario. Diseño responsivo y limpio, pensado para convertir visitas en ventas reales."
       },
-      "saas1": {
-        "title": "SaaS de Pedidos & Menú Digital Diseño Urbano",
-        "description": "Plataforma SaaS para restaurantes con sitio web y sistema interno de pedidos. Los dueños pueden personalizar su landing page, publicar un menú digital interactivo y exportarlo en PDF. Construida para velocidad y conversión."
+      "qably": {
+        "title": "Qably Development AI",
+        "description": "SaaS de calidad de software que recibe los reportes de CI/CD, genera casos de prueba con IA a partir de cada commit y los traza de punta a punta. Multi-tenant, con colas en BullMQ y Redis, y más de 4,900 pruebas automatizadas."
       },
-      "saas2": {
-        "title": "SaaS de Pedidos & Menú Digital Diseño Elegante",
-        "description": "La misma plataforma, con una estética diferente. Esta versión apunta a negocios de categoría superior con una interfaz refinada, animaciones fluidas y tiempos de carga que compiten con apps nativas."
+      "envault": {
+        "title": "EnVault Management",
+        "description": "Sistema que programa, encola y envía dumps de PostgreSQL y MySQL a Cloudflare R2 con Redis y BullMQ. Reintentos con backoff, bloqueos distribuidos para correr en varias réplicas, verificación SHA-256 antes de restaurar y progreso en tiempo real."
+      },
+      "saas": {
+        "title": "SaaS para Restaurantes",
+        "description": "Plataforma multi-tenant donde cada restaurante administra su propia landing con uno de dos diseños, Urbano o Elegante, y vende en línea. Incluye menú digital, pedidos directos, notificaciones push y un panel de gestión con analítica de ventas."
+      },
+      "mps": {
+        "title": "MPS de Guatemala",
+        "description": "Tienda en línea de dispositivos tecnológicos con renderizado en servidor, panel administrativo con roles y analítica, control de stock sin sobreventa y seguimiento de pedidos en tiempo real. Proyecto entregado, en preparación para su lanzamiento."
       },
       "turboauto": {
-        "title": "Turbo Auto - Taller y Carwash",
+        "title": "Turbo Auto",
         "description": "Presencia digital para un taller mecánico y carwash en Quesada, Jutiapa. Presenta los servicios del negocio, incluye una sección de ofertas exclusivas y atrae clientes locales con una imagen limpia y profesional."
       }
     }

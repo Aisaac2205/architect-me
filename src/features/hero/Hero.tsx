@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { HeroHeadline } from './components/HeroHeadline';
 import { HeroServices } from './components/HeroServices';
-import { HeroRecentWork } from './components/HeroRecentWork';
 import { HeroGridBackground } from './components/HeroGridBackground';
 import gsap from 'gsap';
 
@@ -19,9 +18,7 @@ const Hero = () => {
                 '.hero-headline-year',
                 '.hero-headline-name',
                 '.hero-services-card',
-                '.hero-services-portrait',
-                '.hero-recent-work-thumb',
-                '.hero-recent-work-btn'
+                '.hero-services-portrait'
             ], { opacity: 0 });
 
             tl.fromTo('.hero-headline-title',
@@ -43,16 +40,6 @@ const Hero = () => {
                 { y: 0, opacity: 1, scale: 1, duration: 0.8 },
                 '-=0.5'
             );
-            tl.fromTo('.hero-recent-work-thumb',
-                { x: -30, opacity: 0, scale: 0.95 },
-                { x: 0, opacity: 1, scale: 1, duration: 0.6, stagger: 0.08 },
-                '-=0.4'
-            );
-            tl.fromTo('.hero-recent-work-btn',
-                { x: 30, opacity: 0 },
-                { x: 0, opacity: 1, duration: 0.6 },
-                '-=0.6'
-            );
         }, heroRef);
 
         return () => ctx.revert();
@@ -63,7 +50,8 @@ const Hero = () => {
             <div className="relative z-20 md:flex md:flex-col md:justify-between md:flex-1 lg:flex lg:flex-col lg:justify-between lg:flex-1">
                 <HeroHeadline />
                 <HeroServices />
-                <HeroRecentWork />
+                {/* Keeps the box of the removed recent-work block so the hero layout does not shift */}
+                <div className="hidden md:block mt-20 md:mt-14 h-36" aria-hidden="true" />
             </div>
             <HeroGridBackground />
         </div>

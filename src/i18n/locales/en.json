@@ -23,14 +23,34 @@
   },
   "about": {
     "eyebrow": "ENGINEERING & IMPACT",
-    "headline": "Architecting software built to scale.",
-    "headlineAccent": "Focused on high-concurrency systems, fault-tolerant backend services, and high-performance digital platforms ready for production growth.",
+    "headline": "Software architecture.",
+    "headlineAccent": "Every technical decision weighs maintainability, security and scale: design before code, tests on every change and automated deployments.",
     "cta": "Let's connect",
-    "stats": {
-      "projects": { "value": "15+", "label": "Production systems delivered" },
-      "uptime": { "value": "99.9%", "label": "Uptime & availability" },
-      "speed": { "value": "+3x", "label": "System velocity & efficiency" },
-      "response": { "value": "< 1s", "label": "Average load & response time" }
+    "features": {
+      "performance": {
+        "title": "Web performance & SEO",
+        "description": "SSR, CDNs and optimized images for fast loads and strong search rankings."
+      },
+      "async": {
+        "title": "Queues & background jobs",
+        "description": "BullMQ and Redis queues with retries, backoff and idempotency."
+      },
+      "security": {
+        "title": "Secure APIs & authentication",
+        "description": "Token rotation, RBAC, rate limiting and encrypted secrets."
+      },
+      "design": {
+        "title": "System design",
+        "description": "Data models, APIs and modules designed to grow without rewrites."
+      },
+      "quality": {
+        "title": "Automated testing & CI/CD",
+        "description": "Automated tests and pipelines that block the merge when something breaks."
+      },
+      "ai": {
+        "title": "AI-assisted development",
+        "description": "I use Claude Code and Antigravity to ship faster, with code review and tests as the quality gate."
+      }
     },
     "techTitle": "Technical Expertise",
     "techSubtitle": "The technologies and tools behind every system I architect. I integrate modern tooling and automation into my engineering workflow to move fast while maintaining strict reliability, code quality, and performance.",
@@ -41,11 +61,7 @@
       "PERFORMANCE",
       "CLEAN CODE",
       "BUSINESS LOGIC"
-    ],
-    "chart": {
-      "label": "Throughput & scalability",
-      "after": "under production load"
-    }
+    ]
   },
   "projects": {
     "eyebrow": "Portfolio",

@@ -23,14 +23,34 @@
   },
   "about": {
     "eyebrow": "INGENIERÍA E IMPACTO",
-    "headline": "Arquitectura de software construida para escalar.",
-    "headlineAccent": "Especializado en sistemas de alta concurrencia, APIs tolerantes a fallos y plataformas digitales de alto rendimiento preparadas para producción.",
+    "headline": "Arquitectura de software.",
+    "headlineAccent": "Cada decisión técnica considera mantenimiento, seguridad y escala: diseño antes de programar, pruebas en cada cambio y despliegues automatizados.",
     "cta": "Conectemos",
-    "stats": {
-      "projects": { "value": "15+", "label": "Sistemas en producción" },
-      "uptime": { "value": "99.9%", "label": "Disponibilidad y estabilidad" },
-      "speed": { "value": "+3x", "label": "Eficiencia y rendimiento" },
-      "response": { "value": "< 1s", "label": "Tiempo de respuesta y carga" }
+    "features": {
+      "performance": {
+        "title": "Rendimiento web y SEO",
+        "description": "SSR, CDN e imágenes optimizadas para cargar rápido y posicionar en buscadores."
+      },
+      "async": {
+        "title": "Colas y procesos en segundo plano",
+        "description": "Colas con BullMQ y Redis, con reintentos, backoff e idempotencia."
+      },
+      "security": {
+        "title": "APIs seguras y autenticación",
+        "description": "Rotación de tokens, RBAC, rate limiting y secretos cifrados."
+      },
+      "design": {
+        "title": "Diseño de sistemas",
+        "description": "Modelos de datos, APIs y módulos pensados para crecer sin reescribir."
+      },
+      "quality": {
+        "title": "Pruebas automatizadas y CI/CD",
+        "description": "Pruebas automatizadas y pipelines que bloquean el merge si algo falla."
+      },
+      "ai": {
+        "title": "Desarrollo asistido por IA",
+        "description": "Uso Claude Code y Antigravity para entregar más rápido, con revisión de código y pruebas como filtro de calidad."
+      }
     },
     "techTitle": "Dominio Tecnológico",
     "techSubtitle": "Las tecnologías y herramientas detrás de cada sistema que desarrollo. Integro herramientas modernas y automatización en mi flujo de ingeniería para construir con rapidez manteniendo rigor técnico, calidad de código y rendimiento.",
@@ -40,11 +60,7 @@
       "AUTOMATIZACIÓN",
       "SEO PROFESIONAL",
       "RENDIMIENTO"
-    ],
-    "chart": {
-      "label": "Escalabilidad y rendimiento",
-      "after": "en entornos de producción"
-    }
+    ]
   },
   "projects": {
     "eyebrow": "Portfolio",

@@ -10,6 +10,7 @@ function cx(...parts: Array<string | undefined | false | null>): string {
 }
 
 export interface FlowSectionProps {
+  id?: string;
   className?: string;
   style?: React.CSSProperties;
   children: React.ReactNode;
@@ -17,12 +18,14 @@ export interface FlowSectionProps {
 }
 
 export const FlowSection: React.FC<FlowSectionProps> = ({
+  id,
   className,
   style = {},
   children,
   'aria-label': ariaLabel,
 }) => (
   <section
+    id={id}
     data-flow-section
     aria-label={ariaLabel}
     className={cx('relative min-h-screen w-full overflow-hidden', className)}

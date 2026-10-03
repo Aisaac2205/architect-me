@@ -99,31 +99,8 @@
   },
   "contact": {
     "eyebrow": "OPPORTUNITIES",
-    "title": "Let's build together",
-    "subtitle": "Available for full-time software engineering roles, technical architecture, and high-impact engineering leadership. Let's discuss how I can bring value to your engineering team.",
-    "form": {
-      "heading": "Get in touch",
-      "subheading": "Send a direct inquiry or explore my professional profiles below.",
-      "opportunityType": "Opportunity Type",
-      "name": "Your name or Company / Recruiter *",
-      "email": "Work email address *",
-      "message": "Role details, tech stack, or engineering challenges *",
-      "cv": "Download Resume",
-      "placeholders": {
-        "select": "Select opportunity type",
-        "name": "e.g. Sarah Jenkins / Stripe",
-        "email": "recruiter@company.com",
-        "message": "Tell me about the engineering role, team structure, or systems you're building..."
-      },
-      "opportunityTypes": {
-        "fulltime": "Full-Time Engineering Role (Senior / Lead)",
-        "contract": "Contract / Technical Architecture",
-        "consulting": "System Design & Consulting",
-        "general": "General Inquiry / Tech Discussion"
-      },
-      "submitting": "Sending message...",
-      "submit": "Send Message"
-    }
+    "title": "From design to production.",
+    "subtitle": "Six systems delivered, three of my own products and three client projects, backed by more than 8,500 automated tests, reflect a single method: architecture defined from the start, quality verified on every change and software ready to run in production."
   },
   "seo": {
     "title": "Isaac Sarceño - Full Stack Developer | Portfolio",

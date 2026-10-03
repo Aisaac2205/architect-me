@@ -98,31 +98,8 @@
   },
   "contact": {
     "eyebrow": "OPORTUNIDADES",
-    "title": "Construyamos juntos",
-    "subtitle": "Disponible para roles de ingeniería de software a tiempo completo, arquitectura técnica y liderazgo de software de alto impacto. Conversemos sobre cómo aportar valor a tu equipo de ingeniería.",
-    "form": {
-      "heading": "Inicia una conversación",
-      "subheading": "Déjame un mensaje directo o contáctame a través de GitHub o LinkedIn.",
-      "opportunityType": "Tipo de Oportunidad",
-      "name": "Tu nombre o Empresa / Reclutador *",
-      "email": "Correo electrónico corporativo *",
-      "message": "Detalles del rol, stack técnico o desafíos *",
-      "cv": "Descargar CV",
-      "placeholders": {
-        "select": "Seleccionar tipo de oportunidad",
-        "name": "Ej. Sarah Jenkins / Stripe",
-        "email": "reclutador@empresa.com",
-        "message": "Cuéntame sobre el rol de ingeniería, stack técnico o sistemas que están construyendo..."
-      },
-      "opportunityTypes": {
-        "fulltime": "Rol a Tiempo Completo (Senior / Lead)",
-        "contract": "Contrato / Arquitectura Técnica",
-        "consulting": "Diseño de Sistemas & Consultoría",
-        "general": "Consulta General / Networking"
-      },
-      "submitting": "Enviando mensaje...",
-      "submit": "Enviar Mensaje"
-    }
+    "title": "Del diseño a la producción.",
+    "subtitle": "Seis sistemas entregados, tres productos propios y tres proyectos para clientes, con más de 8,500 pruebas automatizadas, respaldan un mismo método: arquitectura definida desde el inicio, calidad verificada en cada cambio y software preparado para operar en producción."
   },
   "seo": {
     "title": "Isaac Sarceño - Desarrollador Full Stack | Portfolio",

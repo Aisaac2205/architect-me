@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { SectionTitle } from '@/components/SectionTitle';
 import {
   Carousel,
   CarouselApi,
@@ -29,8 +30,9 @@ const Projects = () => {
   }, [carouselApi]);
 
   return (
-    <>
-      <div className="flex items-center justify-between">
+    <div className="my-auto flex flex-col gap-6 sm:gap-8">
+      <div className="flex items-end justify-between gap-4">
+        <SectionTitle className="min-w-0">{t('projects.title')}</SectionTitle>
         <div className="flex shrink-0 items-center gap-2">
           <Button
             size="icon"
@@ -55,20 +57,7 @@ const Projects = () => {
         </div>
       </div>
 
-      <hr className="border-none border-t border-current opacity-30" />
-
-      <div>
-        <h2
-          className="font-bold leading-[0.88] uppercase tracking-tight text-balance"
-          style={{ fontSize: 'clamp(2.75rem, 5.5vw, 8rem)' }}
-        >
-          {t('projects.title')}
-        </h2>
-      </div>
-
-      <hr className="border-none border-t border-current opacity-30" />
-
-      <div className="flex-1 flex flex-col justify-center -mr-6 sm:-mr-8 md:-mr-12 lg:-mr-16 xl:-mr-20">
+      <div className="-mr-6 sm:-mr-8 md:-mr-12 lg:-mr-16 xl:-mr-20">
         <Carousel
           setApi={setCarouselApi}
           opts={{
@@ -88,7 +77,7 @@ const Projects = () => {
           </CarouselContent>
         </Carousel>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -29,6 +29,8 @@ export const projects: Project[] = [
         id: 5,
         key: 'mps',
         image: '/assets/mps-guatemala.jpg',
+        // Temporary Railway URL until the launch domain is ready.
+        storeUrl: 'https://mpsdeguatemala.up.railway.app/',
     },
     {
         id: 6,

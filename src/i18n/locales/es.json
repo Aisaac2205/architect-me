@@ -9,7 +9,7 @@
       "/ ARQUITECTURA"
     ],
     "tagline": [
-      "DISEÑO Y CONSTRUYO PLATAFORMAS",
+      "DISEÑO Y DESARROLLO DE PLATAFORMAS",
       "SAAS Y E-COMMERCE, DE LA",
       "ARQUITECTURA AL DESPLIEGUE."
     ],
@@ -19,7 +19,7 @@
   "about": {
     "eyebrow": "INGENIERÍA E IMPACTO",
     "headline": "Arquitectura de software.",
-    "headlineAccent": "Cada decisión técnica considera mantenimiento, seguridad y escala: diseño antes de programar, pruebas en cada cambio y despliegues automatizados.",
+    "headlineAccent": "Cada decisión técnica contempla la mantenibilidad, la seguridad y la escalabilidad. El diseño precede a la implementación, los cambios se validan mediante pruebas automatizadas y los despliegues se ejecutan de forma automática.",
     "cta": "Conectemos",
     "features": {
       "performance": {
@@ -44,7 +44,7 @@
       },
       "ai": {
         "title": "Desarrollo asistido por IA",
-        "description": "Uso Claude Code y Antigravity para entregar más rápido, con revisión de código y pruebas como filtro de calidad."
+        "description": "Claude Code y Antigravity integrados al flujo de desarrollo, con revisión de código y pruebas como control de calidad."
       }
     },
     "techTitle": "Dominio Tecnológico",
@@ -94,7 +94,7 @@
   "contact": {
     "eyebrow": "OPORTUNIDADES",
     "title": "Del diseño a la producción.",
-    "subtitle": "Seis sistemas entregados, tres productos propios y tres proyectos para clientes, con más de 8,500 pruebas automatizadas, respaldan un mismo método: arquitectura definida desde el inicio, calidad verificada en cada cambio y software preparado para operar en producción."
+    "subtitle": "Todo proyecto, ya sea propio o desarrollado para clientes, sigue el mismo ciclo de trabajo. Este comprende el análisis del problema, el diseño de la arquitectura y una implementación respaldada por pruebas, y culmina con la puesta en producción de un software estable."
   },
   "seo": {
     "title": "Isaac Sarceño - Desarrollador Full Stack | Portfolio",

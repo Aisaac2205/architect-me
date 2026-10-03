@@ -9,7 +9,7 @@
       "/ ARCHITECTURE"
     ],
     "tagline": [
-      "I DESIGN AND BUILD SAAS",
+      "DESIGN AND DEVELOPMENT OF SAAS",
       "AND E-COMMERCE PLATFORMS, FROM",
       "ARCHITECTURE TO DEPLOYMENT."
     ],
@@ -19,7 +19,7 @@
   "about": {
     "eyebrow": "ENGINEERING & IMPACT",
     "headline": "Software architecture.",
-    "headlineAccent": "Every technical decision weighs maintainability, security and scale: design before code, tests on every change and automated deployments.",
+    "headlineAccent": "Every technical decision accounts for maintainability, security and scalability. Design precedes implementation, changes are validated through automated testing, and releases are deployed automatically.",
     "cta": "Let's connect",
     "features": {
       "performance": {
@@ -44,7 +44,7 @@
       },
       "ai": {
         "title": "AI-assisted development",
-        "description": "I use Claude Code and Antigravity to ship faster, with code review and tests as the quality gate."
+        "description": "Claude Code and Antigravity integrated into the development workflow, with code review and testing as quality control."
       }
     },
     "techTitle": "Technical Expertise",
@@ -95,7 +95,7 @@
   "contact": {
     "eyebrow": "OPPORTUNITIES",
     "title": "From design to production.",
-    "subtitle": "Six systems delivered, three of my own products and three client projects, backed by more than 8,500 automated tests, reflect a single method: architecture defined from the start, quality verified on every change and software ready to run in production."
+    "subtitle": "Every project, whether proprietary or built for clients, follows the same development cycle. It covers problem analysis, architecture design and test-backed implementation, and concludes with the release of stable software to production."
   },
   "seo": {
     "title": "Isaac Sarceño - Full Stack Developer | Portfolio",

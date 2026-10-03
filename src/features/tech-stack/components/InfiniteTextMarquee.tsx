@@ -65,7 +65,7 @@ export const InfiniteTextMarquee: React.FC<InfiniteTextMarqueeProps> = ({
           <span className="hoverable-text font-black uppercase tracking-tighter text-white cursor-pointer select-none">
             {word}
           </span>
-          <span className="text-foreground/25 font-light text-3xl select-none">/</span>
+          <span className="text-foreground/50 font-light text-3xl select-none">/</span>
         </React.Fragment>
       ))}
     </span>

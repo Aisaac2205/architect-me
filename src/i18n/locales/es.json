@@ -106,9 +106,6 @@
     "description": "Portfolio de Isaac Sarceño - Desarrollador Full Stack especializado en React, TypeScript, Node.js y tecnologías modernas. Creando experiencias web excepcionales."
   },
   "footer": {
-    "about": "Sobre mí",
-    "projects": "Proyectos",
-    "contact": "Contacto",
     "copyright": "© {{year}} Isaac Sarceño. Todos los derechos reservados.",
     "visitAriaLabel": "Visitar mi {{name}}"
   }

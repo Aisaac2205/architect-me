@@ -1,6 +1,5 @@
 import { useTranslation } from 'react-i18next';
 import { cn } from '@/lib/utils';
-import { scrollToElement } from '@/hooks/use-lenis';
 
 interface FlipLinkProps {
   children: string;
@@ -50,10 +49,6 @@ const Footer = () => {
   const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
-  const scrollToSection = (sectionId: string) => {
-    scrollToElement(`#${sectionId}`, { offset: -80, duration: 1.5 });
-  };
-
   const socials = [
     { name: 'Github',    href: 'https://github.com/Aisaac2205' },
     { name: 'Linkedin',  href: 'https://www.linkedin.com/in/isaac-sarce%C3%B1o-aa2850374?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app' },
@@ -75,27 +70,7 @@ const Footer = () => {
         ))}
       </div>
 
-      <div className="mt-auto border-t border-current/20 pt-6 sm:pt-8 flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6">
-        <div className="flex items-center space-x-6">
-          <button
-            onClick={() => scrollToSection('sobre-mi')}
-            className="min-h-[44px] flex items-center text-sm font-medium opacity-60 hover:opacity-100 transition-opacity"
-          >
-            {t('footer.about')}
-          </button>
-          <button
-            onClick={() => scrollToSection('proyectos')}
-            className="min-h-[44px] flex items-center text-sm font-medium opacity-60 hover:opacity-100 transition-opacity"
-          >
-            {t('footer.projects')}
-          </button>
-          <button
-            onClick={() => scrollToSection('contacto')}
-            className="min-h-[44px] flex items-center text-sm font-medium opacity-60 hover:opacity-100 transition-opacity"
-          >
-            {t('footer.contact')}
-          </button>
-        </div>
+      <div className="mt-auto border-t border-current/20 pt-6 sm:pt-8 flex flex-col md:flex-row items-center justify-end gap-4 sm:gap-6">
         <p className="text-sm opacity-40 text-center md:text-right">
           {t('footer.copyright', { year: currentYear })}
         </p>

@@ -107,9 +107,6 @@
     "description": "Isaac Sarceño's portfolio - Full Stack Developer specialized in React, TypeScript, Node.js and modern web technologies. Building exceptional web experiences."
   },
   "footer": {
-    "about": "About",
-    "projects": "Projects",
-    "contact": "Contact",
     "copyright": "© {{year}} Isaac Sarceño. All rights reserved.",
     "visitAriaLabel": "Visit my {{name}}"
   }

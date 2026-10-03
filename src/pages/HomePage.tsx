@@ -42,7 +42,7 @@ const Index = () => {
           <Contact />
         </FlowSection>
 
-        <FlowSection aria-label="Footer" style={FLOW_STYLE}>
+        <FlowSection id="footer" aria-label="Footer" style={FLOW_STYLE}>
           <Footer />
         </FlowSection>
       </FlowArt>

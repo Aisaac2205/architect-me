@@ -8,7 +8,7 @@ export interface HeroData {
 
 export const heroData: HeroData = {
     year: '2,026',
-    cta: { target: '#contacto' },
+    cta: { target: '#footer' },
     recentWork: { target: '#proyectos' },
     portrait: { url: '/assets/isaac-hero.webp' },
     thumbnails: [

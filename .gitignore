@@ -24,4 +24,5 @@ dist-ssr
 *.sw?
 .atl/
 .claude/
+.agents/
 docs/

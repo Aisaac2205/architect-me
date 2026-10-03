@@ -14,10 +14,10 @@ const FlipLink = ({ children, href, className = '', ariaLabel }: FlipLinkProps) 
     target="_blank"
     rel="noopener noreferrer"
     className={cn(
-      'group relative block overflow-hidden whitespace-nowrap font-black uppercase select-none py-1',
+      'group relative block overflow-hidden whitespace-nowrap font-black uppercase select-none py-1 text-[length:max(2.5rem,12vw)] sm:text-[length:clamp(2.5rem,8.5vw,7.5rem)]',
       className
     )}
-    style={{ lineHeight: 0.85, fontSize: 'clamp(2.5rem, 8.5vw, 7.5rem)' }}
+    style={{ lineHeight: 0.85 }}
     aria-label={ariaLabel}
   >
     <div className="flex">

@@ -97,8 +97,8 @@
     "subtitle": "Todo proyecto, ya sea propio o desarrollado para clientes, sigue el mismo ciclo de trabajo. Este comprende el análisis del problema, el diseño de la arquitectura y una implementación respaldada por pruebas, y culmina con la puesta en producción de un software estable."
   },
   "seo": {
-    "title": "Isaac Sarceño - Desarrollador Full Stack | Portfolio",
-    "description": "Portfolio de Isaac Sarceño - Desarrollador Full Stack especializado en React, TypeScript, Node.js y tecnologías modernas. Creando experiencias web excepcionales."
+    "title": "Isaac Sarceño | Ingeniero de software",
+    "description": "Ingeniero de software en Guatemala. Diseño y desarrollo de plataformas SaaS y e-commerce con React, TypeScript y Node.js, de la arquitectura al despliegue."
   },
   "footer": {
     "copyright": "© {{year}} Isaac Sarceño. Todos los derechos reservados.",

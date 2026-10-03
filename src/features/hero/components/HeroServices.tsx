@@ -34,11 +34,11 @@ export const HeroServices = () => {
             </div>
 
             {/* Mobile portrait — scaled with safe margin */}
-            <div className="hero-services-portrait opacity-0 flex md:hidden w-full overflow-hidden bg-secondary mt-8 sm:mt-12 rounded-lg">
+            <div className="hero-services-portrait opacity-0 flex md:hidden w-full overflow-hidden bg-secondary mt-8 sm:mt-12">
                 <img
                     src={portrait.url}
                     alt={t('hero.portraitAlt')}
-                    className="h-[22rem] sm:h-[25rem] flex-1 object-cover object-top grayscale"
+                    className="h-[28rem] sm:h-[32rem] flex-1 object-cover object-top grayscale"
                     fetchpriority="high"
                     loading="eager"
                 />

@@ -9,14 +9,14 @@
       "/ ARCHITECTURE"
     ],
     "tagline": [
-      "SOFTWARE ENGINEER DEDICATED TO",
-      "DESIGNING AND BUILDING SCALABLE SYSTEMS,",
-      "FOCUSED ON CLEAN CODE AND HIGH PERFORMANCE."
+      "I DESIGN AND BUILD SAAS",
+      "AND E-COMMERCE PLATFORMS, FROM",
+      "ARCHITECTURE TO DEPLOYMENT."
     ],
     "cta": "Contact me",
     "recentWork": {
       "label": "RECENT WORK",
-      "title": "Code without limits"
+      "title": "Projects in production"
     },
     "imageAlt": "Project preview",
     "portraitAlt": "Isaac Sarceño"
@@ -65,7 +65,7 @@
   },
   "projects": {
     "eyebrow": "Portfolio",
-    "title": "Solutions Portfolio",
+    "title": "Systems in production",
     "prevAriaLabel": "Previous project",
     "nextAriaLabel": "Next project",
     "visit": "Visit site",

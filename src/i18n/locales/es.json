@@ -9,14 +9,14 @@
       "/ ARQUITECTURA"
     ],
     "tagline": [
-      "INGENIERO DE SOFTWARE DEDICADO AL",
-      "DISEÑO Y DESARROLLO DE SISTEMAS ESCALABLES,",
-      "CON ENFOQUE EN CÓDIGO LIMPIO Y ALTO RENDIMIENTO."
+      "DISEÑO Y CONSTRUYO PLATAFORMAS",
+      "SAAS Y E-COMMERCE, DE LA",
+      "ARQUITECTURA AL DESPLIEGUE."
     ],
     "cta": "Contactar",
     "recentWork": {
       "label": "TRABAJO RECIENTE",
-      "title": "Código sin límites"
+      "title": "Proyectos en producción"
     },
     "imageAlt": "Project preview",
     "portraitAlt": "Isaac Sarceño"
@@ -64,7 +64,7 @@
   },
   "projects": {
     "eyebrow": "Portfolio",
-    "title": "Portafolio de Soluciones",
+    "title": "Sistemas en producción",
     "prevAriaLabel": "Proyecto anterior",
     "nextAriaLabel": "Proyecto siguiente",
     "visit": "Visitar sitio",

@@ -60,7 +60,7 @@
   },
   "projects": {
     "eyebrow": "Portfolio",
-    "title": "Sistemas en\nproducción",
+    "title": "Proyectos",
     "prevAriaLabel": "Proyecto anterior",
     "nextAriaLabel": "Proyecto siguiente",
     "visit": "Visitar sitio",
@@ -68,27 +68,27 @@
     "items": {
       "ecommerce": {
         "title": "La Casa del Balompié",
-        "description": "Tienda en línea para la venta de camisolas de fútbol en Guatemala, con pedidos gestionados directo por WhatsApp del propietario. Diseño responsivo y limpio, pensado para convertir visitas en ventas reales."
+        "description": "E-commerce de camisolas de fútbol oficiales y personalizadas con envío a toda Guatemala. Catálogo de clubes y selecciones en versión fan y jugador, con guía de tallas, carrito de compras y pedidos directos por WhatsApp. Proyecto para un cliente, en producción."
       },
       "qably": {
         "title": "Qably Development AI",
-        "description": "SaaS de calidad de software que recibe los reportes de CI/CD, genera casos de prueba con IA a partir de cada commit y los traza de punta a punta. Multi-tenant, con colas en BullMQ y Redis, y más de 4,900 pruebas automatizadas."
+        "description": "Plataforma de QA con IA que recibe reportes de CI/CD, genera casos de prueba a partir de los cambios de código y vincula las ejecuciones con commits, ramas y pull requests. Detección de pruebas inestables, arquitectura multi-tenant, más de 4,900 pruebas automatizadas y colas con BullMQ y Redis. Proyecto propio."
       },
       "envault": {
         "title": "EnVault Management",
-        "description": "Sistema que programa, encola y envía dumps de PostgreSQL y MySQL a Cloudflare R2 con Redis y BullMQ. Reintentos con backoff, bloqueos distribuidos para correr en varias réplicas, verificación SHA-256 antes de restaurar y progreso en tiempo real."
+        "description": "Sistema de copias de seguridad automáticas para PostgreSQL y MySQL que programa, encola y envía las copias a Cloudflare R2 y permite restaurarlas con seguimiento del progreso en tiempo real. Colas con BullMQ y Redis, reintentos con backoff, bloqueos distribuidos para operar en varias réplicas y verificación SHA-256 antes de restaurar. Proyecto propio."
       },
       "saas": {
-        "title": "SaaS para Restaurantes",
-        "description": "Plataforma multi-tenant donde cada restaurante administra su propia landing con uno de dos diseños, Urbano o Elegante, y vende en línea. Incluye menú digital, pedidos directos, notificaciones push y un panel de gestión con analítica de ventas."
+        "title": "SaaS para restaurantes",
+        "description": "Plataforma multi-tenant para restaurantes en Guatemala donde cada local administra su propia landing, con uno de dos diseños, Urbano o Elegante, y vende en línea con menú digital y pedidos directos por WhatsApp. Panel con pedidos tipo kanban, notificaciones push, alertas sonoras y analítica de ventas. Proyecto propio."
       },
       "mps": {
         "title": "MPS de Guatemala",
-        "description": "Tienda en línea de dispositivos tecnológicos con renderizado en servidor, panel administrativo con roles y analítica, control de stock sin sobreventa y seguimiento de pedidos en tiempo real. Proyecto entregado, en preparación para su lanzamiento."
+        "description": "E-commerce de tecnología en Guatemala que vende computadoras, redes, accesorios y equipos de seguridad, con envío a todo el país. Renderizado en servidor, panel administrativo con roles y analítica, control de stock sin sobreventa y seguimiento de pedidos en tiempo real. Proyecto para un cliente, entregado y en preparación para su lanzamiento."
       },
       "turboauto": {
         "title": "Turbo Auto",
-        "description": "Presencia digital para un taller mecánico y carwash en Quesada, Jutiapa. Presenta los servicios del negocio, incluye una sección de ofertas exclusivas y atrae clientes locales con una imagen limpia y profesional."
+        "description": "Sitio web de un car wash y taller mecánico en Quesada, Jutiapa. Presenta los servicios de lavado de autos, motos y buses, flushing de chasis y reparaciones mecánicas, además de una sección de ofertas semanales exclusivas. Proyecto para un cliente."
       }
     }
   },

@@ -19,7 +19,7 @@
   "about": {
     "eyebrow": "INGENIERÍA E IMPACTO",
     "headline": "Arquitectura de software",
-    "headlineAccent": "Cada decisión técnica contempla la mantenibilidad, la seguridad y la escalabilidad. El diseño precede a la implementación, los cambios se validan mediante pruebas automatizadas y los despliegues se ejecutan de forma automática.",
+    "headlineAccent": "Cada decisión técnica contempla la mantenibilidad, la seguridad y la escalabilidad. El diseño precede a la implementación, las pruebas automatizadas validan los cambios y los despliegues se automatizan.",
     "cta": "Conectemos",
     "features": {
       "performance": {
@@ -40,21 +40,22 @@
       },
       "quality": {
         "title": "Pruebas automatizadas y CI/CD",
-        "description": "Pruebas automatizadas y pipelines que bloquean el merge si algo falla."
+        "description": "Pruebas y pipelines que bloquean el merge si algo falla."
       },
       "ai": {
         "title": "Desarrollo asistido por IA",
         "description": "Claude Code y Antigravity integrados al flujo de desarrollo, con revisión de código y pruebas como control de calidad."
       }
     },
-    "techTitle": "Dominio Tecnológico",
-    "techSubtitle": "Las tecnologías y herramientas detrás de cada sistema que desarrollo. Integro herramientas modernas y automatización en mi flujo de ingeniería para construir con rapidez manteniendo rigor técnico, calidad de código y rendimiento.",
+    "techTitle": "Dominio tecnológico",
+    "techSubtitle": "Un dominio sólido y actual del ecosistema de desarrollo implica elegir la herramienta adecuada para cada sistema y aprovecharla de forma óptima. La automatización y un flujo de ingeniería moderno aceleran la entrega sin comprometer el rigor técnico, la calidad del código ni el rendimiento.",
     "techKeywords": [
       "ARQUITECTURA",
       "ESCALABILIDAD",
       "AUTOMATIZACIÓN",
-      "SEO PROFESIONAL",
-      "RENDIMIENTO"
+      "RENDIMIENTO",
+      "SEO",
+      "CÓDIGO LIMPIO"
     ]
   },
   "projects": {

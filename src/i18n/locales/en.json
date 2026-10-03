@@ -19,7 +19,7 @@
   "about": {
     "eyebrow": "ENGINEERING & IMPACT",
     "headline": "Software architecture",
-    "headlineAccent": "Every technical decision accounts for maintainability, security and scalability. Design precedes implementation, changes are validated through automated testing, and releases are deployed automatically.",
+    "headlineAccent": "Every technical decision accounts for maintainability, security, and scalability. Design precedes implementation, automated tests validate changes, and deployments are automated.",
     "cta": "Let's connect",
     "features": {
       "performance": {
@@ -40,22 +40,22 @@
       },
       "quality": {
         "title": "Automated testing & CI/CD",
-        "description": "Automated tests and pipelines that block the merge when something breaks."
+        "description": "Tests and pipelines that block the merge when something breaks."
       },
       "ai": {
         "title": "AI-assisted development",
         "description": "Claude Code and Antigravity integrated into the development workflow, with code review and testing as quality control."
       }
     },
-    "techTitle": "Technical Expertise",
-    "techSubtitle": "The technologies and tools behind every system I architect. I integrate modern tooling and automation into my engineering workflow to move fast while maintaining strict reliability, code quality, and performance.",
+    "techTitle": "Technical expertise",
+    "techSubtitle": "A solid, current command of the development ecosystem means choosing the right tool for each system and using it optimally. Automation and a modern engineering workflow speed up delivery without compromising technical rigor, code quality, or performance.",
     "techKeywords": [
       "ARCHITECTURE",
       "SCALABILITY",
       "AUTOMATION",
       "PERFORMANCE",
-      "CLEAN CODE",
-      "BUSINESS LOGIC"
+      "SEO",
+      "CLEAN CODE"
     ]
   },
   "projects": {

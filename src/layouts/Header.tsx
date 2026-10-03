@@ -4,30 +4,23 @@ import { useNavigate, useLocation } from 'react-router-dom';
 const LanguageToggle = () => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
-  const currentLang = pathname.startsWith('/en') ? 'en' : 'es';
+  const isEnglish = pathname.startsWith('/en');
 
   return (
-    <div className="flex items-center gap-1 text-sm font-medium tracking-wider">
-      <button
-        onClick={() => navigate('/')}
-        className={`min-h-[44px] min-w-[36px] px-2 flex items-center justify-center transition-colors ${currentLang === 'es'
-          ? 'text-primary font-bold'
-          : 'text-muted-foreground hover:text-primary'}`}
-        aria-label="Cambiar a español"
-      >
-        ES
-      </button>
-      <span className="text-border select-none">|</span>
-      <button
-        onClick={() => navigate('/en')}
-        className={`min-h-[44px] min-w-[36px] px-2 flex items-center justify-center transition-colors ${currentLang === 'en'
-          ? 'text-primary font-bold'
-          : 'text-muted-foreground hover:text-primary'}`}
-        aria-label="Switch to English"
-      >
-        EN
-      </button>
-    </div>
+    <button
+      onClick={() => navigate(isEnglish ? '/' : '/en')}
+      className="group min-h-[44px] px-2 flex items-center gap-2 text-sm font-medium tracking-wider text-muted-foreground hover:text-primary transition-colors"
+      aria-label={isEnglish ? 'Cambiar a español' : 'Switch to English'}
+    >
+      <img
+        src="/assets/traducir.png"
+        alt=""
+        width={18}
+        height={18}
+        className="size-[18px] invert opacity-70 transition-opacity group-hover:opacity-100"
+      />
+      {isEnglish ? 'ES' : 'EN'}
+    </button>
   );
 };
 

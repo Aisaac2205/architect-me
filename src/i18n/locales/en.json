@@ -95,7 +95,7 @@
   "contact": {
     "eyebrow": "OPPORTUNITIES",
     "title": "From design to production",
-    "subtitle": "Every project, whether proprietary or built for clients, follows the same development cycle. It covers problem analysis, architecture design and test-backed implementation, and concludes with the release of stable software to production."
+    "subtitle": "Every project, whether personal or built for clients, follows the same cycle. It starts by analyzing the problem and designing an architecture built to grow without rewrites. Development relies on automated validation and deployment workflows that ensure the integrity and security of every product, and the cycle ends with stable software in production."
   },
   "seo": {
     "title": "Isaac Sarceño | Software Engineer",

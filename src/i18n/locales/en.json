@@ -18,7 +18,7 @@
   },
   "about": {
     "eyebrow": "ENGINEERING & IMPACT",
-    "headline": "Software architecture.",
+    "headline": "Software architecture",
     "headlineAccent": "Every technical decision accounts for maintainability, security and scalability. Design precedes implementation, changes are validated through automated testing, and releases are deployed automatically.",
     "cta": "Let's connect",
     "features": {
@@ -60,7 +60,7 @@
   },
   "projects": {
     "eyebrow": "Portfolio",
-    "title": "Systems in production",
+    "title": "Systems in\nproduction",
     "prevAriaLabel": "Previous project",
     "nextAriaLabel": "Next project",
     "visit": "Visit site",
@@ -94,7 +94,7 @@
   },
   "contact": {
     "eyebrow": "OPPORTUNITIES",
-    "title": "From design to production.",
+    "title": "From design to production",
     "subtitle": "Every project, whether proprietary or built for clients, follows the same development cycle. It covers problem analysis, architecture design and test-backed implementation, and concludes with the release of stable software to production."
   },
   "seo": {

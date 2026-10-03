@@ -18,7 +18,7 @@
   },
   "about": {
     "eyebrow": "INGENIERÍA E IMPACTO",
-    "headline": "Arquitectura de software.",
+    "headline": "Arquitectura de software",
     "headlineAccent": "Cada decisión técnica contempla la mantenibilidad, la seguridad y la escalabilidad. El diseño precede a la implementación, los cambios se validan mediante pruebas automatizadas y los despliegues se ejecutan de forma automática.",
     "cta": "Conectemos",
     "features": {
@@ -59,7 +59,7 @@
   },
   "projects": {
     "eyebrow": "Portfolio",
-    "title": "Sistemas en producción",
+    "title": "Sistemas en\nproducción",
     "prevAriaLabel": "Proyecto anterior",
     "nextAriaLabel": "Proyecto siguiente",
     "visit": "Visitar sitio",
@@ -93,7 +93,7 @@
   },
   "contact": {
     "eyebrow": "OPORTUNIDADES",
-    "title": "Del diseño a la producción.",
+    "title": "Del diseño a la producción",
     "subtitle": "Todo proyecto, ya sea propio o desarrollado para clientes, sigue el mismo ciclo de trabajo. Este comprende el análisis del problema, el diseño de la arquitectura y una implementación respaldada por pruebas, y culmina con la puesta en producción de un software estable."
   },
   "seo": {

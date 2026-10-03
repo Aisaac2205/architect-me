@@ -31,7 +31,7 @@ const Projects = () => {
 
   return (
     <div className="my-auto flex flex-col gap-6 sm:gap-8">
-      <div className="flex items-end justify-between gap-4">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <SectionTitle className="min-w-0">{t('projects.title')}</SectionTitle>
         <div className="flex shrink-0 items-center gap-2">
           <Button

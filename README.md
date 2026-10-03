@@ -10,7 +10,7 @@
 ![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=black)
 ![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
 
-**[Live Demo](https://isaacsf-dev.vercel.app/)**
+**[Live Demo](https://isaacsf.dev/)**
 
 <br />
 
@@ -125,7 +125,14 @@ pnpm dev
 
 ## Deployment
 
-Deployed on **Vercel** with native Vite integration. Fork → Import → Configure env vars → Deploy.
+Deployed on **Cloudflare Pages** as a static site, with no adapter or plugin required.
+
+| Setting | Value |
+|---------|-------|
+| Build command | `pnpm build` |
+| Build output directory | `dist` |
+
+Pages serves `index.html` for any unmatched route because the build has no top-level `404.html`, so client-side routes like `/en` work without a redirects file.
 
 ---
 

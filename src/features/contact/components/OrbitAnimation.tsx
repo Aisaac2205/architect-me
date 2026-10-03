@@ -5,7 +5,7 @@ import {
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import {
-  SiNextdotjs, SiVercel, SiTypescript, SiFacebook,
+  SiNextdotjs, SiTypescript, SiFacebook,
   SiTailwindcss, SiFigma, SiAngular
 } from "react-icons/si";
 
@@ -26,7 +26,6 @@ const iconConfigs = [
   { Icon: FaNodeJs, name: "Node.js", color: "#339933" },
   { Icon: FaDocker, name: "Docker", color: "#2496ED" },
   { Icon: FaAws, name: "AWS", color: "#FF9900" },
-  { Icon: SiVercel, name: "Vercel", color: "#FFFFFF" },
   { Icon: FaGithub, name: "GitHub", color: "#FFFFFF" },
   { Icon: FaLinkedin, name: "LinkedIn", color: "#0077B5" },
   { Icon: FaXTwitter, name: "X", color: "#FFFFFF" },

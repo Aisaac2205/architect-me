@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 
-const BASE_URL = 'https://isaacsf-dev.vercel.app';
+const BASE_URL = 'https://isaacsf.dev';
 
 export const SeoHead = () => {
   const { t, i18n } = useTranslation();

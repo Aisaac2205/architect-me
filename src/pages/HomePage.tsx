@@ -1,7 +1,6 @@
 import { MainLayout } from '@/layouts';
 import { Hero } from '@/features/hero';
 import { About } from '@/features/about';
-import { TechStack } from '@/features/tech-stack';
 import { Projects } from '@/features/projects';
 import { Contact } from '@/features/contact';
 import Footer from '@/layouts/Footer';
@@ -28,10 +27,6 @@ const Index = () => {
 
         <FlowSection aria-label="About" style={FLOW_STYLE}>
           <About />
-        </FlowSection>
-
-        <FlowSection aria-label="Tech Stack" style={FLOW_STYLE}>
-          <TechStack />
         </FlowSection>
 
         <FlowSection aria-label="Projects" style={FLOW_STYLE}>

@@ -1,17 +1,17 @@
 import type { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, useReducedMotion } from 'framer-motion';
-import { Zap, Cpu, Fingerprint, Pencil, Settings2, Sparkles } from 'lucide-react';
+import { Sparkles, Zap, TrendingUp, Layers, ShieldCheck, Handshake } from 'lucide-react';
 import { FeatureCard } from '@/components/ui/grid-feature-cards';
 import { SectionTitle } from '@/components/SectionTitle';
 
 const features = [
-  { key: 'performance', icon: Zap },
-  { key: 'async', icon: Cpu },
-  { key: 'security', icon: Fingerprint },
-  { key: 'design', icon: Pencil },
-  { key: 'quality', icon: Settings2 },
-  { key: 'ai', icon: Sparkles },
+  { key: 'design', icon: Sparkles },
+  { key: 'seo', icon: Zap },
+  { key: 'conversion', icon: TrendingUp },
+  { key: 'solutions', icon: Layers },
+  { key: 'reliability', icon: ShieldCheck },
+  { key: 'partnership', icon: Handshake },
 ] as const;
 
 type AnimatedContainerProps = {

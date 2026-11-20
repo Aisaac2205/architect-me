@@ -1,54 +1,45 @@
 {
   "hero": {
-    "headline": "SOFTWARE\nENGINEER",
+    "headline": "FREELANCE\nENGINEER",
+    "headlineAccent": "FREELANCE",
     "name": "ISAAC SARCEÑO",
-    "location": "BASED IN GUATEMALA",
+    "location": "GUATEMALA · WORLDWIDE",
     "services": [
-      "/ ANALYSIS & DESIGN",
-      "/ DEVELOPMENT",
-      "/ ARCHITECTURE"
+      "/ WEB DESIGN",
+      "/ TECHNICAL SEO",
+      "/ E-COMMERCE"
     ],
-    "portraitAlt": "Isaac Sarceño"
+    "portraitAlt": "Isaac Sarceño, freelance software engineer and web developer"
   },
   "about": {
-    "headline": "Software architecture",
-    "headlineAccent": "Every technical decision accounts for maintainability, security, and scalability. Design precedes implementation, automated tests validate changes, and deployments are automated.",
+    "headline": "Services & approach",
+    "headlineAccent": "Backed by software engineering rigor, every project combines custom web design, technical performance, and search engine optimization to build reliable digital platforms that inspire trust and drive measurable commercial results.",
     "features": {
-      "performance": {
-        "title": "Web performance & SEO",
-        "description": "SSR, CDNs and optimized images for fast loads and strong search rankings."
-      },
-      "async": {
-        "title": "Queues & background jobs",
-        "description": "BullMQ and Redis queues with retries, backoff and idempotency."
-      },
-      "security": {
-        "title": "Secure APIs & authentication",
-        "description": "Token rotation, RBAC, rate limiting and encrypted secrets."
-      },
       "design": {
-        "title": "System design",
-        "description": "Data models, APIs and modules designed to grow without rewrites."
+        "title": "Custom web design",
+        "description": "Bespoke interfaces crafted from scratch without generic templates, aligned with brand identity and focused on user experience."
       },
-      "quality": {
-        "title": "Automated testing & CI/CD",
-        "description": "Tests and pipelines that block the merge when something breaks."
+      "seo": {
+        "title": "Technical SEO & speed",
+        "description": "Semantic architecture, fast load times, and Core Web Vitals optimization built to strengthen organic visibility on Google."
       },
-      "ai": {
-        "title": "AI-assisted development",
-        "description": "Claude Code and Antigravity integrated into the development workflow, with code review and testing as quality control."
+      "conversion": {
+        "title": "Conversion-focused UX",
+        "description": "Clear visual hierarchy, intuitive navigation, and strategic contact flows designed to turn visitors into qualified leads."
+      },
+      "solutions": {
+        "title": "E-commerce & web platforms",
+        "description": "Corporate websites, online stores, and custom management platforms engineered around real business operations."
+      },
+      "reliability": {
+        "title": "Security & scalability",
+        "description": "Clean architecture, web security best practices, and dependable infrastructure prepared to scale alongside business growth."
+      },
+      "partnership": {
+        "title": "Transparent delivery & support",
+        "description": "Milestone-based progress, reliable timelines, direct communication, and ongoing technical support after launch."
       }
-    },
-    "techTitle": "Technical expertise",
-    "techSubtitle": "A solid, current command of the development ecosystem means choosing the right tool for each system and using it optimally. Automation and a modern engineering workflow speed up delivery without compromising technical rigor, code quality, or performance.",
-    "techKeywords": [
-      "ARCHITECTURE",
-      "SCALABILITY",
-      "AUTOMATION",
-      "PERFORMANCE",
-      "SEO",
-      "CLEAN CODE"
-    ]
+    }
   },
   "projects": {
     "title": "Projects",
@@ -59,37 +50,39 @@
     "items": {
       "ecommerce": {
         "title": "La Casa del Balompié",
-        "description": "E-commerce store for official and custom soccer jerseys with shipping across Guatemala. Catalog of clubs and national teams in fan and player versions, with size guide, shopping cart, and direct WhatsApp ordering. Client project, in production."
+        "description": "Online store for official and custom soccer jerseys with nationwide shipping in Guatemala. Fast catalog, size guide, shopping cart, and direct WhatsApp ordering built for smooth conversion."
       },
       "qably": {
         "title": "Qably Development AI",
-        "description": "AI-powered QA platform that ingests CI/CD reports, generates test cases from code changes, and links test runs to commits, branches, and pull requests. Flaky test detection, multi-tenant architecture, more than 4,900 automated tests, and BullMQ and Redis queues. Personal project."
+        "description": "AI-powered web platform helping engineering teams detect defects before release, reducing launch risks and manual QA overhead."
       },
       "envault": {
         "title": "EnVault Management",
-        "description": "Automated backup system for PostgreSQL and MySQL that schedules, queues, and sends backups to Cloudflare R2 and restores them with real-time progress tracking. BullMQ and Redis queues, retries with backoff, distributed locks to run across replicas, and SHA-256 verification before restoring. Personal project."
+        "description": "Automated cloud backup web platform designed to protect business-critical databases and perform verified recoveries with real-time tracking."
       },
       "saas": {
-        "title": "Restaurant SaaS",
-        "description": "Multi-tenant platform for restaurants in Guatemala where each one manages its own landing page with one of two designs, Urban or Elegant, and sells online with a digital menu and direct WhatsApp orders. Dashboard with Kanban-style order management, push notifications, sound alerts, and sales analytics. Personal project."
+        "title": "Restaurant System",
+        "description": "Multi-tenant web platform for restaurants featuring custom storefronts, digital menus, and direct WhatsApp ordering, complete with a real-time order board and sales analytics."
       },
       "mps": {
         "title": "MPS de Guatemala",
-        "description": "E-commerce store in Guatemala selling computers, networking, accessories, and security equipment, with nationwide shipping. Server-side rendering, role-based admin panel with analytics, stock control that prevents overselling, and real-time order tracking. Client project, delivered and being prepared for launch."
+        "description": "Technology and security e-commerce store with nationwide delivery. Engineered for fast load times, technical SEO, inventory accuracy, and real-time order tracking."
       },
       "turboauto": {
         "title": "Turbo Auto",
-        "description": "Website for a car wash and mechanic shop in Quesada, Jutiapa. Presents washing services for cars, motorcycles, and buses, chassis flushing, and mechanical repairs, plus an exclusive weekly deals section. Client project."
+        "description": "Commercial website for a car wash and auto repair shop in Quesada, Jutiapa. Structured service showcase, mobile-first layout, and weekly promotions built to attract local customers."
       }
     }
   },
   "contact": {
-    "title": "From design to production",
-    "subtitle": "Every project, whether personal or built for clients, follows the same cycle. It starts by analyzing the problem and designing an architecture built to grow without rewrites. Development relies on automated validation and deployment workflows that ensure the integrity and security of every product, and the cycle ends with stable software in production."
+    "title": "Start your project",
+    "subtitle": "The goal is to empower businesses through solid digital platforms by elevating user experience, web performance, and technical SEO. Every build combines custom design with a clear commercial focus across corporate websites, e-commerce stores, and web applications."
   },
   "seo": {
-    "title": "Isaac Sarceño | Software Engineer",
-    "description": "Software engineer in Guatemala. Design and development of SaaS and e-commerce platforms with React, TypeScript, and Node.js, from architecture to deployment."
+    "title": "Isaac Sarceño | Freelance Software Engineer, Custom Web Design & SEO",
+    "description": "Freelance software engineer specializing in custom web design, e-commerce stores, and fast websites optimized for technical SEO and conversion.",
+    "keywords": "freelance software engineer, systems engineer, freelance web developer, custom web design, technical seo, ecommerce development, corporate websites, custom web apps, isaac sarceno",
+    "jobTitle": "Freelance Software Engineer"
   },
   "footer": {
     "copyright": "© {{year}} Isaac Sarceño. All rights reserved.",

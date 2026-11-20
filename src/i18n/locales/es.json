@@ -1,54 +1,45 @@
 {
   "hero": {
-    "headline": "INGENIERO DE\nSOFTWARE",
+    "headline": "INGENIERO\nFREELANCE",
+    "headlineAccent": "FREELANCE",
     "name": "ISAAC SARCEÑO",
-    "location": "BASED IN GUATEMALA",
+    "location": "GUATEMALA · REMOTO",
     "services": [
-      "/ ANÁLISIS & DISEÑO",
-      "/ DESARROLLO",
-      "/ ARQUITECTURA"
+      "/ DISEÑO WEB",
+      "/ SEO TÉCNICO",
+      "/ E-COMMERCE"
     ],
-    "portraitAlt": "Isaac Sarceño"
+    "portraitAlt": "Isaac Sarceño, ingeniero de software y desarrollador web freelance"
   },
   "about": {
-    "headline": "Arquitectura de software",
-    "headlineAccent": "Cada decisión técnica contempla la mantenibilidad, la seguridad y la escalabilidad. El diseño precede a la implementación, las pruebas automatizadas validan los cambios y los despliegues se automatizan.",
+    "headline": "Enfoque de trabajo",
+    "headlineAccent": "Con formación y criterio de ingeniería de software, cada proyecto combina diseño web a medida, rendimiento técnico y posicionamiento SEO para construir plataformas digitales sólidas que generen confianza y resultados comerciales medibles.",
     "features": {
-      "performance": {
-        "title": "Rendimiento web y SEO",
-        "description": "SSR, CDN e imágenes optimizadas para cargar rápido y posicionar en buscadores."
-      },
-      "async": {
-        "title": "Colas y procesos en segundo plano",
-        "description": "Colas con BullMQ y Redis, con reintentos, backoff e idempotencia."
-      },
-      "security": {
-        "title": "APIs seguras y autenticación",
-        "description": "Rotación de tokens, RBAC, rate limiting y secretos cifrados."
-      },
       "design": {
-        "title": "Diseño de sistemas",
-        "description": "Modelos de datos, APIs y módulos pensados para crecer sin reescribir."
+        "title": "Diseño web a medida",
+        "description": "Interfaces únicas creadas desde cero, sin plantillas genéricas, alineadas con la identidad visual de cada marca y enfocadas en la experiencia de usuario."
       },
-      "quality": {
-        "title": "Pruebas automatizadas y CI/CD",
-        "description": "Pruebas y pipelines que bloquean el merge si algo falla."
+      "seo": {
+        "title": "SEO técnico y velocidad",
+        "description": "Arquitectura semántica, tiempos de carga optimizados y estándares de Core Web Vitals para mejorar la visibilidad orgánica en Google."
       },
-      "ai": {
-        "title": "Desarrollo asistido por IA",
-        "description": "Claude Code y Antigravity integrados al flujo de desarrollo, con revisión de código y pruebas como control de calidad."
+      "conversion": {
+        "title": "Orientado a conversión",
+        "description": "Jerarquía visual clara, navegación intuitiva y puntos de contacto estratégicos diseñados para transformar visitas en oportunidades comerciales."
+      },
+      "solutions": {
+        "title": "E-commerce y plataformas web",
+        "description": "Desarrollo de sitios corporativos, tiendas en línea y sistemas administrativos a medida adaptados a la operación real de cada negocio."
+      },
+      "reliability": {
+        "title": "Seguridad y escalabilidad",
+        "description": "Código limpio, buenas prácticas de seguridad web e infraestructura estable preparada para crecer junto con la demanda del negocio."
+      },
+      "partnership": {
+        "title": "Gestión transparente y soporte",
+        "description": "Entregas por etapas con avances verificables, cumplimiento de plazos, comunicación directa y acompañamiento técnico posterior al lanzamiento."
       }
-    },
-    "techTitle": "Dominio tecnológico",
-    "techSubtitle": "Un dominio sólido y actual del ecosistema de desarrollo implica elegir la herramienta adecuada para cada sistema y aprovecharla de forma óptima. La automatización y un flujo de ingeniería moderno aceleran la entrega sin comprometer el rigor técnico, la calidad del código ni el rendimiento.",
-    "techKeywords": [
-      "ARQUITECTURA",
-      "ESCALABILIDAD",
-      "AUTOMATIZACIÓN",
-      "RENDIMIENTO",
-      "SEO",
-      "CÓDIGO LIMPIO"
-    ]
+    }
   },
   "projects": {
     "title": "Proyectos",
@@ -59,37 +50,39 @@
     "items": {
       "ecommerce": {
         "title": "La Casa del Balompié",
-        "description": "E-commerce de camisolas de fútbol oficiales y personalizadas con envío a toda Guatemala. Catálogo de clubes y selecciones en versión fan y jugador, con guía de tallas, carrito de compras y pedidos directos por WhatsApp. Proyecto para un cliente, en producción."
+        "description": "Tienda en línea de camisolas oficiales y personalizadas con envío a toda Guatemala. Catálogo optimizado, guía de tallas, carrito de compras y pedidos directos por WhatsApp para agilizar la conversión."
       },
       "qably": {
         "title": "Qably Development AI",
-        "description": "Plataforma de QA con IA que recibe reportes de CI/CD, genera casos de prueba a partir de los cambios de código y vincula las ejecuciones con commits, ramas y pull requests. Detección de pruebas inestables, arquitectura multi-tenant, más de 4,900 pruebas automatizadas y colas con BullMQ y Redis. Proyecto propio."
+        "description": "Plataforma web impulsada por inteligencia artificial que permite a equipos de ingeniería detectar fallos antes del lanzamiento, reduciendo riesgos y tiempos de validación."
       },
       "envault": {
         "title": "EnVault Management",
-        "description": "Sistema de copias de seguridad automáticas para PostgreSQL y MySQL que programa, encola y envía las copias a Cloudflare R2 y permite restaurarlas con seguimiento del progreso en tiempo real. Colas con BullMQ y Redis, reintentos con backoff, bloqueos distribuidos para operar en varias réplicas y verificación SHA-256 antes de restaurar. Proyecto propio."
+        "description": "Plataforma web de respaldos automáticos en la nube diseñada para proteger bases de datos empresariales y ejecutar restauraciones seguras con trazabilidad en tiempo real."
       },
       "saas": {
-        "title": "SaaS para restaurantes",
-        "description": "Plataforma multi-tenant para restaurantes en Guatemala donde cada local administra su propia landing, con uno de dos diseños, Urbano o Elegante, y vende en línea con menú digital y pedidos directos por WhatsApp. Panel con pedidos tipo kanban, notificaciones push, alertas sonoras y analítica de ventas. Proyecto propio."
+        "title": "Sistema para Restaurantes",
+        "description": "Plataforma web multiempresa para restaurantes con sitio propio, menú digital y pedidos directos por WhatsApp. Incluye panel de gestión en tiempo real, alertas y analítica de ventas."
       },
       "mps": {
         "title": "MPS de Guatemala",
-        "description": "E-commerce de tecnología en Guatemala que vende computadoras, redes, accesorios y equipos de seguridad, con envío a todo el país. Renderizado en servidor, panel administrativo con roles y analítica, control de stock sin sobreventa y seguimiento de pedidos en tiempo real. Proyecto para un cliente, entregado y en preparación para su lanzamiento."
+        "description": "E-commerce de tecnología y equipos de seguridad con cobertura nacional. Construido con enfoque en velocidad, SEO técnico, control de inventario y seguimiento de pedidos en tiempo real."
       },
       "turboauto": {
         "title": "Turbo Auto",
-        "description": "Sitio web de un car wash y taller mecánico en Quesada, Jutiapa. Presenta los servicios de lavado de autos, motos y buses, flushing de chasis y reparaciones mecánicas, además de una sección de ofertas semanales exclusivas. Proyecto para un cliente."
+        "description": "Sitio web comercial para centro de lavado y taller mecánico en Quesada, Jutiapa. Presentación clara de servicios, diseño adaptable a dispositivos móviles y sección de ofertas semanales para captar clientes locales."
       }
     }
   },
   "contact": {
-    "title": "Del diseño a la producción",
-    "subtitle": "Todo proyecto, propio o desarrollado para clientes, sigue el mismo ciclo. Parte del análisis del problema y del diseño de una arquitectura preparada para crecer sin reescrituras. El desarrollo se apoya en flujos de validación y despliegue automatizados que aseguran la integridad y la seguridad de cada producto, y el ciclo culmina con un software estable en producción."
+    "title": "Iniciemos tu proyecto",
+    "subtitle": "El objetivo es potenciar negocios mediante plataformas digitales sólidas, elevando la experiencia de usuario, el rendimiento web y el posicionamiento SEO. Cada desarrollo se construye con diseño a medida y enfoque comercial para sitios corporativos, tiendas en línea y aplicaciones web."
   },
   "seo": {
-    "title": "Isaac Sarceño | Ingeniero de software",
-    "description": "Ingeniero de software en Guatemala. Diseño y desarrollo de plataformas SaaS y e-commerce con React, TypeScript y Node.js, de la arquitectura al despliegue."
+    "title": "Isaac Sarceño | Ingeniero de Software Freelance, Diseño Web y SEO",
+    "description": "Ingeniero de software freelance en Guatemala. Diseño web a medida, tiendas en línea e-commerce y sitios rápidos optimizados para SEO técnico y conversión.",
+    "keywords": "ingeniero de software freelance, ingeniero en sistemas guatemala, desarrollador web freelance, diseño web a medida, páginas web guatemala, tiendas en línea, ecommerce guatemala, seo técnico, isaac sarceño",
+    "jobTitle": "Ingeniero de Software Freelance"
   },
   "footer": {
     "copyright": "© {{year}} Isaac Sarceño. Todos los derechos reservados.",

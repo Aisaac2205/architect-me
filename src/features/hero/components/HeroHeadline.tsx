@@ -6,7 +6,11 @@ export const HeroHeadline = () => {
     const { year } = heroData;
 
     const headline = t('hero.headline');
-    const headlineParts = headline.split(/(SOFTWARE)/i);
+    const accentWord = t('hero.headlineAccent');
+    const escapedAccent = accentWord.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const headlineParts = escapedAccent
+        ? headline.split(new RegExp(`(${escapedAccent})`, 'i'))
+        : [headline];
 
     return (
         <div className="relative w-full">
@@ -17,8 +21,8 @@ export const HeroHeadline = () => {
                 className="hero-headline-title opacity-0 z-20 text-primary relative font-bold text-center leading-[0.88] tracking-tight sm:tracking-tighter md:tracking-[-0.03em] whitespace-pre-line text-balance select-none"
                 style={{ fontSize: 'clamp(2.75rem, 8.2vw, 8.5rem)' }}
             >
-                {headlineParts.map((part, index) => 
-                    part.toLowerCase() === 'software' ? (
+                {headlineParts.map((part, index) =>
+                    accentWord && part.toLowerCase() === accentWord.toLowerCase() ? (
                         <span key={index} className="text-[#3b82f6]">{part}</span>
                     ) : (
                         part

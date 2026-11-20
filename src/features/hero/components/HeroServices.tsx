@@ -12,7 +12,7 @@ export const HeroServices = () => {
             {/* Services text stays on the LEFT of the card; portrait (absolute) sits center-right */}
             <div className="md:space-y-8 md:pt-6 lg:pt-8 md:flex md:gap-6 md:justify-center">
                 <div className="hero-services-card opacity-0 hidden md:flex gap-6 bg-secondary w-full max-w-xl h-fit p-8 lg:p-10 items-end space-y-2">
-                    <div className="font-semibold text-base md:text-lg xl:text-xl tracking-wide space-y-1">
+                    <div className="w-[48%] pr-4 font-semibold text-sm md:text-base lg:text-lg xl:text-xl tracking-wide space-y-1">
                         {services.map((service) => (
                             <div key={service}>{service}</div>
                         ))}

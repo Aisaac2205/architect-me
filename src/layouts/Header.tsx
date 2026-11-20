@@ -13,7 +13,7 @@ const LanguageToggle = () => {
       aria-label={isEnglish ? 'Cambiar a español' : 'Switch to English'}
     >
       <img
-        src="/assets/traducir.png"
+        src="/assets/icons/traducir.png"
         alt=""
         width={18}
         height={18}

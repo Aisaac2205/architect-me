@@ -5,5 +5,5 @@ export interface HeroData {
 
 export const heroData: HeroData = {
     year: '2026',
-    portrait: { url: '/assets/isaac-hero.webp' },
+    portrait: { url: '/assets/hero/isaac-hero.webp' },
 };

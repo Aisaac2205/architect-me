@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { ArrowRight } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 import { Project } from '../types/project.types';
 
 interface ProjectCardProps {
@@ -20,17 +20,17 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
             className={`${project.storeUrl ? 'group ' : ''}flex flex-col h-full`}
         >
             <div className="flex flex-col flex-1">
-                <div className="flex aspect-[3/2] overflow-clip rounded-xl border border-border bg-[#d9d9d9]">
-                    <div className="flex-1">
-                        <div className="relative h-full w-full origin-bottom transition duration-300 group-hover:scale-[1.02]">
-                            <img
-                                src={project.image}
-                                alt={title}
-                                className="h-full w-full object-contain object-top"
-                                loading="lazy"
-                                decoding="async"
-                            />
-                        </div>
+                <div className="aspect-video w-full overflow-hidden rounded-xl border border-border bg-secondary">
+                    <div className="relative h-full w-full origin-bottom transition duration-300 group-hover:scale-[1.02]">
+                        <img
+                            src={project.image}
+                            alt={title}
+                            width={1920}
+                            height={1080}
+                            className="h-full w-full object-cover object-top"
+                            loading="lazy"
+                            decoding="async"
+                        />
                     </div>
                 </div>
 
@@ -45,7 +45,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
             {project.storeUrl && (
                 <div className="flex items-center text-sm font-medium mt-auto">
                     {t('projects.visit')}
-                    <ArrowRight className="ml-2 size-4 transition-transform group-hover:translate-x-1" />
+                    <ChevronRight className="ml-1.5 size-4 transition-transform group-hover:translate-x-1" />
                 </div>
             )}
         </a>

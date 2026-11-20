@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { SectionTitle } from '@/components/SectionTitle';
 import {
@@ -42,7 +42,7 @@ const Projects = () => {
             className="border-current/30 hover:bg-current/10 disabled:pointer-events-auto"
             aria-label={t('projects.prevAriaLabel')}
           >
-            <ArrowLeft className="size-5" />
+            <ChevronLeft className="size-5" />
           </Button>
           <Button
             size="icon"
@@ -52,7 +52,7 @@ const Projects = () => {
             className="border-current/30 hover:bg-current/10 disabled:pointer-events-auto"
             aria-label={t('projects.nextAriaLabel')}
           >
-            <ArrowRight className="size-5" />
+            <ChevronRight className="size-5" />
           </Button>
         </div>
       </div>
